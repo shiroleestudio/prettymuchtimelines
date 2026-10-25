@@ -1,4 +1,4 @@
-# 새 항목 후보 (2026-10-20)
+# 새 항목 후보 (2026-10-25)
 
 Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것을 뽑았습니다. 이미 연결된 항목은 뺐고, 위키백과 언어판이 많은(널리 알려진) 순입니다.
 연도는 Wikidata 값이라 **들이기 전에 공인 자료로 확인**하고, 설명은 직접 한 문장으로 씁니다.
@@ -11,7 +11,7 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [나치 독일](https://www.wikidata.org/wiki/Q7318) | 1933 | 1945 | 과거에 존재했던 나라 | 179 | 나치당 집권하의 독일 (1933-1945) |
 | [러시아의 우크라이나 침공](https://www.wikidata.org/wiki/Q110999040) | 2022 | — | 전쟁 | 176 | 러시아가 우크라이나를 침공하면서 발발한 전쟁 |
 | [체코슬로바키아](https://www.wikidata.org/wiki/Q33946) | 1918 | 1992 | 과거에 존재했던 나라 | 168 | 중앙유럽의 옛 국가 (1918-1992) |
-| [고대 로마](https://www.wikidata.org/wiki/Q1747689) | 기원전 753 | 476 | 과거에 존재했던 나라 | 165 | 기원전 8세기부터 이탈리아 반도에서 성장하기 시작한 문명 |
+| [고대 로마](https://www.wikidata.org/wiki/Q1747689) | 기원전 753 | 476 | 과거에 존재했던 나라 | 166 | 기원전 8세기부터 이탈리아 반도에서 성장하기 시작한 문명 |
 | [동독](https://www.wikidata.org/wiki/Q16957) | 1949 | 1989 | 과거에 존재했던 나라 | 158 | 유럽의 옛 공산주의 국가 |
 | [러시아 제국](https://www.wikidata.org/wiki/Q34266) | 1721 | 1917 | 과거에 존재했던 나라 | 156 | 유라시아와 북아메리카의 옛 제국 (1721년 ~ 1917년) |
 | [오스트리아-헝가리 제국](https://www.wikidata.org/wiki/Q28513) | 1867 | 1918 | 과거에 존재했던 나라 | 148 | 중앙유럽의 옛 국가 (1867-1918) |
@@ -77,7 +77,7 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [인천 상륙 작전](https://www.wikidata.org/wiki/Q483039) | 1950 | 1950 | 전투 | 34 | 6.25 전쟁 당시 유엔군이 인천에 상륙한 작전 |
 | [한국 전쟁에 대한 정전 협정](https://www.wikidata.org/wiki/Q2862267) | 1953 | — | 조약 | 30 | 1953년 7월 27일에 체결된 정전협정 |
 | [후삼국 시대](https://www.wikidata.org/wiki/Q698268) | 892 | 936 | 시대 | 23 |  |
-| [제주 4·3 사건](https://www.wikidata.org/wiki/Q483458) | 1948 | 1949 | 학살 | 23 | 1948년 분쟁 |
+| [제주 4·3 사건](https://www.wikidata.org/wiki/Q483458) | 1948 | 1949 | 반란 | 23 | 1948년 분쟁 |
 | [평양 전투](https://www.wikidata.org/wiki/Q715791) | 1894 | — | 전투 | 21 | 청나라-일본 간 전투 (1894) |
 | [장진호 전투](https://www.wikidata.org/wiki/Q277337) | 1950 | 1950 | 전투 | 20 | 1950년 말 미국 제1해병사단과 공산군이 장진호와 장진군에서 벌인 전투 |
 | [부산 교두보 전투](https://www.wikidata.org/wiki/Q482979) | 1950 | 1950 | 전투 | 19 | 한국 전쟁의 주요 전투 |
@@ -88,11 +88,11 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [풍도 해전](https://www.wikidata.org/wiki/Q701890) | 1894 | — | 전투 | 15 | 청나라-일본 간 전투 (1894) |
 | [울산 해전](https://www.wikidata.org/wiki/Q702150) | 1904 | — | 전투 | 15 |  |
 | [제1차 서울 전투](https://www.wikidata.org/wiki/Q18016068) | 1950 | — | 전투 | 15 | 6.25 전쟁 당시 조선인민군과 대한민국 국군이 서울 일대에서 벌인 전투 |
-| [여란전쟁](https://www.wikidata.org/wiki/Q706428) | 993 | 1022 | 전쟁 | 14 | 8세기 말~9세기 초 고려와 요나라 간의 전쟁 |
-| [임오군란](https://www.wikidata.org/wiki/Q709191) | 1882 | 1882 | 반란 | 14 | 1882년에 발생한 조선 군인들의 폭동 |
+| [고려-거란 전쟁](https://www.wikidata.org/wiki/Q706428) | 993 | 1022 | 전쟁 | 14 | 8세기 말~9세기 초 고려와 요나라 간의 전쟁 |
+| [임오군란](https://www.wikidata.org/wiki/Q709191) | 1882 | 1882 | 하극상 | 14 | 1882년에 발생한 조선 군인들의 폭동 |
 | [12·12 군사 반란](https://www.wikidata.org/wiki/Q623641) | 1979 | — | 쿠데타 | 14 | 1979년 12월 12일, 전두환과 노태우 등을 중심으로 한 신군부 세력의 군사 반란 |
+| [조선민주주의인민공화국과 로씨야련방사이의 포괄적인 전략적동반자관계에 관한 조약](https://www.wikidata.org/wiki/Q126896555) | 2024 | — | 조약 | 13 |  |
 | [상주 전투](https://www.wikidata.org/wiki/Q497034) | 1592 | — | 전투 | 12 |  |
-| [조선민주주의인민공화국과 로씨야련방사이의 포괄적인 전략적동반자관계에 관한 조약](https://www.wikidata.org/wiki/Q126896555) | 2024 | — | 조약 | 12 |  |
 
 ## 중국사 (18)
 
@@ -135,7 +135,7 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [에조 공화국](https://www.wikidata.org/wiki/Q714006) | 1869 | 1869 | 과거에 존재했던 나라 | 40 |  |
 | [대만일치시기](https://www.wikidata.org/wiki/Q137816) | 1895 | 1945 | 식민지 | 37 | 대만 역사의 시대 (1895–1945) |
 | [오닌의 난](https://www.wikidata.org/wiki/Q385676) | 1467 | 1477 | 전쟁 | 34 | 무로마치 막부 후기 발생한 일본 동군과 서군의 내전 |
-| [남양 군도](https://www.wikidata.org/wiki/Q718763) | 1919 | 1947 | 위임통치령 | 34 | 제1차 세계대전 이후 국제연맹이 일본에 부여한 오세아니아의 위임통치령 |
+| [남양 군도](https://www.wikidata.org/wiki/Q718763) | 1919 | 1947 | 과거에 존재했던 나라 | 34 | 제1차 세계대전 이후 국제연맹이 일본에 부여한 오세아니아의 위임통치령 |
 | [소련-일본 국경 분쟁](https://www.wikidata.org/wiki/Q696389) | 1932 | 1939 | 전쟁 | 32 |  |
 | [일본의 쌀 소동](https://www.wikidata.org/wiki/Q696111) | 1918 | 1918 | 반란 | 32 | 1918년 일본에서 발생한 쌀 가격 담합 항의 시위 및 폭동 |
 | [막부 말기](https://www.wikidata.org/wiki/Q804558) | 1853 | 1868 | 시대 | 31 | 에도 막부 말기 |
@@ -152,15 +152,12 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 
 | 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
 |---|---|---|---|---:|---|
-| [브라질](https://www.wikidata.org/wiki/Q155) | 1822 | — | 주권국 | 387 | 남아메리카의 국가 |
-| [남극](https://www.wikidata.org/wiki/Q51) | 1820 | — | 지역 | 316 | 지구에서 가장 남쪽에 있는 대륙 |
+| [남극](https://www.wikidata.org/wiki/Q51) | 1820 | — | 무주지 | 317 | 지구에서 가장 남쪽에 있는 대륙 |
 | [컴퓨터](https://www.wikidata.org/wiki/Q68) | 1945 | — | 기계 | 298 | 산술 또는 논리 연산을 수행하기 위한 범용 장치 |
 | [수성](https://www.wikidata.org/wiki/Q308) | — | — | 내행성 | 274 | 태양계의 첫째 행성 |
-| [천왕성](https://www.wikidata.org/wiki/Q324) | 1781 | — | 지구 과학/외행성 | 261 | 태양계의 일곱 번째 행성 |
+| [천왕성](https://www.wikidata.org/wiki/Q324) | 1781 | — | 지구 과학/외행성 | 262 | 태양계의 일곱 번째 행성 |
 | [해왕성](https://www.wikidata.org/wiki/Q332) | 1846 | — | 지구 과학/외행성 | 252 | 태양계의 마지막 행성 |
 | [승용자동차](https://www.wikidata.org/wiki/Q1420) | 1884 | — |  | 246 | 교통 수단의 일종 |
-| [명왕성](https://www.wikidata.org/wiki/Q339) | 1930 | — | 왜행성 | 223 | 태양계의 왜행성 |
-| [농구](https://www.wikidata.org/wiki/Q5372) | 1891 | — | 올림픽 경기 종목 | 217 | 양 끝에 바스켓이 있는 코트에서 진행되는 팀 스포츠로 농구공을 사용하여 바스켓에 넣으면 득 |
 | [빅뱅](https://www.wikidata.org/wiki/Q323) | 기원전 13787000001 | — | 부동의 동자 | 184 | 태초부터 거대구조 진화까지 관측가능한 우주의 존재를 설명하는 우주론 모형 |
 | [휴대 전화](https://www.wikidata.org/wiki/Q17517) | 1973 | — |  | 180 | 이동통신 서비스의 사용을 목적으로 개발된 무선 전화기 |
 | [전자](https://www.wikidata.org/wiki/Q2225) | 1897 | — | 양자 입자의 종류 | 175 | 소립자 |
@@ -169,7 +166,6 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [양성자](https://www.wikidata.org/wiki/Q2294) | 1920 | — | 양자 입자의 종류 | 162 | 양전하를 가진 아원자 입자 |
 | [웹 브라우저](https://www.wikidata.org/wiki/Q6368) | 1990 | — | 소프트웨어 분류 | 155 | 월드 와이드 웹의 정보 자원을 검색하고 표현하고 경유하기 위한 응용 소프트웨어 |
 | [애니메이션](https://www.wikidata.org/wiki/Q11425) | 1888 | — |  | 146 | 영상의 한 제작 방식 |
-| [세레스](https://www.wikidata.org/wiki/Q596) | 1801 | — | 왜행성 | 145 | 소행성 |
 | [중성자](https://www.wikidata.org/wiki/Q2348) | 1932 | — | 양자 입자의 종류 | 145 | 원소를 이루는 입자들 중 전하를 띠지 않는 입자 |
 | [노퍽섬](https://www.wikidata.org/wiki/Q31057) | 1774 | — |  | 144 |  |
 | [SARS-CoV-2](https://www.wikidata.org/wiki/Q82069695) | 2019 | — | 바이러스 | 130 | 코로나바이러스감염증-19를 일으키는 코로나 바이러스의 일종 |
@@ -177,43 +173,47 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [다이오드](https://www.wikidata.org/wiki/Q11656) | 1901 | — | 능동소자 | 130 |  |
 | [전자기 복사](https://www.wikidata.org/wiki/Q12969754) | 1886 | — |  | 129 | 전기장과 자기장이 주기적으로 변화하면서 전달되는 파동 |
 | [변압기](https://www.wikidata.org/wiki/Q11658) | 1831 | — |  | 123 | 전자기 유도로 전기 에너지를 전달하는 장치 |
-| [타이탄](https://www.wikidata.org/wiki/Q2565) | 1655 | — | 토성의 위성 | 121 | 토성의 6번째 위성 |
-| [에리스](https://www.wikidata.org/wiki/Q611) | 2003 | — | 왜행성 | 121 | 태양계의 왜소행성 |
+| [에리스](https://www.wikidata.org/wiki/Q611) | 2003 | — | 천체 | 121 | 태양계의 왜소행성 |
 | [내연기관](https://www.wikidata.org/wiki/Q12757) | 1924 | — |  | 121 | 연료와 공기 따위의 산화제를 연소실에서 연소시켜 에너지를 얻는 기관이다. |
 | [배터리](https://www.wikidata.org/wiki/Q267298) | 1800 | — | 능동소자 | 120 | 전기 에너지를 저장해 놓을 수 있는 물건 |
 | [메탄](https://www.wikidata.org/wiki/Q37129) | 1777 | — | 화학 물질의 종류 | 119 | 화학식 CH4의 포화 탄화수소 |
-| [포보스](https://www.wikidata.org/wiki/Q7547) | 1877 | — | 화성의 위성 | 116 |  |
-| [유로파](https://www.wikidata.org/wiki/Q3143) | 1610 | — | 규칙 위성 | 115 | 목성의 둘째 위성이자 갈릴레이 위성의 구성원 |
-| [마케마케 (왜행성)](https://www.wikidata.org/wiki/Q604) | 2005 | — | 고전적 카이퍼대 천체 | 114 |  |
-| [이오](https://www.wikidata.org/wiki/Q3123) | 1610 | — | 규칙 위성 | 113 | 목성의 갈릴레이 위성 4개 중 가장 안쪽 |
+| [마케마케 (왜행성)](https://www.wikidata.org/wiki/Q604) | 2005 | — | 명왕성형 천체 | 114 |  |
 | [자연선택](https://www.wikidata.org/wiki/Q43478) | 1858 | — |  | 112 | 특정 환경에서 생존에 적합한 형질을 지닌 종이 번성하고, 생존에 적합하지 않은 형질을 지닌 |
-| [가니메데](https://www.wikidata.org/wiki/Q3169) | 1610 | — | 규칙 위성 | 111 | 목성의 위성 |
-| [데이모스](https://www.wikidata.org/wiki/Q7548) | 1877 | — | 화성의 위성 | 111 | 화성의 위성 |
 | [적혈구](https://www.wikidata.org/wiki/Q37187) | 1658 | — | 세포 유형 | 111 | 세포의 종류 |
 | [재봉틀](https://www.wikidata.org/wiki/Q49013) | 1790 | — |  | 111 | 바느질을 하는데 사용하는 기계 |
-| [하우메아](https://www.wikidata.org/wiki/Q601) | 2003 | — | 왜행성 | 109 | 카이퍼대에 있는 왜행성 |
 | [모스 부호](https://www.wikidata.org/wiki/Q79897) | 1837 | — | 문자 인코딩 | 106 | 간단한 펄스를 이용한 언어의 전송 방식 |
 | [환초](https://www.wikidata.org/wiki/Q42523) | 1842 | — |  | 105 | 산호에 의해 둘러싸인 반지 모양의 산호초 |
 | [유도기](https://www.wikidata.org/wiki/Q5325) | 1831 | — |  | 104 |  |
-| [칼리스토](https://www.wikidata.org/wiki/Q3134) | 1610 | — | 규칙 위성 | 103 | 목성의 두번째로 큰 갈릴레이 위성이자 태양계에서 세번째로 큰 위성 |
-| [페르세폴리스](https://www.wikidata.org/wiki/Q129072) | 기원전 511 | 기원전 330 | 고대 도시 | 103 | 역사 기념물, 아케메네스 궁전, 이란 국가 유산, 유네스코 세계유산 |
+| [페르세폴리스](https://www.wikidata.org/wiki/Q129072) | 기원전 511 | 기원전 330 | 문화재 | 103 | 역사 기념물, 아케메네스 궁전, 이란 국가 유산, 유네스코 세계유산 |
 | [소네트](https://www.wikidata.org/wiki/Q80056) | 1300 | — | 시의 양식 | 103 |  |
 | [다이너마이트](https://www.wikidata.org/wiki/Q80728) | 1867 | — |  | 103 | 폭탄의 발명품 |
-| [부베섬](https://www.wikidata.org/wiki/Q23408) | 1739 | — | 지방 (지리) | 102 |  |
-| [로제타석](https://www.wikidata.org/wiki/Q48584) | 기원전 196 | — | 비석 | 101 |  |
-| [트리톤](https://www.wikidata.org/wiki/Q3359) | 1846 | — | 해왕성의 위성 | 100 | 해왕성의 가장 큰 위성 |
-| [단두대](https://www.wikidata.org/wiki/Q128015) | 1792 | — | 사형 방법 | 99 | 사형수의 목을 자르는 대 |
 | [진공 청소기(유선)](https://www.wikidata.org/wiki/Q101674) | 1901 | — |  | 97 | 전동기의 전기에너지에 의한 공기의 압력차를 이용해 티끌과 먼지를 흡수하는 청소 기구 이전하 |
-| [4 베스타](https://www.wikidata.org/wiki/Q3030) | 1807 | — | 소행성 | 96 | 두 번째로 큰 소행성 대지단 소행성 |
-| [2 팔라스](https://www.wikidata.org/wiki/Q3002) | 1802 | — | 소행성 | 94 | 소행성 |
 | [양전자](https://www.wikidata.org/wiki/Q3229) | 1932 | — | 입자물리학 | 94 | 아원자 입자 |
-| [카론](https://www.wikidata.org/wiki/Q6604) | 1978 | — | 명왕성의 위성 | 94 | 명왕성의 가장 큰 위성 |
 | [기압계](https://www.wikidata.org/wiki/Q79757) | 1643 | — |  | 94 | 대기압을 측정하는 장치 |
-| [엔셀라두스](https://www.wikidata.org/wiki/Q3303) | 1789 | — | 토성의 위성 | 93 | 토성의 위성 |
 | [벤젠](https://www.wikidata.org/wiki/Q2270) | 1825 | — | 화학 물질의 종류 | 93 | 콜타르를 증류한 유기화합물의 일종 |
-| [센타우루스자리 프록시마](https://www.wikidata.org/wiki/Q14266) | 기원전 4850000001 | — | 적색 왜성 | 91 | 태양계에서 가장 가까운 별로, 센타우루스자리에 속한 적색왜성 |
+| [전자레인지](https://www.wikidata.org/wiki/Q127956) | 1945 | — |  | 91 | 고주파로 가열하는 조리 기구 |
+| [클리퍼턴섬](https://www.wikidata.org/wiki/Q161258) | 1711 | — | 환초 | 89 |  |
+| [머리털자리](https://www.wikidata.org/wiki/Q9285) | 기원전 245 | — | 별자리 | 89 |  |
+| [공기펌프자리](https://www.wikidata.org/wiki/Q10481) | 1752 | — | 별자리 | 89 |  |
+| [저온 살균법](https://www.wikidata.org/wiki/Q58148) | 1864 | — |  | 89 | 가열 살균법의 일종 |
+| [강입자](https://www.wikidata.org/wiki/Q101667) | 1962 | — | 양자 입자의 종류 | 88 |  |
+| [도플러 효과](https://www.wikidata.org/wiki/Q76436) | 1842 | — | 물리 현상 | 88 |  |
+| [펄사](https://www.wikidata.org/wiki/Q4360) | 1967 | — | 천체 유형 | 87 |  |
+| [90377 세드나](https://www.wikidata.org/wiki/Q15610) | 2003 | — | 세드나족 | 87 | 소행성 |
+| [쿨롱 법칙](https://www.wikidata.org/wiki/Q83152) | 1875 | — | 물리 법칙 | 86 |  |
+| [물뱀자리](https://www.wikidata.org/wiki/Q10416) | 1597 | — | 별자리 | 86 | 별자리 |
+| [외뿔소자리](https://www.wikidata.org/wiki/Q10428) | 1612 | — | 별자리 | 86 |  |
+| [용골자리](https://www.wikidata.org/wiki/Q10470) | 1763 | — | 별자리 | 86 |  |
+| [에모지](https://www.wikidata.org/wiki/Q1049294) | 1999 | — | 표기법 | 86 | 그림 문자 및 그림 문자 표현 기술의 총칭 |
+| [플랑크 상수](https://www.wikidata.org/wiki/Q122894) | 1901 | — | 물리 상수 | 85 |  |
+| [기린자리](https://www.wikidata.org/wiki/Q8832) | 1612 | — | 별자리 | 85 |  |
+| [화로자리](https://www.wikidata.org/wiki/Q8913) | 1756 | — | 별자리 | 85 | 천구의 남쪽에 있는 별자리 |
+| [조각칼자리](https://www.wikidata.org/wiki/Q10488) | 1750 | — | 별자리 | 85 |  |
+| [여우자리](https://www.wikidata.org/wiki/Q10519) | 1683 | — | 별자리 | 85 |  |
+| [리세르그산 디에틸아미드](https://www.wikidata.org/wiki/Q23118) | 1948 | — | 화학 물질의 종류 | 85 | 환각제 |
+| [지퍼](https://www.wikidata.org/wiki/Q101761) | 1893 | — | 기기 | 84 | 두 줄을 쇠고리로 밀고 당겨 여닫을 수 있도록 만든 물건 |
 
-## 음악사 (60)
+## 서양 음악사 (60)
 
 | 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
 |---|---|---|---|---:|---|
@@ -233,7 +233,7 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [프란츠 리스트](https://www.wikidata.org/wiki/Q41309) | 1811 | 1886 | 사람 | 127 | 헝가리 출생의 피아니스트이자 작곡가 (1811-1886) |
 | [프리드리히 2세](https://www.wikidata.org/wiki/Q33550) | 1712 | 1786 | 사람 | 124 | 프로이센의 왕 |
 | [알베르트 슈바이처](https://www.wikidata.org/wiki/Q49325) | 1875 | 1965 | 사람 | 122 | 독일 출신의 프랑스의 의사 |
-| [프랑스의 국가](https://www.wikidata.org/wiki/Q41180) | 1792 | — | 국가 | 121 | 국가 |
+| [프랑스의 국가](https://www.wikidata.org/wiki/Q41180) | 1792 | — | 음악 작품/작곡 | 121 | 국가 |
 | [헨리 8세](https://www.wikidata.org/wiki/Q38370) | 1491 | 1547 | 사람 | 120 | 1509년부터 1547년까지 잉글랜드의 왕 |
 | [윌리엄 허셜](https://www.wikidata.org/wiki/Q14277) | 1738 | 1822 | 사람 | 114 | 독일 출신의 천문학자, 수학자, 작곡가 (1738–1822) |
 | [힐데가르트 폰 빙겐](https://www.wikidata.org/wiki/Q70991) | 1098 | 1179 | 사람 | 114 |  |
@@ -241,8 +241,8 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [에즈라 파운드](https://www.wikidata.org/wiki/Q163366) | 1885 | 1972 | 사람 | 110 | 미국의 시인, 비평가 (1885~1972) |
 | [조아키노 로시니](https://www.wikidata.org/wiki/Q9726) | 1792 | 1868 | 사람 | 108 | 이탈리아의 오페라 작곡가 |
 | [모리스 라벨](https://www.wikidata.org/wiki/Q1178) | 1875 | 1937 | 사람 | 106 | 프랑스의 작곡가 (1875–1937) |
-| [영국의 국가](https://www.wikidata.org/wiki/Q40807) | 1745 | — | 국가 | 105 |  |
-| [미국의 국가](https://www.wikidata.org/wiki/Q44696) | 1814 | — | 국가 | 105 |  |
+| [영국의 국가](https://www.wikidata.org/wiki/Q40807) | 1745 | — | 음악 작품/작곡 | 105 |  |
+| [미국의 국가](https://www.wikidata.org/wiki/Q44696) | 1814 | — | 음악 작품/작곡 | 105 |  |
 | [자크 오펜바흐](https://www.wikidata.org/wiki/Q41555) | 1819 | 1880 | 사람 | 105 | 독일, 프랑스의 고전 음악가 (1819–1880) |
 | [장 시벨리우스](https://www.wikidata.org/wiki/Q45682) | 1865 | 1957 | 사람 | 105 | 핀란드의 클래식 작곡가 (1865–1957) |
 | [조르주 비제](https://www.wikidata.org/wiki/Q56158) | 1838 | 1875 | 사람 | 105 | 프랑스의 음악가 (1838–1875) |
@@ -253,7 +253,7 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [스테파니야 투르케비치](https://www.wikidata.org/wiki/Q12162960) | 1898 | 1977 | 사람 | 102 |  |
 | [울리히 츠빙글리](https://www.wikidata.org/wiki/Q123034) | 1484 | 1531 | 사람 | 100 | 스위스의 신학자 (1484–1531) |
 | [W. H. 오든](https://www.wikidata.org/wiki/Q178698) | 1907 | 1973 | 사람 | 100 | 영국과 미국의 시인 (1907~1973) |
-| [독일의 국가](https://www.wikidata.org/wiki/Q44042) | 1841 | — | 국가 | 97 |  |
+| [독일의 국가](https://www.wikidata.org/wiki/Q44042) | 1841 | — | 음악 작품/작곡 | 97 |  |
 | [이자벨 드 샤리에르](https://www.wikidata.org/wiki/Q123386) | 1740 | 1805 | 사람 | 97 |  |
 | [세르게이 프로코피예프](https://www.wikidata.org/wiki/Q49481) | 1891 | 1953 | 사람 | 95 | 소련의 작곡가 (1891–1953) |
 | [엔니오 모리코네](https://www.wikidata.org/wiki/Q23848) | 1928 | 2020 | 사람 | 94 | 이탈리아의 작곡가, 지휘자 (1928–2020) |
@@ -263,49 +263,54 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [안톤 브루크너](https://www.wikidata.org/wiki/Q81752) | 1824 | 1896 | 사람 | 92 | 오스트리아의 작곡가 (1824-1896) |
 | [세르게이 라흐마니노프](https://www.wikidata.org/wiki/Q131861) | 1873 | 1943 | 사람 | 92 | 러시아 제국 태생 미국의 작곡가, 피아노 연주자 (1873–1943) |
 | [알렉산드르 보로딘](https://www.wikidata.org/wiki/Q164004) | 1833 | 1887 | 사람 | 92 | 러시아의 작곡가, 화학자 (1833–1887) |
-| [인도의 국가](https://www.wikidata.org/wiki/Q83099) | 1911 | — | 국가 | 90 |  |
-| [이스라엘의 국가](https://www.wikidata.org/wiki/Q130865) | 1878 | — | 국가 | 90 |  |
-| [중화인민공화국의 국가](https://www.wikidata.org/wiki/Q156136) | 1934 | — | 국가 | 90 |  |
-| [오스트레일리아의 국가](https://www.wikidata.org/wiki/Q170601) | 1878 | — | 국가 | 90 |  |
+| [인도의 국가](https://www.wikidata.org/wiki/Q83099) | 1911 | — | 음악 작품/작곡 | 90 |  |
+| [이스라엘의 국가](https://www.wikidata.org/wiki/Q130865) | 1878 | — | 음악 작품/작곡 | 90 |  |
+| [중화인민공화국의 국가](https://www.wikidata.org/wiki/Q156136) | 1934 | — | 음악 작품/작곡 | 90 |  |
+| [오스트레일리아의 국가](https://www.wikidata.org/wiki/Q170601) | 1878 | — | 음악 작품/작곡 | 90 |  |
 | [한스 짐머](https://www.wikidata.org/wiki/Q76364) | 1957 | — | 사람 | 90 | 독일의 작곡가, 음악 프로듀서 |
 | [요한 슈트라우스 2세](https://www.wikidata.org/wiki/Q83309) | 1825 | 1899 | 사람 | 90 | 오스트리아의 작곡가 |
-| [헝가리의 국가](https://www.wikidata.org/wiki/Q45788) | 1829 | — | 국가 | 86 |  |
-| [폴란드의 국가](https://www.wikidata.org/wiki/Q482988) | 1927 | — | 국가 | 85 |  |
-| [이탈리아인들의 노래](https://www.wikidata.org/wiki/Q187) | 1859 | — | 국가 | 80 | 이탈리아의 국가 |
-| [고요한 밤 거룩한 밤](https://www.wikidata.org/wiki/Q172152) | 1815 | — | 크리스마스 캐럴 | 79 |  |
-| [벨라루스의 국가](https://www.wikidata.org/wiki/Q166350) | 2002 | — | 국가 | 73 |  |
+| [아비치](https://www.wikidata.org/wiki/Q505476) | 1989 | 2018 | 사람 | 90 | 스웨덴의 DJ (1989–2018) |
+| [헝가리의 국가](https://www.wikidata.org/wiki/Q45788) | 1829 | — | 음악 작품/작곡 | 86 |  |
+| [폴란드의 국가](https://www.wikidata.org/wiki/Q482988) | 1927 | — | 음악 작품/작곡 | 85 |  |
+| [이탈리아인들의 노래](https://www.wikidata.org/wiki/Q187) | 1859 | — | 창작물 | 80 | 이탈리아의 국가 |
+| [고요한 밤 거룩한 밤](https://www.wikidata.org/wiki/Q172152) | 1815 | — | 음악 작품/작곡 | 79 |  |
+| [벨라루스의 국가](https://www.wikidata.org/wiki/Q166350) | 2002 | — | 음악 작품/작곡 | 73 |  |
 | [벨라 차오](https://www.wikidata.org/wiki/Q159633) | 1944 | — | 음악 작품/작곡 | 72 |  |
-| [안도라의 국가](https://www.wikidata.org/wiki/Q199506) | 1921 | — | 국가 | 69 |  |
-| [인도네시아의 국가](https://www.wikidata.org/wiki/Q142260) | 1945 | — | 국가 | 67 |  |
+| [안도라의 국가](https://www.wikidata.org/wiki/Q199506) | 1921 | — | 음악 작품/작곡 | 69 |  |
 
-## 미술사 (60)
+## 동양 음악사 (0)
+
+| 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
+|---|---|---|---|---:|---|
+
+## 서양 미술사 (60)
 
 | 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
 |---|---|---|---|---:|---|
 | [모나리자](https://www.wikidata.org/wiki/Q12418) | 1503 | — | 회화 | 146 | 16세기 르네상스 시대에 레오나르도 다 빈치가 그린 초상화 |
-| [랩](https://www.wikidata.org/wiki/Q6010) | 1970 | — | 음악 장르 | 109 | 힙합의 한 축을 이루는 음악 요소 |
+| [랩](https://www.wikidata.org/wiki/Q6010) | 1970 | — | 예술 사조 | 109 | 힙합의 한 축을 이루는 음악 요소 |
 | [모더니즘](https://www.wikidata.org/wiki/Q878985) | 1900 | — | 예술 사조 | 105 |  |
 | [포스트모더니즘](https://www.wikidata.org/wiki/Q47783) | 1940 | — | 예술 사조 | 104 |  |
 | [미래파](https://www.wikidata.org/wiki/Q131221) | 1909 | — | 예술 사조 | 89 |  |
 | [고전주의](https://www.wikidata.org/wiki/Q170292) | 1660 | 1725 | 건축 양식 | 88 |  |
 | [상징주의](https://www.wikidata.org/wiki/Q164800) | 1857 | — | 예술 사조 | 84 |  |
 | [별이 빛나는 밤](https://www.wikidata.org/wiki/Q45585) | 1889 | — | 회화 | 76 | 1889년 빈센트 반 고흐의 그림 |
+| [아르데코](https://www.wikidata.org/wiki/Q173782) | 1910 | — | 예술 사조 | 73 | 1920년대 프랑스에서 시작한 시각 예술 양식 |
 | [진주 귀고리를 한 소녀](https://www.wikidata.org/wiki/Q185372) | 1665 | — | 회화 | 72 |  |
-| [아르데코](https://www.wikidata.org/wiki/Q173782) | 1910 | — | 예술 사조 | 72 | 1920년대 프랑스에서 시작한 시각 예술 양식 |
 | [게르니카](https://www.wikidata.org/wiki/Q175036) | 1937 | — | 회화 | 71 | 1937년 파블로 피카소의 회화 작품 |
 | [사회주의적 사실주의](https://www.wikidata.org/wiki/Q180902) | 1932 | — | 예술 사조 | 68 |  |
 | [우키요에](https://www.wikidata.org/wiki/Q185905) | 1700 | 1900 | 예술 사조 | 68 | 에도 시대에 인물, 풍속 등을 그린 일본식 목판화 |
 | [민중을 이끄는 자유의 여신](https://www.wikidata.org/wiki/Q29530) | 1830 | — | 회화 | 67 | 외젠 들라크루아가 1830년에 그린 그림 |
-| [쉬프레마티슴](https://www.wikidata.org/wiki/Q191970) | 1913 | — | 예술 사조 | 66 |  |
-| [라파엘 전파](https://www.wikidata.org/wiki/Q184814) | 1848 | — | 예술 사조 | 63 | 1848년에 형성된 영국의 문예 유파 |
+| [쉬프레마티슴](https://www.wikidata.org/wiki/Q191970) | 1913 | — | 예술 사조 | 67 |  |
+| [라파엘 전파](https://www.wikidata.org/wiki/Q184814) | 1848 | — | 예술 사조 | 64 | 1848년에 형성된 영국의 문예 유파 |
 | [현대 미술](https://www.wikidata.org/wiki/Q38166) | 1860 | 1970 | 예술 사조 | 62 |  |
-| [구성주의](https://www.wikidata.org/wiki/Q207103) | 1913 | — | 건축 양식 | 60 |  |
+| [구성주의](https://www.wikidata.org/wiki/Q207103) | 1913 | — | 건축 양식 | 61 |  |
 | [더 스테일](https://www.wikidata.org/wiki/Q207445) | 1917 | 1932 | 건축 양식 | 59 |  |
 | [야경](https://www.wikidata.org/wiki/Q219831) | 1642 | — | 회화 | 58 | 렘브란트 하르먼손 판 레인의 그림 (1642) |
 | [비너스의 탄생](https://www.wikidata.org/wiki/Q151047) | 1485 | — | 회화 | 57 | 산드로 보티첼리의 그림 |
 | [시녀들](https://www.wikidata.org/wiki/Q208758) | 1656 | — | 회화 | 57 |  |
 | [힙합](https://www.wikidata.org/wiki/Q1132127) | 1970 | — | 예술 사조 | 57 | 아프리카계 미국인의 거리 문화 |
-| [옵아트](https://www.wikidata.org/wiki/Q182331) | 1960 | — | 예술 사조 | 55 |  |
+| [옵아트](https://www.wikidata.org/wiki/Q182331) | 1960 | — | 예술 사조 | 56 |  |
 | [감자 먹는 사람들](https://www.wikidata.org/wiki/Q154469) | 1885 | — | 회화 | 53 |  |
 | [인상, 해돋이](https://www.wikidata.org/wiki/Q328523) | 1872 | — | 회화 | 52 |  |
 | [세상의 기원](https://www.wikidata.org/wiki/Q334138) | 1866 | — | 회화 | 51 | 귀스타브 쿠르베의 작품 |
@@ -314,14 +319,14 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [카롤링거 르네상스](https://www.wikidata.org/wiki/Q157123) | 800 | 900 | 예술 사조 | 51 | 카롤루스 대제 시기의 르네상스 |
 | [흰 족제비를 안은 여인](https://www.wikidata.org/wiki/Q474338) | 1490 | — | 회화 | 50 | 레오나르도 다 빈치의 회화 작품 |
 | [살바토르 문디](https://www.wikidata.org/wiki/Q1892745) | 1500 | — | 회화 | 50 |  |
+| [빈 분리파](https://www.wikidata.org/wiki/Q208208) | 1897 | — | 건축 양식 | 50 | 오스트리아의 예술 집단 |
 | [아츠 앤 크래프츠 운동](https://www.wikidata.org/wiki/Q330369) | 1880 | 1910 | 건축 양식 | 50 |  |
-| [빈 분리파](https://www.wikidata.org/wiki/Q208208) | 1897 | — | 조합 | 50 | 오스트리아의 예술 집단 |
 | [세속적인 쾌락의 정원](https://www.wikidata.org/wiki/Q321303) | 1490 | — | 세 폭 제단화 | 49 | 히에로니무스 보스의 작품 |
 | [기억의 지속](https://www.wikidata.org/wiki/Q25729) | 1931 | — | 회화 | 48 |  |
 | [안개 바다 위의 방랑자](https://www.wikidata.org/wiki/Q311243) | 1818 | — | 회화 | 48 | 카스파르 다비트 프리드리히의 1818년 그림 |
+| [플럭서스](https://www.wikidata.org/wiki/Q108908) | 1960 | 1970 | 예술 사조 | 48 |  |
 | [메두사호의 뗏목](https://www.wikidata.org/wiki/Q212616) | 1819 | — | 회화 | 47 | 프랑스 낭만주의파의 유화 작품 |
 | [브릿팝](https://www.wikidata.org/wiki/Q189045) | 1991 | — | 음악 장르 | 47 | 1990년대 영국 대중문화운동 |
-| [플럭서스](https://www.wikidata.org/wiki/Q108908) | 1960 | 1970 | 예술 사조 | 47 |  |
 | [자포로자 코사크의 답변](https://www.wikidata.org/wiki/Q478271) | 1890 | — | 회화 | 46 |  |
 | [브뤼케](https://www.wikidata.org/wiki/Q152778) | 1905 | 1913 | 예술 사조 | 46 |  |
 | [풀밭 위의 점심 식사](https://www.wikidata.org/wiki/Q152509) | 1863 | — | 회화 | 45 |  |
@@ -343,6 +348,11 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [12세기 르네상스](https://www.wikidata.org/wiki/Q755709) | 1200 | — | 예술 사조 | 34 |  |
 | [시에나 화파](https://www.wikidata.org/wiki/Q1332178) | 1300 | — | 예술 사조 | 33 | 14세기 시에나에서 발전한 회화 양식 |
 
+## 동양 미술사 (0)
+
+| 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
+|---|---|---|---|---:|---|
+
 ## 종교사 (17)
 
 | 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
@@ -357,7 +367,7 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [카타리파](https://www.wikidata.org/wiki/Q161696) | 1100 | 1321 | 종교 | 74 |  |
 | [프란치스코회](https://www.wikidata.org/wiki/Q165005) | 1209 | — | 탁발수도회 | 68 |  |
 | [위카](https://www.wikidata.org/wiki/Q59774) | 1954 | — | 종교 | 67 |  |
-| [다르마계 종교](https://www.wikidata.org/wiki/Q1651597) | 기원전 5001 | — | 종교 | 60 |  |
+| [다르마계 종교](https://www.wikidata.org/wiki/Q1651597) | 기원전 5001 | — | 종교 | 61 |  |
 | [카르투시오회](https://www.wikidata.org/wiki/Q220979) | 1084 | — | 수도회 | 49 |  |
 | [트라피스트회](https://www.wikidata.org/wiki/Q276223) | 1098 | — | 단체 | 45 |  |
 | [텔레마](https://www.wikidata.org/wiki/Q745955) | 1904 | — | 종교 | 43 |  |
@@ -365,7 +375,7 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [유니테리언 유니버설리즘](https://www.wikidata.org/wiki/Q1622507) | 1961 | — | 종교 | 35 |  |
 | [셰이커 (기독교)](https://www.wikidata.org/wiki/Q1370167) | 1740 | — | 단체 | 27 |  |
 
-## 철학사 (60)
+## 서양 철학사 (60)
 
 | 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
 |---|---|---|---|---:|---|
@@ -376,12 +386,12 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [볼테르](https://www.wikidata.org/wiki/Q9068) | 1694 | 1778 | 사람 | 256 | 18세기 프랑스의 계몽사상가, 철학자 |
 | [애덤 스미스](https://www.wikidata.org/wiki/Q9381) | 1723 | 1790 | 사람 | 225 | 스코틀랜드의 경제학자, 철학자 (1723–1790) |
 | [노자](https://www.wikidata.org/wiki/Q9333) | 기원전 580 | 기원전 501 | 사람 | 214 | 춘추시대 초나라의 철학자 |
-| [장폴 사르트르](https://www.wikidata.org/wiki/Q9364) | 1905 | 1980 | 사람 | 201 | 프랑스의 작가이자 철학자 (1905–1980) |
+| [장폴 사르트르](https://www.wikidata.org/wiki/Q9364) | 1905 | 1980 | 사람 | 202 | 프랑스의 작가이자 철학자 (1905–1980) |
 | [교황 베네딕토 16세](https://www.wikidata.org/wiki/Q2494) | 1927 | 2022 | 사람 | 200 | 가톨릭 제265대 교황 (2005–2013) |
 | [프리드리히 엥겔스](https://www.wikidata.org/wiki/Q34787) | 1820 | 1895 | 사람 | 200 | 독일의 사회주의 철학자, 경제학자 (1820–1895) |
 | [이백](https://www.wikidata.org/wiki/Q7071) | 701 | 762 | 사람 | 198 | 중국의 시인. 자는 태백, 호는 청련거사. |
+| [시몬 드 보부아르](https://www.wikidata.org/wiki/Q7197) | 1908 | 1986 | 사람 | 188 | 프랑스의 작가이자 철학자 |
 | [노엄 촘스키](https://www.wikidata.org/wiki/Q9049) | 1928 | — | 사람 | 188 | 언어학자 |
-| [시몬 드 보부아르](https://www.wikidata.org/wiki/Q7197) | 1908 | 1986 | 사람 | 187 | 프랑스의 작가이자 철학자 |
 | [프리드리히 실러](https://www.wikidata.org/wiki/Q22670) | 1759 | 1805 | 사람 | 183 | 독일의 극작가, 시인, 철학자 (1759~1805) |
 | [아르투어 쇼펜하우어](https://www.wikidata.org/wiki/Q38193) | 1788 | 1860 | 사람 | 175 | 독일의 철학자 (1788–1860) |
 | [루트비히 비트겐슈타인](https://www.wikidata.org/wiki/Q9391) | 1889 | 1951 | 사람 | 173 | 오스트리아의 철학자 (1889–1951) |
@@ -389,8 +399,8 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [쇠렌 키르케고르](https://www.wikidata.org/wiki/Q6512) | 1813 | 1855 | 사람 | 170 | 덴마크의 철학자 (1813–1855) |
 | [호라티우스](https://www.wikidata.org/wiki/Q6197) | 기원전 65 | 기원전 8 | 사람 | 169 | 고대 로마 공화정 말기의 시인 |
 | [아이소포스](https://www.wikidata.org/wiki/Q43423) | 기원전 620 | 기원전 564 | 사람 | 166 |  |
+| [프란체스코 페트라르카](https://www.wikidata.org/wiki/Q1401) | 1304 | 1374 | 사람 | 164 |  |
 | [손무](https://www.wikidata.org/wiki/Q37151) | 기원전 544 | 기원전 496 | 사람 | 164 |  |
-| [프란체스코 페트라르카](https://www.wikidata.org/wiki/Q1401) | 1304 | 1374 | 사람 | 163 |  |
 | [헤르만 헤세](https://www.wikidata.org/wiki/Q25973) | 1877 | 1962 | 사람 | 163 | 스위스의 소설가, 노벨문학상 수상자 |
 | [조너선 스위프트](https://www.wikidata.org/wiki/Q41166) | 1667 | 1745 | 사람 | 162 |  |
 | [윌리엄 블레이크](https://www.wikidata.org/wiki/Q41513) | 1757 | 1827 | 사람 | 162 | 영국의 화가이자 시인 |
@@ -409,7 +419,7 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [마르틴 하이데거](https://www.wikidata.org/wiki/Q48301) | 1889 | 1976 | 사람 | 148 | 독일의 철학자 |
 | [가잘리](https://www.wikidata.org/wiki/Q9546) | 1056 | 1111 | 사람 | 145 | 페르시아의 이슬람 신학자, 신비주의자 (1058-1111) |
 | [헨리 데이비드 소로](https://www.wikidata.org/wiki/Q131149) | 1817 | 1862 | 사람 | 145 | 미국의 시인 |
-| [올더스 헉슬리](https://www.wikidata.org/wiki/Q81447) | 1894 | 1963 | 사람 | 144 |  |
+| [올더스 헉슬리](https://www.wikidata.org/wiki/Q81447) | 1894 | 1963 | 사람 | 143 |  |
 | [앙리 베르그송](https://www.wikidata.org/wiki/Q42156) | 1859 | 1941 | 사람 | 138 | 프랑스의 철학자 (1859–1941) |
 | [비베카난다](https://www.wikidata.org/wiki/Q47478) | 1863 | 1902 | 사람 | 138 | 인도 힌두교 수도사와 철학자 (1862–1902) |
 | [조지 엘리엇](https://www.wikidata.org/wiki/Q131333) | 1819 | 1880 | 사람 | 138 | 영국의 소설가 (1819–1880) |
@@ -418,26 +428,31 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [오귀스트 콩트](https://www.wikidata.org/wiki/Q12718) | 1798 | 1857 | 사람 | 133 | 프랑스의 사회학자, 철학자, 수학자, 종합 과학자 (1798-1857) |
 | [모리스 마테를링크](https://www.wikidata.org/wiki/Q49747) | 1862 | 1949 | 사람 | 132 | 벨기에의 시인, 극작가 (1862–1949) |
 | [메리 울스턴크래프트](https://www.wikidata.org/wiki/Q101638) | 1759 | 1797 | 사람 | 131 | 영국의 작가이자 지식인 (1759–1797) |
-| [크리슈나](https://www.wikidata.org/wiki/Q42891) | 기원전 3228 | 기원전 3102 | 힌두교의 신 | 129 |  |
+| [크리슈나](https://www.wikidata.org/wiki/Q42891) | 기원전 3228 | 기원전 3102 | 실존이 불분명한 인물 | 129 |  |
 | [미셸 푸코](https://www.wikidata.org/wiki/Q44272) | 1926 | 1984 | 사람 | 128 | 프랑스의 철학자 |
 | [칼 포퍼](https://www.wikidata.org/wiki/Q81244) | 1902 | 1994 | 사람 | 128 | 오스트리아 출신 영국의 철학자 (1902–1994) |
+| [대 플리니우스](https://www.wikidata.org/wiki/Q82778) | 20 | 79 | 사람 | 127 | 고대 로마의 정치인, 군인, 박물학자 |
 | [크세노폰](https://www.wikidata.org/wiki/Q129772) | 기원전 431 | 기원전 354 | 사람 | 127 |  |
 | [한나 아렌트](https://www.wikidata.org/wiki/Q60025) | 1906 | 1975 | 사람 | 126 | 독일 태생의 미국의 작가, 정치 이론가 (1906-1975) |
-| [대 플리니우스](https://www.wikidata.org/wiki/Q82778) | 20 | 79 | 사람 | 126 | 고대 로마의 정치인, 군인, 박물학자 |
 | [아인 랜드](https://www.wikidata.org/wiki/Q132524) | 1905 | 1982 | 사람 | 126 |  |
 | [에밀 뒤르켐](https://www.wikidata.org/wiki/Q15948) | 1858 | 1917 | 사람 | 125 | 프랑스의 사회학자 (1858~1917) |
 | [루크레티우스](https://www.wikidata.org/wiki/Q47154) | 기원전 94 | 기원전 55 | 사람 | 125 |  |
+| [쉴리 프뤼돔](https://www.wikidata.org/wiki/Q42247) | 1839 | 1907 | 사람 | 124 | 프랑스시인 |
 | [윌리엄 제임스](https://www.wikidata.org/wiki/Q125249) | 1842 | 1910 | 사람 | 124 | 미국의 철학자, 심리학자 (1842~1910) |
-| [쉴리 프뤼돔](https://www.wikidata.org/wiki/Q42247) | 1839 | 1907 | 사람 | 123 | 프랑스시인 |
 
-## 문학사 (60)
+## 동양 철학사 (0)
 
 | 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
 |---|---|---|---|---:|---|
-| [쿠란](https://www.wikidata.org/wiki/Q428) | 631 | — | 경전 | 282 | 이슬람교의 성서 |
-| [세계 인권 선언](https://www.wikidata.org/wiki/Q7813) | 1948 | — | 법령 | 241 | 1948년 12월 10일 파리에서 열린 제3회 유엔 총회에서 채택된 인권에 관한 세계 선언 |
-| [신약성경](https://www.wikidata.org/wiki/Q18813) | 100 | — | 경전 | 200 | 기독교의 경전 |
-| [일리아스](https://www.wikidata.org/wiki/Q8275) | 기원전 801 | — | 문학 작품 | 181 |  |
+
+## 서양 문학사 (60)
+
+| 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
+|---|---|---|---|---:|---|
+| [쿠란](https://www.wikidata.org/wiki/Q428) | 631 | — | 문학 작품 | 282 | 이슬람교의 성서 |
+| [세계 인권 선언](https://www.wikidata.org/wiki/Q7813) | 1948 | — | 국제관습법 | 241 | 1948년 12월 10일 파리에서 열린 제3회 유엔 총회에서 채택된 인권에 관한 세계 선언 |
+| [신약성경](https://www.wikidata.org/wiki/Q18813) | 100 | — | 저작물 | 200 | 기독교의 경전 |
+| [일리아스](https://www.wikidata.org/wiki/Q8275) | 기원전 801 | — | 문학 작품 | 182 |  |
 | [창세기](https://www.wikidata.org/wiki/Q9184) | 기원전 501 | — | 문학 작품 | 178 | 유대교 성경과 구약성경에 포함되며, 율법(토라, 모세오경) 가운데 첫 번째에 해당되는 낱권 |
 | [어린 왕자](https://www.wikidata.org/wiki/Q25338) | 1943 | — | 문학 작품 | 151 | 1943년 생텍쥐페리의 아동, 성장 소설 |
 | [루가의 복음서](https://www.wikidata.org/wiki/Q39939) | 85 | — | 문학 작품 | 149 | 기독교의 신약성경에 포함된 복음서 |
@@ -446,33 +461,33 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [1984](https://www.wikidata.org/wiki/Q208460) | 1948 | — | 문학 작품 | 138 | 1949년 조지 오웰의 디스토피아 소설 |
 | [신곡](https://www.wikidata.org/wiki/Q40185) | 1320 | — | 문학 작품 | 131 | 1321년 출판된 단테 알리기에리의 서사시 |
 | [샤나메](https://www.wikidata.org/wiki/Q8279) | 1000 | — | 문학 작품 | 131 |  |
-| [미국의 헌법](https://www.wikidata.org/wiki/Q11698) | 2026 | — | 헌법 | 127 | 1789년 문서 |
-| [몰몬경](https://www.wikidata.org/wiki/Q459842) | 1830 | — | 경전 | 126 | 예수그리스도후기성도교회 및 기타 몰몬교 종파의 경전 |
+| [미국의 헌법](https://www.wikidata.org/wiki/Q11698) | 2026 | — | 저작물 | 127 | 1789년 문서 |
+| [몰몬경](https://www.wikidata.org/wiki/Q459842) | 1830 | — | 저작물 | 126 | 예수그리스도후기성도교회 및 기타 몰몬교 종파의 경전 |
 | [이상한 나라의 앨리스](https://www.wikidata.org/wiki/Q92640) | 1862 | — | 문학 작품 | 124 | 루이스 캐럴의 아동 소설 |
 | [동물 농장](https://www.wikidata.org/wiki/Q1396889) | 1945 | — | 문학 작품 | 122 | 조지 오웰의 정치 풍자, 사회고발 소설 |
-| [로마 신자들에게 보낸 서간](https://www.wikidata.org/wiki/Q48203) | 57 | — | 경전 | 120 | 신약성경 정경의 편지 가운데 하나 |
-| [코린토 신자들에게 보낸 첫째 서간](https://www.wikidata.org/wiki/Q80355) | 54 | — | 경전 | 119 | 사도 바울로가 쓴 편지이자 신약성경 중 한 권 |
+| [로마 신자들에게 보낸 서간](https://www.wikidata.org/wiki/Q48203) | 57 | — | 문학 작품 | 120 | 신약성경 정경의 편지 가운데 하나 |
+| [코린토 신자들에게 보낸 첫째 서간](https://www.wikidata.org/wiki/Q80355) | 54 | — | 문학 작품 | 119 | 사도 바울로가 쓴 편지이자 신약성경 중 한 권 |
 | [홍루몽](https://www.wikidata.org/wiki/Q8265) | 1701 | — | 문학 작품 | 117 | 조설근의 18세기 중반 장편소설 |
 | [호빗](https://www.wikidata.org/wiki/Q74287) | 1937 | — | 문학 작품 | 117 |  |
-| [갈라티아 신자들에게 보낸 서간](https://www.wikidata.org/wiki/Q128620) | 48 | — | 서신서 | 116 | 신약성경의 9번째 책 |
+| [갈라티아 신자들에게 보낸 서간](https://www.wikidata.org/wiki/Q128620) | 48 | — | 문학 작품 | 116 | 신약성경의 9번째 책 |
 | [룻기](https://www.wikidata.org/wiki/Q80038) | — | — | 문학 작품 | 115 | 유대교 성경인 타나크의 케투빔과 구약성경의 역사서 가운데 하나 |
 | [브리태니커 백과사전](https://www.wikidata.org/wiki/Q455) | 1768 | — | 저작물 | 115 | 영어 백과사전 |
-| [에페소 신자들에게 보낸 서간](https://www.wikidata.org/wiki/Q408673) | 62 | — | 경전 | 114 | 신약성경의 열 번째 책 |
-| [히브리인들에게 보낸 편지](https://www.wikidata.org/wiki/Q128608) | 63 | — | 경전 | 114 | 신약성경을 이루는 성경 중의 하나 |
-| [필립비인들에게 보낸 서간](https://www.wikidata.org/wiki/Q51613) | 54 | — | 경전 | 113 | 신약성경의 11번째 책 |
-| [코린토 신자들에게 보낸 둘째 서간](https://www.wikidata.org/wiki/Q123808) | 56 | — | 경전 | 113 | 신약성경 중 한 권 |
-| [필레몬에게 보낸 편지](https://www.wikidata.org/wiki/Q131104) | 57 | — | 경전 | 112 | 신약성경의 한 권 |
-| [유엔 헌장](https://www.wikidata.org/wiki/Q171328) | 1945 | — | 헌장 | 112 | 1945년 유엔 기본 조약 |
-| [티모테오에게 보낸 첫째 서간](https://www.wikidata.org/wiki/Q131180) | 64 | — | 경전 | 110 | 사도 파울로스가 제자 디모테오에게 보낸 서신서 |
+| [에페소 신자들에게 보낸 서간](https://www.wikidata.org/wiki/Q408673) | 62 | — | 문학 작품 | 114 | 신약성경의 열 번째 책 |
+| [히브리인들에게 보낸 편지](https://www.wikidata.org/wiki/Q128608) | 63 | — | 문학 작품 | 114 | 신약성경을 이루는 성경 중의 하나 |
+| [필립비인들에게 보낸 서간](https://www.wikidata.org/wiki/Q51613) | 54 | — | 문학 작품 | 113 | 신약성경의 11번째 책 |
+| [코린토 신자들에게 보낸 둘째 서간](https://www.wikidata.org/wiki/Q123808) | 56 | — | 문학 작품 | 113 | 신약성경 중 한 권 |
+| [필레몬에게 보낸 편지](https://www.wikidata.org/wiki/Q131104) | 57 | — | 문학 작품 | 112 | 신약성경의 한 권 |
+| [유엔 헌장](https://www.wikidata.org/wiki/Q171328) | 1945 | — | 저작물 | 112 | 1945년 유엔 기본 조약 |
+| [티모테오에게 보낸 첫째 서간](https://www.wikidata.org/wiki/Q131180) | 64 | — | 문학 작품 | 110 | 사도 파울로스가 제자 디모테오에게 보낸 서신서 |
 | [안나 카레니나](https://www.wikidata.org/wiki/Q147787) | 1873 | — | 문학 작품 | 109 | 1878년 출판된 레프 톨스토이의 장편소설 |
 | [죄와 벌](https://www.wikidata.org/wiki/Q165318) | 1865 | — | 문학 작품 | 109 | 1866년 출판된 표도르 도스토옙스키의 장편소설 |
 | [인어공주](https://www.wikidata.org/wiki/Q11859) | 1837 | — | 메르헨 | 107 | 1836년 한스 크리스티안 안데르센의 동화 |
-| [티모테오에게 보낸 둘째 서간](https://www.wikidata.org/wiki/Q131489) | 64 | — | 경전 | 107 | 신약성경의 서신 |
-| [티토에게 보낸 서간](https://www.wikidata.org/wiki/Q131493) | 63 | — | 경전 | 107 | 사도 바울로가 크레타 교회의 디도에게 보낸 서신서 |
-| [테살로니카 신자들에게 보낸 둘째 서간](https://www.wikidata.org/wiki/Q131107) | 50 | — | 경전 | 105 | 신약성경의 바울로 서신들 가운데 하나 |
-| [테살로니카 신자들에게 보낸 첫째 서간](https://www.wikidata.org/wiki/Q131115) | 50 | — | 경전 | 105 | 신약성경의 바울로 서신들중 하나 |
-| [기네스 세계 기록](https://www.wikidata.org/wiki/Q41675) | 1955 | — | 연속간행물 | 105 | 기네스 사(社)에서 발간하는 천문 지리, 자연, 역사, 과학, 인문 등의 각 분야 세계 기 |
+| [티모테오에게 보낸 둘째 서간](https://www.wikidata.org/wiki/Q131489) | 64 | — | 문학 작품 | 107 | 신약성경의 서신 |
+| [티토에게 보낸 서간](https://www.wikidata.org/wiki/Q131493) | 63 | — | 문학 작품 | 107 | 사도 바울로가 크레타 교회의 디도에게 보낸 서신서 |
+| [기네스 세계 기록](https://www.wikidata.org/wiki/Q41675) | 1955 | — | 문학 작품 | 105 | 기네스 사(社)에서 발간하는 천문 지리, 자연, 역사, 과학, 인문 등의 각 분야 세계 기 |
 | [욥기](https://www.wikidata.org/wiki/Q4577) | 기원전 501 | — | 문학 작품 | 105 | 구약의 시가서 |
+| [테살로니카 신자들에게 보낸 둘째 서간](https://www.wikidata.org/wiki/Q131107) | 50 | — | 문학 작품 | 105 | 신약성경의 바울로 서신들 가운데 하나 |
+| [테살로니카 신자들에게 보낸 첫째 서간](https://www.wikidata.org/wiki/Q131115) | 50 | — | 문학 작품 | 105 | 신약성경의 바울로 서신들중 하나 |
 | [해리 포터와 마법사의 돌](https://www.wikidata.org/wiki/Q43361) | 1990 | — | 문학 작품 | 104 | J. K. 롤링의 1997년 판타지 소설 |
 | [나의 투쟁](https://www.wikidata.org/wiki/Q48244) | 1924 | — | 문학 작품 | 104 | 1925년에 출간한 아돌프 히틀러의 자서전 |
 | [국가](https://www.wikidata.org/wiki/Q123397) | 기원전 380 | — | 문학 작품 | 103 | 플라톤이 쓴 철학적 저서 |
@@ -495,6 +510,11 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [모비딕](https://www.wikidata.org/wiki/Q174596) | 1850 | — | 문학 작품 | 90 |  |
 | [해리 포터와 죽음의 성물](https://www.wikidata.org/wiki/Q46758) | 2007 | — | 문학 작품 | 89 | J. K. 롤링의 2007년 판타지 소설 |
 
+## 동양 문학사 (0)
+
+| 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
+|---|---|---|---|---:|---|
+
 ## 기술사 (7)
 
 | 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
@@ -506,4 +526,14 @@ Wikidata(CC0)에서 카테고리마다 한국어 이름과 연도가 있는 것�
 | [금속 탐지기](https://www.wikidata.org/wiki/Q211959) | 1874 | — | 도구 | 47 |  |
 | [버니어](https://www.wikidata.org/wiki/Q14946576) | 1631 | — | 실험 기구 | 38 |  |
 | [이상고 뼈](https://www.wikidata.org/wiki/Q1077717) | 기원전 20001 | — | 골각기 | 33 |  |
+
+## 경제사 (0)
+
+| 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
+|---|---|---|---|---:|---|
+
+## 건축사 (0)
+
+| 이름 | 시작 | 끝 | 종류 | 언어판 | 설명 |
+|---|---|---|---|---:|---|
 

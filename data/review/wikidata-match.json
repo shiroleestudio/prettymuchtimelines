@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20",
+ "generated": "2026-10-25",
  "sources": [
   {
    "name": "Wikidata",
@@ -515,9 +515,9 @@
      "precision": 9
     },
     "end": {
-     "prop": "P576",
+     "prop": "P582",
      "year": -27,
-     "precision": 11
+     "precision": 9
     },
     "term": "(지정한 번호)"
    },
@@ -639,7 +639,7 @@
      "precision": 9
     },
     "end": {
-     "prop": "P576",
+     "prop": "P582",
      "year": 651,
      "precision": 9
     },
@@ -1488,6 +1488,44 @@
    }
   },
   {
+   "id": "world-russia",
+   "dataset": "world",
+   "title": "러시아 연방",
+   "kind": "polity",
+   "linked": "Q159",
+   "start_year": 1991,
+   "end_year": 2025,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q159",
+    "ko": "러시아",
+    "en": "Russia",
+    "desc": "동유럽과 북아시아의 국가",
+    "types": [
+     "나라",
+     "세속 국가",
+     "여러 대륙에 걸친 나라",
+     "주권국"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": 1991,
+     "precision": 11
+    },
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": [],
+   "cliopatria": {
+    "names": [
+     "(Russian Federation)",
+     "Russian Federation"
+    ],
+    "from": 1992,
+    "to": 2024
+   }
+  },
+  {
    "id": "world-great-depression",
    "dataset": "world",
    "title": "대공황",
@@ -1710,6 +1748,93 @@
    "others": []
   },
   {
+   "id": "korea-jinguk",
+   "dataset": "korea",
+   "title": "진국",
+   "kind": "polity",
+   "linked": null,
+   "start_year": -300,
+   "end_year": -100,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q1155101",
+    "ko": "진국",
+    "en": "Jin",
+    "desc": "과거에 존재했던 한국의 초기 집단",
+    "types": [
+     "과거에 존재했던 나라"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": -301,
+     "precision": 7
+    },
+    "end": {
+     "prop": "P576",
+     "year": -108,
+     "precision": 9
+    },
+    "term": "진국"
+   },
+   "others": [
+    {
+     "qid": "Q69507668",
+     "ko": "진국",
+     "en": "Jin-kook",
+     "desc": "남성의 이름",
+     "types": [
+      "남성의 이름"
+     ],
+     "start": null,
+     "end": null,
+     "term": "진국"
+    },
+    {
+     "qid": "Q465280",
+     "ko": "천추",
+     "en": "Chen Chu",
+     "desc": "대만 정치인",
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1950,
+      "precision": 11
+     },
+     "end": null,
+     "term": "진국"
+    },
+    {
+     "qid": "Q496599",
+     "ko": "김원봉",
+     "en": "Kim Won-bong",
+     "desc": "일제강점기의 독립운동가, 정치인(1898–1958)",
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1898,
+      "precision": 11
+     },
+     "end": {
+      "prop": "P570",
+      "year": 1958,
+      "precision": 9
+     },
+     "term": "진국"
+    }
+   ],
+   "cliopatria": {
+    "names": [
+     "Korean Jin"
+    ],
+    "from": -197,
+    "to": -92
+   }
+  },
+  {
    "id": "korea-buyeo",
    "dataset": "korea",
    "title": "부여",
@@ -1735,6 +1860,122 @@
     "term": "(지정한 번호)"
    },
    "others": []
+  },
+  {
+   "id": "korea-okjeo",
+   "dataset": "korea",
+   "title": "옥저",
+   "kind": "polity",
+   "linked": null,
+   "start_year": -200,
+   "end_year": 300,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q713393",
+    "ko": "옥저",
+    "en": "Okjeo",
+    "desc": "과거 존재했던 한국의 국가",
+    "types": [
+     "부족"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": -301,
+     "precision": 7
+    },
+    "end": {
+     "prop": "P576",
+     "year": 300,
+     "precision": 7
+    },
+    "term": "옥저"
+   },
+   "others": [],
+   "cliopatria": {
+    "names": [
+     "Dong-okjeo"
+    ],
+    "from": -36,
+    "to": 153
+   }
+  },
+  {
+   "id": "korea-dongye",
+   "dataset": "korea",
+   "title": "동예",
+   "kind": "polity",
+   "linked": null,
+   "start_year": -200,
+   "end_year": 300,
+   "verdict": "어긋남",
+   "best": {
+    "qid": "Q713397",
+    "ko": "동예",
+    "en": "Dongye",
+    "desc": "과거 존재했던 한국의 왕조",
+    "types": [
+     "군장국가",
+     "과거에 존재했던 나라"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": -301,
+     "precision": 7
+    },
+    "end": {
+     "prop": "P576",
+     "year": 500,
+     "precision": 7
+    },
+    "term": "동예"
+   },
+   "others": [
+    {
+     "qid": "Q1038382",
+     "ko": "동예",
+     "en": "Dong Yi",
+     "desc": null,
+     "types": [
+      "사람"
+     ],
+     "start": null,
+     "end": {
+      "prop": "P570",
+      "year": -204,
+      "precision": 9
+     },
+     "term": "동예"
+    },
+    {
+     "qid": "Q212938",
+     "ko": "동예루살렘",
+     "en": "East Jerusalem",
+     "desc": "1967년부터 이스라엘의 점령하에 있는 서안지구와 요르단 동예루살렘의 일부",
+     "types": [
+      "행정 구역",
+      "동네"
+     ],
+     "start": null,
+     "end": null,
+     "term": "동예"
+    },
+    {
+     "qid": "Q139823383",
+     "ko": "퉁루이",
+     "en": "Tong Rui",
+     "desc": "중국의 바둑 기사",
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1990,
+      "precision": 11
+     },
+     "end": null,
+     "term": "동예"
+    }
+   ]
   },
   {
    "id": "korea-samhan",
@@ -1766,6 +2007,217 @@
     "term": "(지정한 번호)"
    },
    "others": []
+  },
+  {
+   "id": "korea-mahan",
+   "dataset": "korea",
+   "title": "마한",
+   "kind": "polity",
+   "linked": null,
+   "start_year": -100,
+   "end_year": 300,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q704278",
+    "ko": "마한",
+    "en": "Mahan confederacy",
+    "desc": "과거에 존재했던 한국의 연맹 왕국",
+    "types": [
+     "국가 연합",
+     "과거에 존재했던 나라"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": 100,
+     "precision": 7
+    },
+    "end": {
+     "prop": "P576",
+     "year": 300,
+     "precision": 7
+    },
+    "term": "마한"
+   },
+   "others": [
+    {
+     "qid": "Q830282",
+     "ko": "마한",
+     "en": "Maján",
+     "desc": null,
+     "types": [
+      "스페인의 무니시피오"
+     ],
+     "start": null,
+     "end": null,
+     "term": "마한"
+    },
+    {
+     "qid": "Q1149762",
+     "ko": "마한 에어",
+     "en": "Mahan Air",
+     "desc": "이란의 항공사",
+     "types": [
+      "항공사"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1991,
+      "precision": 9
+     },
+     "end": null,
+     "term": "마한"
+    },
+    {
+     "qid": "Q262659",
+     "ko": "마한드라 델피노",
+     "en": "Majandra Delfino",
+     "desc": null,
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1981,
+      "precision": 11
+     },
+     "end": null,
+     "term": "마한"
+    }
+   ]
+  },
+  {
+   "id": "korea-jinhan",
+   "dataset": "korea",
+   "title": "진한",
+   "kind": "polity",
+   "linked": null,
+   "start_year": -100,
+   "end_year": 300,
+   "verdict": "어긋남",
+   "best": {
+    "qid": "Q701273",
+    "ko": "진한",
+    "en": "Jinhan confederacy",
+    "desc": "과거에 존재했던 한국의 연맹 왕국",
+    "types": [
+     "과거에 존재했던 나라"
+    ],
+    "start": null,
+    "end": {
+     "prop": "P576",
+     "year": 356,
+     "precision": 9
+    },
+    "term": "진한"
+   },
+   "others": [
+    {
+     "qid": "Q6669561",
+     "ko": "진한",
+     "en": "Chen Han",
+     "desc": "중국의 옛 나라",
+     "types": [
+      "과거에 존재했던 나라"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1360,
+      "precision": 9
+     },
+     "end": {
+      "prop": "P576",
+      "year": 1364,
+      "precision": 9
+     },
+     "term": "진한"
+    },
+    {
+     "qid": "Q69509857",
+     "ko": "진한",
+     "en": "Jin-han",
+     "desc": "남성의 이름",
+     "types": [
+      "남성의 이름"
+     ],
+     "start": null,
+     "end": null,
+     "term": "진한"
+    },
+    {
+     "qid": "Q9026212",
+     "ko": "친한",
+     "en": "Chin Han",
+     "desc": null,
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1946,
+      "precision": 11
+     },
+     "end": null,
+     "term": "진한"
+    }
+   ],
+   "cliopatria": {
+    "names": [
+     "Jinhan"
+    ],
+    "from": -91,
+    "to": 377
+   }
+  },
+  {
+   "id": "korea-byeonhan",
+   "dataset": "korea",
+   "title": "변한",
+   "kind": "polity",
+   "linked": null,
+   "start_year": -100,
+   "end_year": 300,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q1378584",
+    "ko": "변한",
+    "en": "Byeonhan confederacy",
+    "desc": "과거에 존재했던 한국의 연맹 왕국",
+    "types": [
+     "과거에 존재했던 나라"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": -201,
+     "precision": 7
+    },
+    "end": {
+     "prop": "P576",
+     "year": 400,
+     "precision": 7
+    },
+    "term": "변한"
+   },
+   "others": [
+    {
+     "qid": "Q12598219",
+     "ko": "변한후",
+     "en": "Beon Han",
+     "desc": "고려의 왕족",
+     "types": [
+      "사람"
+     ],
+     "start": null,
+     "end": null,
+     "term": "변한"
+    }
+   ],
+   "cliopatria": {
+    "names": [
+     "Byeonhan"
+    ],
+    "from": -91,
+    "to": 566
+   }
   },
   {
    "id": "korea-hansagun",
@@ -1942,6 +2394,30 @@
     },
     "term": "(지정한 번호)"
    },
+   "others": []
+  },
+  {
+   "id": "korea-tamna",
+   "dataset": "korea",
+   "title": "탐라국",
+   "kind": "polity",
+   "linked": null,
+   "start_year": 476,
+   "end_year": 1105,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "korea-usan",
+   "dataset": "korea",
+   "title": "우산국 복속",
+   "kind": "event",
+   "linked": null,
+   "start_year": 512,
+   "end_year": 512,
+   "verdict": "못 찾음",
+   "best": null,
    "others": []
   },
   {
@@ -2172,9 +2648,9 @@
    "title": "원 간섭기",
    "kind": "era",
    "linked": "Q123468225",
-   "start_year": 1270,
+   "start_year": 1259,
    "end_year": 1356,
-   "verdict": "부분 일치",
+   "verdict": "어긋남",
    "best": {
     "qid": "Q123468225",
     "ko": "원간섭기",
@@ -2543,8 +3019,8 @@
    "kind": "polity",
    "linked": "Q28278",
    "start_year": 1919,
-   "end_year": 1948,
-   "verdict": "부분 일치",
+   "end_year": 1945,
+   "verdict": "일치",
    "best": {
     "qid": "Q28278",
     "ko": "대한민국 임시정부",
@@ -2600,6 +3076,18 @@
     },
     "term": "(지정한 번호)"
    },
+   "others": []
+  },
+  {
+   "id": "korea-sogunjeong",
+   "dataset": "korea",
+   "title": "소련군정기",
+   "kind": "era",
+   "linked": null,
+   "start_year": 1945,
+   "end_year": 1948,
+   "verdict": "못 찾음",
+   "best": null,
    "others": []
   },
   {
@@ -3355,7 +3843,7 @@
      "precision": 9
     },
     "end": {
-     "prop": "P582",
+     "prop": "P576",
      "year": 220,
      "precision": 9
     },
@@ -4239,7 +4727,7 @@
    "kind": "era",
    "linked": "Q52824",
    "start_year": -14000,
-   "end_year": -300,
+   "end_year": -800,
    "verdict": "부분 일치",
    "best": {
     "qid": "Q52824",
@@ -4265,14 +4753,92 @@
    "others": []
   },
   {
+   "id": "japan-shellmound",
+   "dataset": "japan",
+   "title": "패총 시대(오키나와)",
+   "kind": "era",
+   "linked": null,
+   "start_year": -14000,
+   "end_year": 1000,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q766445",
+     "ko": "오키나와현",
+     "en": "Okinawa Prefecture",
+     "desc": "일본에 있는 현",
+     "types": [
+      "도도부현"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1879,
+      "precision": 11
+     },
+     "end": null,
+     "term": "오키나와"
+    },
+    {
+     "qid": "Q328615",
+     "ko": "오키나와시",
+     "en": "Okinawa",
+     "desc": "일본의 오키나와현에 있는 시",
+     "types": [
+      "일본의 시",
+      "인구 10만 명 이상 도시"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1974,
+      "precision": 11
+     },
+     "end": null,
+     "term": "오키나와"
+    },
+    {
+     "qid": "Q192660",
+     "ko": "오키나와 전투",
+     "en": "Battle of Okinawa",
+     "desc": "1945년 태평양 전쟁의 주요 전투",
+     "types": [
+      "전투"
+     ],
+     "start": {
+      "prop": "P585",
+      "year": 1945,
+      "precision": 9
+     },
+     "end": {
+      "prop": "P582",
+      "year": 1945,
+      "precision": 11
+     },
+     "term": "오키나와"
+    },
+    {
+     "qid": "Q600614",
+     "ko": "오키나와섬",
+     "en": "Okinawa",
+     "desc": "일본의 섬",
+     "types": [
+      "섬"
+     ],
+     "start": null,
+     "end": null,
+     "term": "오키나와"
+    }
+   ]
+  },
+  {
    "id": "japan-yayoi",
    "dataset": "japan",
    "title": "야요이 시대",
    "kind": "era",
    "linked": "Q207858",
-   "start_year": -300,
+   "start_year": -800,
    "end_year": 250,
-   "verdict": "일치",
+   "verdict": "부분 일치",
    "best": {
     "qid": "Q207858",
     "ko": "야요이 시대",
@@ -4297,14 +4863,92 @@
    "others": []
   },
   {
+   "id": "japan-epi-jomon",
+   "dataset": "japan",
+   "title": "속조몬 시대(홋카이도)",
+   "kind": "era",
+   "linked": null,
+   "start_year": -500,
+   "end_year": 700,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q11607084",
+    "ko": "속조몬 시대",
+    "en": "Epi-Jōmon period",
+    "desc": null,
+    "types": [
+     "archaeological period"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": -301,
+     "precision": 7
+    },
+    "end": {
+     "prop": "P582",
+     "year": 700,
+     "precision": 7
+    },
+    "term": "속조몬 시대"
+   },
+   "others": [
+    {
+     "qid": "Q35581",
+     "ko": "홋카이도",
+     "en": "Hokkaidō",
+     "desc": "일본에 있는 도",
+     "types": [
+      "island of Japan"
+     ],
+     "start": null,
+     "end": null,
+     "term": "홋카이도"
+    },
+    {
+     "qid": "Q1057199",
+     "ko": "홋카이도 대학",
+     "en": "Hokkaido University",
+     "desc": "일본 홋카이도에 위치한 국립 종합대학",
+     "types": [
+      "대학",
+      "국립 대학",
+      "학술 출판사"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1918,
+      "precision": 9
+     },
+     "end": null,
+     "term": "홋카이도"
+    },
+    {
+     "qid": "Q586787",
+     "ko": "홋카이도 콘사도레 삿포로",
+     "en": "Hokkaido Consadole Sapporo",
+     "desc": "일본 삿포로시의 프로 축구단",
+     "types": [
+      "축구단"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1935,
+      "precision": 9
+     },
+     "end": null,
+     "term": "홋카이도"
+    }
+   ]
+  },
+  {
    "id": "japan-kofun",
    "dataset": "japan",
    "title": "고훈 시대",
    "kind": "era",
    "linked": "Q459939",
    "start_year": 250,
-   "end_year": 538,
-   "verdict": "일치",
+   "end_year": 592,
+   "verdict": "부분 일치",
    "best": {
     "qid": "Q459939",
     "ko": "고훈 시대",
@@ -4333,9 +4977,9 @@
    "title": "아스카 시대",
    "kind": "era",
    "linked": "Q210688",
-   "start_year": 538,
+   "start_year": 592,
    "end_year": 710,
-   "verdict": "일치",
+   "verdict": "부분 일치",
    "best": {
     "qid": "Q210688",
     "ko": "아스카 시대",
@@ -4404,6 +5048,77 @@
    }
   },
   {
+   "id": "japan-satsumon",
+   "dataset": "japan",
+   "title": "사쓰몬 시대(홋카이도)",
+   "kind": "era",
+   "linked": null,
+   "start_year": 700,
+   "end_year": 1300,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q35581",
+     "ko": "홋카이도",
+     "en": "Hokkaidō",
+     "desc": "일본에 있는 도",
+     "types": [
+      "island of Japan"
+     ],
+     "start": null,
+     "end": null,
+     "term": "홋카이도"
+    },
+    {
+     "qid": "Q1057199",
+     "ko": "홋카이도 대학",
+     "en": "Hokkaido University",
+     "desc": "일본 홋카이도에 위치한 국립 종합대학",
+     "types": [
+      "대학",
+      "국립 대학",
+      "학술 출판사"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1918,
+      "precision": 9
+     },
+     "end": null,
+     "term": "홋카이도"
+    },
+    {
+     "qid": "Q586787",
+     "ko": "홋카이도 콘사도레 삿포로",
+     "en": "Hokkaido Consadole Sapporo",
+     "desc": "일본 삿포로시의 프로 축구단",
+     "types": [
+      "축구단"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1935,
+      "precision": 9
+     },
+     "end": null,
+     "term": "홋카이도"
+    },
+    {
+     "qid": "Q816829",
+     "ko": "시대",
+     "en": "periodization",
+     "desc": null,
+     "types": [
+      "field of study"
+     ],
+     "start": null,
+     "end": null,
+     "term": "시대"
+    }
+   ]
+  },
+  {
    "id": "japan-heian",
    "dataset": "japan",
    "title": "헤이안 시대",
@@ -4440,6 +5155,91 @@
     "from": 793,
     "to": 1187
    }
+  },
+  {
+   "id": "japan-gusuku",
+   "dataset": "japan",
+   "title": "구스쿠 시대(오키나와)",
+   "kind": "era",
+   "linked": null,
+   "start_year": 1000,
+   "end_year": 1429,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q17990555",
+    "ko": "구스쿠 시대",
+    "en": "Gusuku period",
+    "desc": null,
+    "types": [
+     "archaeological period"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": 1100,
+     "precision": 7
+    },
+    "end": {
+     "prop": "P582",
+     "year": 1500,
+     "precision": 7
+    },
+    "term": "구스쿠 시대"
+   },
+   "others": [
+    {
+     "qid": "Q766445",
+     "ko": "오키나와현",
+     "en": "Okinawa Prefecture",
+     "desc": "일본에 있는 현",
+     "types": [
+      "도도부현"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1879,
+      "precision": 11
+     },
+     "end": null,
+     "term": "오키나와"
+    },
+    {
+     "qid": "Q328615",
+     "ko": "오키나와시",
+     "en": "Okinawa",
+     "desc": "일본의 오키나와현에 있는 시",
+     "types": [
+      "일본의 시",
+      "인구 10만 명 이상 도시"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1974,
+      "precision": 11
+     },
+     "end": null,
+     "term": "오키나와"
+    },
+    {
+     "qid": "Q192660",
+     "ko": "오키나와 전투",
+     "en": "Battle of Okinawa",
+     "desc": "1945년 태평양 전쟁의 주요 전투",
+     "types": [
+      "전투"
+     ],
+     "start": {
+      "prop": "P585",
+      "year": 1945,
+      "precision": 9
+     },
+     "end": {
+      "prop": "P582",
+      "year": 1945,
+      "precision": 11
+     },
+     "term": "오키나와"
+    }
+   ]
   },
   {
    "id": "japan-kamakura",
@@ -4482,6 +5282,69 @@
    }
   },
   {
+   "id": "japan-ainu",
+   "dataset": "japan",
+   "title": "아이누 문화기",
+   "kind": "era",
+   "linked": null,
+   "start_year": 1300,
+   "end_year": 1868,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q132151",
+     "ko": "문화기술지",
+     "en": "ethnography",
+     "desc": null,
+     "types": [
+      "학문"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문화기"
+    },
+    {
+     "qid": "Q16169654",
+     "ko": "문화기행 세계의 유산",
+     "en": null,
+     "desc": null,
+     "types": [
+      "텔레비전 프로그램"
+     ],
+     "start": {
+      "prop": "P580",
+      "year": 2011,
+      "precision": 11
+     },
+     "end": null,
+     "term": "문화기"
+    },
+    {
+     "qid": "Q96736768",
+     "ko": "문화기술의 융합",
+     "en": "The journal of the convergence on culture technology",
+     "desc": null,
+     "types": [
+      "과학 저널"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문화기"
+    },
+    {
+     "qid": "Q128364010",
+     "ko": null,
+     "en": null,
+     "desc": null,
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "문화기"
+    }
+   ]
+  },
+  {
    "id": "japan-kenmu",
    "dataset": "japan",
    "title": "겐무 신정",
@@ -4522,6 +5385,75 @@
    }
   },
   {
+   "id": "japan-nanbokucho",
+   "dataset": "japan",
+   "title": "남북조 시대",
+   "kind": "era",
+   "linked": null,
+   "start_year": 1333,
+   "end_year": 1392,
+   "verdict": "어긋남",
+   "best": {
+    "qid": "Q49696",
+    "ko": "남북조 시대",
+    "en": "Northern and Southern dynasties",
+    "desc": "중국의 역사 (420~589)",
+    "types": [
+     "시대",
+     "historical Chinese state"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": 420,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P582",
+     "year": 589,
+     "precision": 9
+    },
+    "term": "남북조 시대"
+   },
+   "others": [
+    {
+     "qid": "Q987901",
+     "ko": "남북조 시대",
+     "en": "Northern and Southern dynasties",
+     "desc": null,
+     "types": [
+      "시대"
+     ],
+     "start": null,
+     "end": null,
+     "term": "남북조 시대"
+    },
+    {
+     "qid": "Q8140349",
+     "ko": "남북조 시대 (동음이의)",
+     "en": "Northern and Southern Courts period",
+     "desc": "위키백과 동음이의어 문서",
+     "types": [
+      "위키미디어 동음이의어 문서"
+     ],
+     "start": null,
+     "end": null,
+     "term": "남북조 시대"
+    },
+    {
+     "qid": "Q12589842",
+     "ko": "남북조 시대의 역대 황제",
+     "en": null,
+     "desc": "위키미디어 목록 항목",
+     "types": [
+      "위키미디어 목록 문서"
+     ],
+     "start": null,
+     "end": null,
+     "term": "남북조 시대"
+    }
+   ]
+  },
+  {
    "id": "japan-muromachi",
    "dataset": "japan",
    "title": "무로마치 막부",
@@ -4560,6 +5492,68 @@
     "from": 1344,
     "to": 1571
    }
+  },
+  {
+   "id": "japan-ryukyu",
+   "dataset": "japan",
+   "title": "류큐 왕국",
+   "kind": "polity",
+   "linked": null,
+   "start_year": 1429,
+   "end_year": 1879,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q1333330",
+     "ko": "류큐 왕국의 구스쿠 및 관련 유산군",
+     "en": "Gusuku Sites and Related Properties of the Kingdom of Ryukyu",
+     "desc": null,
+     "types": [
+      "구스쿠",
+      "group of structures or buildings"
+     ],
+     "start": null,
+     "end": null,
+     "term": "류큐 왕국"
+    },
+    {
+     "qid": "Q1250464",
+     "ko": "왕국",
+     "en": "realm",
+     "desc": "최고 권력자인 '왕'이 통치하는 나라",
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "왕국"
+    },
+    {
+     "qid": "Q1843279",
+     "ko": "왕국",
+     "en": "Thayer's Quest",
+     "desc": "1984년 어드벤처 게임",
+     "types": [
+      "비디오 게임"
+     ],
+     "start": {
+      "prop": "P577",
+      "year": 1984,
+      "precision": 9
+     },
+     "end": null,
+     "term": "왕국"
+    },
+    {
+     "qid": "Q417175",
+     "ko": "왕국",
+     "en": "kingdom",
+     "desc": null,
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "왕국"
+    }
+   ]
   },
   {
    "id": "japan-sengoku",
@@ -5713,7 +6707,7 @@
      "배터리"
     ],
     "start": {
-     "prop": "P571",
+     "prop": "P575",
      "year": 1800,
      "precision": 9
     },
@@ -6014,7 +7008,7 @@
      "과학 이론"
     ],
     "start": {
-     "prop": "P571",
+     "prop": "P575",
      "year": 1905,
      "precision": 9
     },
@@ -6422,7 +7416,7 @@
   },
   {
    "id": "music-greek-theory",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "고대 그리스 음악이론",
    "kind": null,
    "linked": null,
@@ -6434,7 +7428,7 @@
   },
   {
    "id": "music-gregorian",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "그레고리오 성가",
    "kind": null,
    "linked": "Q26473",
@@ -6465,7 +7459,7 @@
   },
   {
    "id": "music-guido",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "귀도 다레초의 기보법",
    "kind": null,
    "linked": "Q192238",
@@ -6496,7 +7490,7 @@
   },
   {
    "id": "music-notredame",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "노트르담 악파 다성음악",
    "kind": null,
    "linked": null,
@@ -6570,7 +7564,7 @@
   },
   {
    "id": "music-ars-nova",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "아르스 노바",
    "kind": null,
    "linked": "Q210854",
@@ -6598,7 +7592,7 @@
   },
   {
    "id": "music-renaissance-poly",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "르네상스 다성음악",
    "kind": null,
    "linked": "Q201405",
@@ -6627,7 +7621,7 @@
   },
   {
    "id": "music-palestrina",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "팔레스트리나",
    "kind": null,
    "linked": "Q179277",
@@ -6657,31 +7651,8 @@
    "others": []
   },
   {
-   "id": "music-jongmyo",
-   "dataset": "music",
-   "title": "종묘제례악",
-   "kind": null,
-   "linked": "Q3323672",
-   "start_year": 1464,
-   "end_year": 2025,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q3323672",
-    "ko": "종묘 제례악",
-    "en": "Jongmyo Jeryeak",
-    "desc": "宗廟祭禮樂",
-    "types": [
-     "악곡의 형식"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "music-opera-birth",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "오페라의 탄생",
    "kind": null,
    "linked": null,
@@ -6755,7 +7726,7 @@
   },
   {
    "id": "music-baroque",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "바로크 시대",
    "kind": null,
    "linked": "Q8361",
@@ -6783,7 +7754,7 @@
   },
   {
    "id": "music-vivaldi",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "비발디",
    "kind": null,
    "linked": "Q1340",
@@ -6814,7 +7785,7 @@
   },
   {
    "id": "music-bach",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "J.S. 바흐",
    "kind": null,
    "linked": "Q1339",
@@ -6845,7 +7816,7 @@
   },
   {
    "id": "music-handel",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "헨델",
    "kind": null,
    "linked": "Q7302",
@@ -6876,7 +7847,7 @@
   },
   {
    "id": "music-classical-era",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "고전주의 시대",
    "kind": null,
    "linked": "Q17723",
@@ -6904,7 +7875,7 @@
   },
   {
    "id": "music-haydn",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "하이든",
    "kind": null,
    "linked": "Q7349",
@@ -6935,7 +7906,7 @@
   },
   {
    "id": "music-mozart",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "모차르트",
    "kind": null,
    "linked": "Q254",
@@ -6966,7 +7937,7 @@
   },
   {
    "id": "music-beethoven",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "베토벤",
    "kind": null,
    "linked": "Q255",
@@ -6997,7 +7968,7 @@
   },
   {
    "id": "music-romantic",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "낭만주의 음악",
    "kind": null,
    "linked": "Q207591",
@@ -7029,7 +8000,7 @@
   },
   {
    "id": "music-schubert",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "슈베르트와 예술가곡",
    "kind": null,
    "linked": "Q7312",
@@ -7060,7 +8031,7 @@
   },
   {
    "id": "music-chopin",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "쇼팽",
    "kind": null,
    "linked": "Q1268",
@@ -7091,7 +8062,7 @@
   },
   {
    "id": "music-wagner",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "바그너 악극",
    "kind": null,
    "linked": "Q1511",
@@ -7122,7 +8093,7 @@
   },
   {
    "id": "music-brahms",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "브람스",
    "kind": null,
    "linked": "Q7294",
@@ -7153,7 +8124,7 @@
   },
   {
    "id": "music-nationalism",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "국민악파",
    "kind": null,
    "linked": "Q1196170",
@@ -7176,7 +8147,7 @@
   },
   {
    "id": "music-debussy",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "드뷔시와 인상주의",
    "kind": null,
    "linked": "Q4700",
@@ -7207,7 +8178,7 @@
   },
   {
    "id": "music-blues",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "블루스의 형성",
    "kind": null,
    "linked": "Q9759",
@@ -7234,7 +8205,7 @@
   },
   {
    "id": "music-recording",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "음반 산업의 성립",
    "kind": null,
    "linked": null,
@@ -7246,7 +8217,7 @@
   },
   {
    "id": "music-rite-of-spring",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "스트라빈스키 『봄의 제전』",
    "kind": null,
    "linked": "Q206015",
@@ -7262,9 +8233,9 @@
      "음악 작품/작곡"
     ],
     "start": {
-     "prop": "P571",
+     "prop": "P1191",
      "year": 1913,
-     "precision": 9
+     "precision": 11
     },
     "end": null,
     "term": "(지정한 번호)"
@@ -7273,7 +8244,7 @@
   },
   {
    "id": "music-jazz",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "재즈의 확산",
    "kind": null,
    "linked": "Q8341",
@@ -7301,7 +8272,7 @@
   },
   {
    "id": "music-twelve-tone",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "쇤베르크 12음 기법",
    "kind": null,
    "linked": "Q221686",
@@ -7330,7 +8301,7 @@
   },
   {
    "id": "music-electronic",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "전자음악과 신시사이저",
    "kind": null,
    "linked": "Q9778",
@@ -7357,7 +8328,7 @@
   },
   {
    "id": "music-rocknroll",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "로큰롤의 탄생",
    "kind": null,
    "linked": "Q7749",
@@ -7384,7 +8355,7 @@
   },
   {
    "id": "music-beatles",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "비틀스",
    "kind": null,
    "linked": "Q1299",
@@ -7415,7 +8386,7 @@
   },
   {
    "id": "music-hiphop",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "힙합의 탄생",
    "kind": null,
    "linked": "Q11401",
@@ -7442,7 +8413,7 @@
   },
   {
    "id": "music-mtv",
-   "dataset": "music",
+   "dataset": "music-west",
    "title": "MTV와 뮤직비디오 시대",
    "kind": null,
    "linked": null,
@@ -7527,8 +8498,191 @@
    ]
   },
   {
+   "id": "music-streaming",
+   "dataset": "music-west",
+   "title": "디지털 음원과 스트리밍",
+   "kind": null,
+   "linked": "Q220499",
+   "start_year": 1999,
+   "end_year": 2025,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q220499",
+    "ko": "스트리밍",
+    "en": "streaming media",
+    "desc": "멀티미디어 전달방식",
+    "types": [
+     "경제 분과",
+     "product distribution method"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "music-daeseong",
+   "dataset": "music-east",
+   "title": "대성아악 전래",
+   "kind": null,
+   "linked": null,
+   "start_year": 1116,
+   "end_year": 1116,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "music-sinje-aak",
+   "dataset": "music-east",
+   "title": "세종의 신제 아악",
+   "kind": null,
+   "linked": null,
+   "start_year": 1430,
+   "end_year": 1430,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "music-jeonggan",
+   "dataset": "music-east",
+   "title": "정간보 창안",
+   "kind": null,
+   "linked": null,
+   "start_year": 1447,
+   "end_year": 1447,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q29366",
+     "ko": "창안 자동차",
+     "en": "Changan Automobile",
+     "desc": "중화인민공화국의 자동차 제조사",
+     "types": [
+      "복합기업",
+      "자동차 제조사",
+      "상장 기업"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1862,
+      "precision": 9
+     },
+     "end": null,
+     "term": "창안"
+    },
+    {
+     "qid": "Q25138439",
+     "ko": "창안 포드",
+     "en": "Changan Ford Automobile",
+     "desc": null,
+     "types": [
+      "사업"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 2012,
+      "precision": 9
+     },
+     "end": null,
+     "term": "창안"
+    },
+    {
+     "qid": "Q1061858",
+     "ko": "창안 구 (시안 시)",
+     "en": "Chang'an District",
+     "desc": null,
+     "types": [
+      "시할구"
+     ],
+     "start": null,
+     "end": null,
+     "term": "창안"
+    },
+    {
+     "qid": "Q28154332",
+     "ko": "창안 마쓰다",
+     "en": "Changan Mazda",
+     "desc": "창안 자동차와 마쓰다 간의 50:50 합작 투자 회사",
+     "types": [
+      "합작투자"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 2012,
+      "precision": 10
+     },
+     "end": null,
+     "term": "창안"
+    }
+   ]
+  },
+  {
+   "id": "music-jongmyo",
+   "dataset": "music-east",
+   "title": "종묘제례악",
+   "kind": null,
+   "linked": "Q3323672",
+   "start_year": 1464,
+   "end_year": 2025,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q3323672",
+    "ko": "종묘 제례악",
+    "en": "Jongmyo Jeryeak",
+    "desc": "宗廟祭禮樂",
+    "types": [
+     "악곡의 형식"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "music-pansori",
+   "dataset": "music-east",
+   "title": "판소리의 첫 기록",
+   "kind": null,
+   "linked": null,
+   "start_year": 1753,
+   "end_year": 1753,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "music-sanjo",
+   "dataset": "music-east",
+   "title": "가야금산조 창제",
+   "kind": null,
+   "linked": null,
+   "start_year": 1883,
+   "end_year": 1883,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q69510169",
+     "ko": "창제",
+     "en": null,
+     "desc": null,
+     "types": [
+      "이름"
+     ],
+     "start": null,
+     "end": null,
+     "term": "창제"
+    }
+   ]
+  },
+  {
    "id": "music-kpop",
-   "dataset": "music",
+   "dataset": "music-east",
    "title": "K-pop의 성장",
    "kind": null,
    "linked": "Q213665",
@@ -7556,32 +8710,8 @@
    "others": []
   },
   {
-   "id": "music-streaming",
-   "dataset": "music",
-   "title": "디지털 음원과 스트리밍",
-   "kind": null,
-   "linked": "Q220499",
-   "start_year": 1999,
-   "end_year": 2025,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q220499",
-    "ko": "스트리밍",
-    "en": "streaming media",
-    "desc": "멀티미디어 전달방식",
-    "types": [
-     "경제 분과",
-     "product distribution method"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "art-cave",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "구석기 동굴벽화(쇼베·라스코)",
    "kind": null,
    "linked": "Q172125",
@@ -7609,7 +8739,7 @@
   },
   {
    "id": "art-egypt-art",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "이집트 벽화와 조각",
    "kind": null,
    "linked": "Q318394",
@@ -7640,7 +8770,7 @@
   },
   {
    "id": "art-archaic-greek",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "그리스 고졸기 조각",
    "kind": null,
    "linked": null,
@@ -7652,7 +8782,7 @@
   },
   {
    "id": "art-classical-greek",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "그리스 고전기 조각",
    "kind": null,
    "linked": null,
@@ -7664,7 +8794,7 @@
   },
   {
    "id": "art-hellenistic-art",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "헬레니즘 조각",
    "kind": null,
    "linked": "Q1580145",
@@ -7691,7 +8821,7 @@
   },
   {
    "id": "art-roman-portrait",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "로마 초상조각과 건축",
    "kind": null,
    "linked": null,
@@ -7757,7 +8887,7 @@
   },
   {
    "id": "art-byzantine-art",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "비잔틴 모자이크와 이콘",
    "kind": null,
    "linked": "Q211884",
@@ -7780,29 +8910,8 @@
    "others": []
   },
   {
-   "id": "art-goryeo-celadon",
-   "dataset": "art",
-   "title": "고려청자",
-   "kind": null,
-   "linked": "Q850242",
-   "start_year": 918,
-   "end_year": 1392,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q850242",
-    "ko": "고려청자",
-    "en": "Goryeo celadon",
-    "desc": "고려시대에 고려 사람들이 만든 청자",
-    "types": [],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "art-romanesque",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "로마네스크",
    "kind": null,
    "linked": "Q46805",
@@ -7834,7 +8943,7 @@
   },
   {
    "id": "art-gothic",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "고딕",
    "kind": null,
    "linked": "Q46825",
@@ -7865,7 +8974,7 @@
   },
   {
    "id": "art-giotto",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "조토",
    "kind": null,
    "linked": "Q7814",
@@ -7896,7 +9005,7 @@
   },
   {
    "id": "art-early-renaissance",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "초기 르네상스",
    "kind": null,
    "linked": "Q1472236",
@@ -7928,7 +9037,7 @@
   },
   {
    "id": "art-northern-renaissance",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "북유럽 르네상스",
    "kind": null,
    "linked": "Q610877",
@@ -7954,7 +9063,7 @@
   },
   {
    "id": "art-high-renaissance",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "전성기 르네상스",
    "kind": null,
    "linked": "Q1474884",
@@ -7988,7 +9097,7 @@
   },
   {
    "id": "art-mannerism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "매너리즘",
    "kind": null,
    "linked": "Q131808",
@@ -8022,7 +9131,7 @@
   },
   {
    "id": "art-baroque-art",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "바로크 미술",
    "kind": null,
    "linked": "Q37853",
@@ -8056,7 +9165,7 @@
   },
   {
    "id": "art-rembrandt",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "렘브란트",
    "kind": null,
    "linked": "Q5598",
@@ -8087,7 +9196,7 @@
   },
   {
    "id": "art-dutch-golden",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "네덜란드 황금기 회화",
    "kind": null,
    "linked": "Q2352880",
@@ -8117,39 +9226,8 @@
    "others": []
   },
   {
-   "id": "art-jeongseon",
-   "dataset": "art",
-   "title": "겸재 정선과 진경산수",
-   "kind": null,
-   "linked": "Q489785",
-   "start_year": 1676,
-   "end_year": 1759,
-   "verdict": "일치",
-   "best": {
-    "qid": "Q489785",
-    "ko": "정선",
-    "en": "Jeong Seon",
-    "desc": null,
-    "types": [
-     "사람"
-    ],
-    "start": {
-     "prop": "P569",
-     "year": 1676,
-     "precision": 9
-    },
-    "end": {
-     "prop": "P570",
-     "year": 1759,
-     "precision": 9
-    },
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "art-rococo",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "로코코",
    "kind": null,
    "linked": "Q122960",
@@ -8182,7 +9260,7 @@
   },
   {
    "id": "art-neoclassicism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "신고전주의",
    "kind": null,
    "linked": "Q14378",
@@ -8215,7 +9293,7 @@
   },
   {
    "id": "art-romanticism-art",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "낭만주의 미술",
    "kind": null,
    "linked": "Q37068",
@@ -8249,7 +9327,7 @@
   },
   {
    "id": "art-realism-art",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "사실주의",
    "kind": null,
    "linked": "Q2642826",
@@ -8277,7 +9355,7 @@
   },
   {
    "id": "art-impressionism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "인상주의",
    "kind": null,
    "linked": "Q40415",
@@ -8307,7 +9385,7 @@
   },
   {
    "id": "art-post-impressionism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "후기인상주의",
    "kind": null,
    "linked": "Q166713",
@@ -8338,7 +9416,7 @@
   },
   {
    "id": "art-artnouveau",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "아르누보",
    "kind": null,
    "linked": "Q34636",
@@ -8370,7 +9448,7 @@
   },
   {
    "id": "art-fauvism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "야수파",
    "kind": null,
    "linked": "Q166593",
@@ -8398,7 +9476,7 @@
   },
   {
    "id": "art-expressionism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "표현주의",
    "kind": null,
    "linked": "Q80113",
@@ -8426,7 +9504,7 @@
   },
   {
    "id": "art-cubism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "입체파",
    "kind": null,
    "linked": "Q42934",
@@ -8456,7 +9534,7 @@
   },
   {
    "id": "art-abstract",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "추상미술",
    "kind": null,
    "linked": "Q128115",
@@ -8482,7 +9560,7 @@
   },
   {
    "id": "art-dada",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "다다",
    "kind": null,
    "linked": "Q6034",
@@ -8512,7 +9590,7 @@
   },
   {
    "id": "art-bauhaus",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "바우하우스",
    "kind": null,
    "linked": "Q124354",
@@ -8546,7 +9624,7 @@
   },
   {
    "id": "art-surrealism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "초현실주의",
    "kind": null,
    "linked": "Q39427",
@@ -8579,7 +9657,7 @@
   },
   {
    "id": "art-abstract-expressionism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "추상표현주의",
    "kind": null,
    "linked": "Q177725",
@@ -8607,7 +9685,7 @@
   },
   {
    "id": "art-popart",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "팝아트",
    "kind": null,
    "linked": "Q134147",
@@ -8635,7 +9713,7 @@
   },
   {
    "id": "art-minimalism",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "미니멀리즘",
    "kind": null,
    "linked": "Q6865348",
@@ -8659,7 +9737,7 @@
   },
   {
    "id": "art-conceptual",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "개념미술",
    "kind": null,
    "linked": "Q203209",
@@ -8687,7 +9765,7 @@
   },
   {
    "id": "art-contemporary",
-   "dataset": "art",
+   "dataset": "art-west",
    "title": "포스트모던·동시대 미술",
    "kind": null,
    "linked": "Q186030",
@@ -8708,6 +9786,332 @@
     "start": null,
     "end": null,
     "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "art-anak3",
+   "dataset": "art-east",
+   "title": "안악 3호분 벽화",
+   "kind": null,
+   "linked": null,
+   "start_year": 357,
+   "end_year": 357,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "art-silla-crown",
+   "dataset": "art-east",
+   "title": "신라 금관",
+   "kind": null,
+   "linked": null,
+   "start_year": 400,
+   "end_year": 600,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q497657",
+    "ko": "신라 금관",
+    "en": "Crowns of Silla",
+    "desc": null,
+    "types": [],
+    "start": null,
+    "end": null,
+    "term": "신라 금관"
+   },
+   "others": [
+    {
+     "qid": "Q2447242",
+     "ko": "문화훈장",
+     "en": "Order of Cultural Merit",
+     "desc": null,
+     "types": [
+      "order of merit"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1973,
+      "precision": 9
+     },
+     "end": null,
+     "term": "금관"
+    },
+    {
+     "qid": "Q180744",
+     "ko": "금관악기",
+     "en": "brass instrument",
+     "desc": null,
+     "types": [
+      "family of musical instruments"
+     ],
+     "start": null,
+     "end": null,
+     "term": "금관"
+    },
+    {
+     "qid": "Q496836",
+     "ko": "수로왕",
+     "en": "Suro of Geumgwan Gaya",
+     "desc": "금관가야의 초대 왕",
+     "types": [
+      "사람",
+      "전설 속 인물"
+     ],
+     "start": null,
+     "end": {
+      "prop": "P570",
+      "year": 199,
+      "precision": 9
+     },
+     "term": "금관"
+    }
+   ]
+  },
+  {
+   "id": "art-goryeo-celadon",
+   "dataset": "art-east",
+   "title": "고려청자",
+   "kind": null,
+   "linked": "Q850242",
+   "start_year": 918,
+   "end_year": 1392,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q850242",
+    "ko": "고려청자",
+    "en": "Goryeo celadon",
+    "desc": "고려시대에 고려 사람들이 만든 청자",
+    "types": [],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "art-suwol",
+   "dataset": "art-east",
+   "title": "고려 불화 「수월관음도」",
+   "kind": null,
+   "linked": null,
+   "start_year": 1310,
+   "end_year": 1323,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "art-buncheong",
+   "dataset": "art-east",
+   "title": "분청사기",
+   "kind": null,
+   "linked": null,
+   "start_year": 1400,
+   "end_year": 1600,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q1133261",
+    "ko": "분청사기",
+    "en": "Buncheong",
+    "desc": "조선 전기의 도자기",
+    "types": [],
+    "start": null,
+    "end": null,
+    "term": "분청사기"
+   },
+   "others": [
+    {
+     "qid": "Q12599166",
+     "ko": "분청사기 음각어문 편병",
+     "en": "Buncheong Flat Bottle with Incised Fish Design",
+     "desc": null,
+     "types": [
+      "병",
+      "꽃병",
+      "문화유산"
+     ],
+     "start": null,
+     "end": null,
+     "term": "분청사기"
+    },
+    {
+     "qid": "Q12599161",
+     "ko": "분청사기 박지철채모란문 자라병",
+     "en": "Buncheong Porcelain Parkjicheolchae Peony Moon Jararabyeong",
+     "desc": null,
+     "types": [
+      "문화유산",
+      "그릇"
+     ],
+     "start": null,
+     "end": null,
+     "term": "분청사기"
+    },
+    {
+     "qid": "Q16093324",
+     "ko": "분청사기 박지연화어문 편병",
+     "en": null,
+     "desc": "호림박물관 소장의 조선 초기 분청사기 편병",
+     "types": [
+      "문화유산",
+      "분청사기"
+     ],
+     "start": null,
+     "end": null,
+     "term": "분청사기"
+    }
+   ]
+  },
+  {
+   "id": "art-mongyu",
+   "dataset": "art-east",
+   "title": "안견 「몽유도원도」",
+   "kind": null,
+   "linked": null,
+   "start_year": 1447,
+   "end_year": 1447,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q12595455",
+    "ko": "몽유도원도",
+    "en": "Dream Journey to the Peach Blossom Land",
+    "desc": "안견이 그린 1447년 산수화",
+    "types": [
+     "회화"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": 1447,
+     "precision": 9
+    },
+    "end": null,
+    "term": "몽유도원도"
+   },
+   "others": []
+  },
+  {
+   "id": "art-jeongseon",
+   "dataset": "art-east",
+   "title": "겸재 정선과 진경산수",
+   "kind": null,
+   "linked": "Q489785",
+   "start_year": 1676,
+   "end_year": 1759,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q489785",
+    "ko": "정선",
+    "en": "Jeong Seon",
+    "desc": null,
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1676,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1759,
+     "precision": 9
+    },
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "art-kimhongdo",
+   "dataset": "art-east",
+   "title": "김홍도와 풍속화",
+   "kind": null,
+   "linked": null,
+   "start_year": 1745,
+   "end_year": 1806,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q494712",
+    "ko": "김홍도",
+    "en": "Kim Hong-do",
+    "desc": "조선 후기의 화가 (1745–1806?)",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1745,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1806,
+     "precision": 9
+    },
+    "term": "김홍도"
+   },
+   "others": [
+    {
+     "qid": "Q214127",
+     "ko": "풍속화",
+     "en": "genre painting",
+     "desc": null,
+     "types": [
+      "회화 장르"
+     ],
+     "start": null,
+     "end": null,
+     "term": "풍속화"
+    },
+    {
+     "qid": "Q625501",
+     "ko": "김홍도 필 풍속도 화첩",
+     "en": "Danwon pungsokdo cheop",
+     "desc": null,
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "김홍도"
+    },
+    {
+     "qid": "Q16092522",
+     "ko": "김홍도 필 군선도 병풍",
+     "en": null,
+     "desc": "조선 후기 화가인 단원 김홍도가 1776년에 그린 도석인물화",
+     "types": [
+      "문화유산"
+     ],
+     "start": null,
+     "end": null,
+     "term": "김홍도"
+    }
+   ]
+  },
+  {
+   "id": "art-sehando",
+   "dataset": "art-east",
+   "title": "김정희 「세한도」",
+   "kind": null,
+   "linked": null,
+   "start_year": 1844,
+   "end_year": 1844,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q12588609",
+    "ko": "김정희필 세한도",
+    "en": "Sehando",
+    "desc": "김정희의 그림",
+    "types": [
+     "작품",
+     "회화"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": 1844,
+     "precision": 9
+    },
+    "end": null,
+    "term": "세한도"
    },
    "others": []
   },
@@ -9710,7 +11114,7 @@
   },
   {
    "id": "philosophy-thales-phil",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "밀레토스 학파",
    "kind": null,
    "linked": "Q190279",
@@ -9738,7 +11142,7 @@
   },
   {
    "id": "philosophy-heraclitus",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "헤라클레이토스와 파르메니데스",
    "kind": null,
    "linked": "Q41155",
@@ -9769,7 +11173,7 @@
   },
   {
    "id": "philosophy-sophists",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "소피스트",
    "kind": null,
    "linked": "Q3750514",
@@ -9796,7 +11200,7 @@
   },
   {
    "id": "philosophy-socrates",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "소크라테스",
    "kind": null,
    "linked": "Q913",
@@ -9827,7 +11231,7 @@
   },
   {
    "id": "philosophy-plato",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "플라톤",
    "kind": null,
    "linked": "Q859",
@@ -9858,7 +11262,7 @@
   },
   {
    "id": "philosophy-aristotle",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "아리스토텔레스",
    "kind": null,
    "linked": "Q868",
@@ -9889,7 +11293,7 @@
   },
   {
    "id": "philosophy-epicurus",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "에피쿠로스 학파",
    "kind": null,
    "linked": "Q179541",
@@ -9916,7 +11320,7 @@
   },
   {
    "id": "philosophy-stoicism",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "스토아 학파",
    "kind": null,
    "linked": "Q48235",
@@ -9942,33 +11346,8 @@
    "others": []
   },
   {
-   "id": "philosophy-hundred-schools",
-   "dataset": "philosophy",
-   "title": "제자백가",
-   "kind": null,
-   "linked": "Q864947",
-   "start_year": -500,
-   "end_year": -221,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q864947",
-    "ko": "제자백가",
-    "en": "Hundred Schools of Thought",
-    "desc": null,
-    "types": [
-     "철학적 운동",
-     "명수 100",
-     "group"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "philosophy-plotinus",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "신플라톤주의(플로티노스)",
    "kind": null,
    "linked": "Q134189",
@@ -9999,7 +11378,7 @@
   },
   {
    "id": "philosophy-augustine",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "아우구스티누스",
    "kind": null,
    "linked": "Q8018",
@@ -10030,7 +11409,7 @@
   },
   {
    "id": "philosophy-islamic-phil",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "이슬람 철학(이븐 시나·이븐 루시드)",
    "kind": null,
    "linked": "Q193104",
@@ -10056,7 +11435,7 @@
   },
   {
    "id": "philosophy-scholastic",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "스콜라 철학",
    "kind": null,
    "linked": "Q41679",
@@ -10076,39 +11455,8 @@
    "others": []
   },
   {
-   "id": "philosophy-zhuxi",
-   "dataset": "philosophy",
-   "title": "주희와 성리학",
-   "kind": null,
-   "linked": "Q9397",
-   "start_year": 1130,
-   "end_year": 1200,
-   "verdict": "일치",
-   "best": {
-    "qid": "Q9397",
-    "ko": "주희",
-    "en": "Zhu Xi",
-    "desc": "중국 남송의 유학자 (1130–1200)",
-    "types": [
-     "사람"
-    ],
-    "start": {
-     "prop": "P569",
-     "year": 1130,
-     "precision": 11
-    },
-    "end": {
-     "prop": "P570",
-     "year": 1200,
-     "precision": 11
-    },
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "philosophy-ockham",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "오컴과 유명론",
    "kind": null,
    "linked": "Q43936",
@@ -10139,7 +11487,7 @@
   },
   {
    "id": "philosophy-humanism",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "르네상스 인문주의",
    "kind": null,
    "linked": "Q846933",
@@ -10161,70 +11509,8 @@
    "others": []
   },
   {
-   "id": "philosophy-wangyangming",
-   "dataset": "philosophy",
-   "title": "왕양명과 양명학",
-   "kind": null,
-   "linked": "Q378462",
-   "start_year": 1472,
-   "end_year": 1529,
-   "verdict": "일치",
-   "best": {
-    "qid": "Q378462",
-    "ko": "왕양명",
-    "en": "Wang Yangming",
-    "desc": "중국 명나라의 철학자 (1472-1529)",
-    "types": [
-     "사람"
-    ],
-    "start": {
-     "prop": "P569",
-     "year": 1472,
-     "precision": 11
-    },
-    "end": {
-     "prop": "P570",
-     "year": 1529,
-     "precision": 11
-    },
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "philosophy-toegye",
-   "dataset": "philosophy",
-   "title": "퇴계 이황과 율곡 이이",
-   "kind": null,
-   "linked": "Q486291",
-   "start_year": 1501,
-   "end_year": 1584,
-   "verdict": "부분 일치",
-   "best": {
-    "qid": "Q486291",
-    "ko": "이황",
-    "en": "Yi Hwang",
-    "desc": "조선의 선비 (1502–1571)",
-    "types": [
-     "사람"
-    ],
-    "start": {
-     "prop": "P569",
-     "year": 1501,
-     "precision": 9
-    },
-    "end": {
-     "prop": "P570",
-     "year": 1570,
-     "precision": 9
-    },
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "philosophy-bacon",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "베이컨의 귀납법",
    "kind": null,
    "linked": "Q37388",
@@ -10255,7 +11541,7 @@
   },
   {
    "id": "philosophy-descartes",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "데카르트",
    "kind": null,
    "linked": "Q9191",
@@ -10286,7 +11572,7 @@
   },
   {
    "id": "philosophy-spinoza",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "스피노자",
    "kind": null,
    "linked": "Q35802",
@@ -10317,7 +11603,7 @@
   },
   {
    "id": "philosophy-locke",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "로크와 경험론",
    "kind": null,
    "linked": "Q9353",
@@ -10348,7 +11634,7 @@
   },
   {
    "id": "philosophy-hume",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "흄",
    "kind": null,
    "linked": "Q37160",
@@ -10379,7 +11665,7 @@
   },
   {
    "id": "philosophy-rousseau",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "루소",
    "kind": null,
    "linked": "Q6527",
@@ -10410,7 +11696,7 @@
   },
   {
    "id": "philosophy-kant",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "칸트",
    "kind": null,
    "linked": "Q9312",
@@ -10441,7 +11727,7 @@
   },
   {
    "id": "philosophy-hegel",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "헤겔",
    "kind": null,
    "linked": "Q9235",
@@ -10472,7 +11758,7 @@
   },
   {
    "id": "philosophy-utilitarian",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "공리주의(벤담·밀)",
    "kind": null,
    "linked": "Q1197767",
@@ -10499,7 +11785,7 @@
   },
   {
    "id": "philosophy-marx",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "마르크스",
    "kind": null,
    "linked": "Q9061",
@@ -10530,7 +11816,7 @@
   },
   {
    "id": "philosophy-nietzsche",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "니체",
    "kind": null,
    "linked": "Q9358",
@@ -10561,7 +11847,7 @@
   },
   {
    "id": "philosophy-pragmatism",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "실용주의",
    "kind": null,
    "linked": "Q126692",
@@ -10585,7 +11871,7 @@
   },
   {
    "id": "philosophy-phenomenology",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "현상학(후설)",
    "kind": null,
    "linked": "Q179235",
@@ -10609,7 +11895,7 @@
   },
   {
    "id": "philosophy-analytic",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "분석철학(러셀·비트겐슈타인)",
    "kind": null,
    "linked": "Q183216",
@@ -10632,7 +11918,7 @@
   },
   {
    "id": "philosophy-existentialism",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "실존주의(사르트르·카뮈)",
    "kind": null,
    "linked": "Q38066",
@@ -10656,7 +11942,7 @@
   },
   {
    "id": "philosophy-structuralism",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "구조주의·후기구조주의",
    "kind": null,
    "linked": "Q179168",
@@ -10679,7 +11965,7 @@
   },
   {
    "id": "philosophy-rawls",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "롤스 『정의론』",
    "kind": null,
    "linked": "Q300588",
@@ -10706,7 +11992,7 @@
   },
   {
    "id": "philosophy-applied-ethics",
-   "dataset": "philosophy",
+   "dataset": "philosophy-west",
    "title": "응용윤리와 기술철학",
    "kind": null,
    "linked": "Q538733",
@@ -10728,8 +12014,465 @@
    "others": []
   },
   {
+   "id": "philosophy-hundred-schools",
+   "dataset": "philosophy-east",
+   "title": "제자백가",
+   "kind": null,
+   "linked": "Q864947",
+   "start_year": -500,
+   "end_year": -221,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q864947",
+    "ko": "제자백가",
+    "en": "Hundred Schools of Thought",
+    "desc": null,
+    "types": [
+     "철학적 운동",
+     "명수 100",
+     "group"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "philosophy-wonhyo",
+   "dataset": "philosophy-east",
+   "title": "원효",
+   "kind": null,
+   "linked": null,
+   "start_year": 617,
+   "end_year": 686,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q485114",
+    "ko": "원효",
+    "en": "Wonhyo",
+    "desc": "신라의 승려",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 617,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P570",
+     "year": 686,
+     "precision": 9
+    },
+    "term": "원효"
+   },
+   "others": [
+    {
+     "qid": "Q69511929",
+     "ko": "원효",
+     "en": "Won-hyo",
+     "desc": null,
+     "types": [
+      "이름"
+     ],
+     "start": null,
+     "end": null,
+     "term": "원효"
+    },
+    {
+     "qid": "Q485664",
+     "ko": "조선 숙종",
+     "en": "Sukjong of Joseon",
+     "desc": "조선의 제19대 임금 (1661–1720)",
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1661,
+      "precision": 11
+     },
+     "end": {
+      "prop": "P570",
+      "year": 1720,
+      "precision": 11
+     },
+     "term": "원효"
+    },
+    {
+     "qid": "Q704280",
+     "ko": "고려 강종",
+     "en": "Gangjong of Goryeo",
+     "desc": "고려의 제22대 임금 (1152–1213)",
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1152,
+      "precision": 11
+     },
+     "end": {
+      "prop": "P570",
+      "year": 1213,
+      "precision": 11
+     },
+     "term": "원효"
+    }
+   ]
+  },
+  {
+   "id": "philosophy-uisang",
+   "dataset": "philosophy-east",
+   "title": "의상과 화엄",
+   "kind": null,
+   "linked": null,
+   "start_year": 625,
+   "end_year": 702,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q483049",
+    "ko": "의상",
+    "en": "Uisang",
+    "desc": null,
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 625,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P570",
+     "year": 702,
+     "precision": 9
+    },
+    "term": "의상"
+   },
+   "others": [
+    {
+     "qid": "Q37580",
+     "ko": "게곤 폭포",
+     "en": "Kegon Falls",
+     "desc": "일본의 도치기현 닛코시에 있는 폭포",
+     "types": [
+      "폭포"
+     ],
+     "start": null,
+     "end": null,
+     "term": "화엄"
+    },
+    {
+     "qid": "Q487187",
+     "ko": "춘성",
+     "en": "Chunseong",
+     "desc": "대한민국의 승려 (1891–1977)",
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1891,
+      "precision": 11
+     },
+     "end": {
+      "prop": "P570",
+      "year": 1977,
+      "precision": 11
+     },
+     "term": "화엄"
+    },
+    {
+     "qid": "Q790258",
+     "ko": "화엄경",
+     "en": "Avatamsaka Sutra",
+     "desc": "대승 불교 경전의 하나",
+     "types": [
+      "대승 경전",
+      "저작물"
+     ],
+     "start": null,
+     "end": null,
+     "term": "화엄"
+    }
+   ]
+  },
+  {
+   "id": "philosophy-zhuxi",
+   "dataset": "philosophy-east",
+   "title": "주희와 성리학",
+   "kind": null,
+   "linked": "Q9397",
+   "start_year": 1130,
+   "end_year": 1200,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q9397",
+    "ko": "주희",
+    "en": "Zhu Xi",
+    "desc": "중국 남송의 유학자 (1130–1200)",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1130,
+     "precision": 11
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1200,
+     "precision": 11
+    },
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "philosophy-jinul",
+   "dataset": "philosophy-east",
+   "title": "지눌과 정혜결사",
+   "kind": null,
+   "linked": null,
+   "start_year": 1158,
+   "end_year": 1210,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q704894",
+    "ko": "지눌",
+    "en": "Jinul",
+    "desc": "고려의 승려 (1158-1210)",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1158,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1210,
+     "precision": 9
+    },
+    "term": "지눌"
+   },
+   "others": [
+    {
+     "qid": "Q12616161",
+     "ko": "정혜결사문",
+     "en": "Jeonghye Gyeolsamun",
+     "desc": "고려시대 승려 지눌이 승려들에게 선정과 지혜를 함께 닦을 것을 호소하며 저술한 불교서",
+     "types": [
+      "저작물"
+     ],
+     "start": null,
+     "end": null,
+     "term": "정혜결사"
+    }
+   ]
+  },
+  {
+   "id": "philosophy-wangyangming",
+   "dataset": "philosophy-east",
+   "title": "왕양명과 양명학",
+   "kind": null,
+   "linked": "Q378462",
+   "start_year": 1472,
+   "end_year": 1529,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q378462",
+    "ko": "왕양명",
+    "en": "Wang Yangming",
+    "desc": "중국 명나라의 철학자 (1472-1529)",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1472,
+     "precision": 11
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1529,
+     "precision": 11
+    },
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "philosophy-toegye",
+   "dataset": "philosophy-east",
+   "title": "퇴계 이황과 율곡 이이",
+   "kind": null,
+   "linked": "Q486291",
+   "start_year": 1501,
+   "end_year": 1584,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q486291",
+    "ko": "이황",
+    "en": "Yi Hwang",
+    "desc": "조선의 선비 (1502–1571)",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1501,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1570,
+     "precision": 9
+    },
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "philosophy-jeongyakyong",
+   "dataset": "philosophy-east",
+   "title": "정약용과 실학",
+   "kind": null,
+   "linked": null,
+   "start_year": 1762,
+   "end_year": 1836,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q256246",
+    "ko": "정약용",
+    "en": "Jeong Yak-yong",
+    "desc": "조선의 실학자, 철학자 (1762–1836)",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1762,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1836,
+     "precision": 9
+    },
+    "term": "정약용"
+   },
+   "others": [
+    {
+     "qid": "Q1036586",
+     "ko": "실학",
+     "en": "Silhak",
+     "desc": "17세기 후반에서 19세기 전반에 걸쳐 대두된, 현실 개혁적 조선 유학의 학풍",
+     "types": [
+      "사회 운동",
+      "철학 사조"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1700,
+      "precision": 7
+     },
+     "end": null,
+     "term": "실학"
+    },
+    {
+     "qid": "Q18605464",
+     "ko": "실학박물관",
+     "en": "Silhak Museum",
+     "desc": "남양주에 있는 역사 박물관",
+     "types": [
+      "박물관"
+     ],
+     "start": null,
+     "end": null,
+     "term": "실학"
+    },
+    {
+     "qid": "Q17314819",
+     "ko": "정약용 선생 묘",
+     "en": "tomb of Jeong Yak-yong",
+     "desc": null,
+     "types": [
+      "묘소"
+     ],
+     "start": null,
+     "end": null,
+     "term": "정약용"
+    }
+   ]
+  },
+  {
+   "id": "philosophy-choehangi",
+   "dataset": "philosophy-east",
+   "title": "최한기의 기학",
+   "kind": null,
+   "linked": null,
+   "start_year": 1803,
+   "end_year": 1877,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q186083",
+     "ko": "기학",
+     "en": "vexillology",
+     "desc": null,
+     "types": [
+      "과학"
+     ],
+     "start": null,
+     "end": null,
+     "term": "기학"
+    },
+    {
+     "qid": "Q12152721",
+     "ko": "기학 기호",
+     "en": "flag identification symbol",
+     "desc": null,
+     "types": [
+      "도구"
+     ],
+     "start": null,
+     "end": null,
+     "term": "기학"
+    },
+    {
+     "qid": "Q133847408",
+     "ko": "기학 상",
+     "en": "Kihak Sung",
+     "desc": null,
+     "types": [
+      "사람"
+     ],
+     "start": null,
+     "end": null,
+     "term": "기학"
+    },
+    {
+     "qid": "Q69513670",
+     "ko": "기학",
+     "en": "Gi-hak",
+     "desc": "남성의 이름",
+     "types": [
+      "남성의 이름"
+     ],
+     "start": null,
+     "end": null,
+     "term": "기학"
+    }
+   ]
+  },
+  {
    "id": "literature-gilgamesh",
-   "dataset": "literature",
+   "dataset": "literature-west",
    "title": "『길가메시 서사시』",
    "kind": null,
    "linked": "Q8272",
@@ -10755,65 +12498,8 @@
    "others": []
   },
   {
-   "id": "literature-rigveda",
-   "dataset": "literature",
-   "title": "『리그베다』",
-   "kind": null,
-   "linked": "Q727413",
-   "start_year": -1500,
-   "end_year": -1200,
-   "verdict": "부분 일치",
-   "best": {
-    "qid": "Q727413",
-    "ko": "리그베다",
-    "en": "Rigveda",
-    "desc": null,
-    "types": [
-     "슈루티",
-     "힌두교 경전",
-     "miscellany",
-     "컬렉션"
-    ],
-    "start": {
-     "prop": "P571",
-     "year": -1500,
-     "precision": 9
-    },
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-shijing",
-   "dataset": "literature",
-   "title": "『시경』",
-   "kind": null,
-   "linked": "Q465108",
-   "start_year": -1000,
-   "end_year": -600,
-   "verdict": "어긋남",
-   "best": {
-    "qid": "Q465108",
-    "ko": "시경",
-    "en": "Classic of Poetry",
-    "desc": "서주의 말기로부터 동주에 걸쳐 완성된, 305편이 수록된 중국 최초의 시가집",
-    "types": [
-     "문학 작품"
-    ],
-    "start": {
-     "prop": "P571",
-     "year": -701,
-     "precision": 7
-    },
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "literature-homer",
-   "dataset": "literature",
+   "dataset": "literature-west",
    "title": "호메로스 서사시",
    "kind": null,
    "linked": "Q6691",
@@ -10844,7 +12530,7 @@
   },
   {
    "id": "literature-greek-tragedy",
-   "dataset": "literature",
+   "dataset": "literature-west",
    "title": "그리스 비극",
    "kind": null,
    "linked": "Q34620",
@@ -10867,32 +12553,8 @@
    "others": []
   },
   {
-   "id": "literature-indian-epic",
-   "dataset": "literature",
-   "title": "『마하바라타』와 『라마야나』",
-   "kind": null,
-   "linked": "Q8276",
-   "start_year": -400,
-   "end_year": 400,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q8276",
-    "ko": "마하바라타",
-    "en": "Mahabharata",
-    "desc": null,
-    "types": [
-     "경전",
-     "문학 작품"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "literature-virgil",
-   "dataset": "literature",
+   "dataset": "literature-west",
    "title": "베르길리우스 『아이네이스』",
    "kind": null,
    "linked": "Q60220",
@@ -10918,58 +12580,8 @@
    "others": []
   },
   {
-   "id": "literature-tangshi",
-   "dataset": "literature",
-   "title": "당시(이백·두보)",
-   "kind": null,
-   "linked": "Q3236984",
-   "start_year": 700,
-   "end_year": 770,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q3236984",
-    "ko": "당시",
-    "en": "Tang poetry",
-    "desc": null,
-    "types": [
-     "문학 장르"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-genji",
-   "dataset": "literature",
-   "title": "『겐지 이야기』",
-   "kind": null,
-   "linked": "Q8269",
-   "start_year": 1008,
-   "end_year": 1008,
-   "verdict": "일치",
-   "best": {
-    "qid": "Q8269",
-    "ko": "겐지 이야기",
-    "en": "The Tale of Genji",
-    "desc": "1008년경 출판된 무라사키 시키부의 소설",
-    "types": [
-     "문학 작품"
-    ],
-    "start": {
-     "prop": "P571",
-     "year": 1010,
-     "precision": 8
-    },
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "literature-dante",
-   "dataset": "literature",
+   "dataset": "literature-west",
    "title": "단테 『신곡』",
    "kind": null,
    "linked": null,
@@ -11046,7 +12658,7 @@
   },
   {
    "id": "literature-chaucer",
-   "dataset": "literature",
+   "dataset": "literature-west",
    "title": "초서 『캔터베리 이야기』",
    "kind": null,
    "linked": "Q191663",
@@ -11072,8 +12684,691 @@
    "others": []
   },
   {
+   "id": "literature-shakespeare",
+   "dataset": "literature-west",
+   "title": "셰익스피어",
+   "kind": null,
+   "linked": "Q692",
+   "start_year": 1564,
+   "end_year": 1616,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q692",
+    "ko": "윌리엄 셰익스피어",
+    "en": "William Shakespeare",
+    "desc": "잉글랜드의 극작가이자 시인",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1564,
+     "precision": 10
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1616,
+     "precision": 11
+    },
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-quixote",
+   "dataset": "literature-west",
+   "title": "세르반테스 『돈키호테』",
+   "kind": null,
+   "linked": "Q480",
+   "start_year": 1605,
+   "end_year": 1615,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q480",
+    "ko": "돈키호테",
+    "en": "Don Quixote",
+    "desc": "미겔 데 세르반테스의 소설",
+    "types": [
+     "문학 작품"
+    ],
+    "start": {
+     "prop": "P577",
+     "year": 1605,
+     "precision": 9
+    },
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-milton",
+   "dataset": "literature-west",
+   "title": "밀턴 『실낙원』",
+   "kind": null,
+   "linked": "Q28754",
+   "start_year": 1667,
+   "end_year": 1667,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q28754",
+    "ko": "실낙원",
+    "en": "Paradise Lost",
+    "desc": null,
+    "types": [
+     "문학 작품"
+    ],
+    "start": {
+     "prop": "P577",
+     "year": 1667,
+     "precision": 9
+    },
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-enlightenment-lit",
+   "dataset": "literature-west",
+   "title": "계몽주의 문학",
+   "kind": null,
+   "linked": null,
+   "start_year": 1700,
+   "end_year": 1789,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q8242",
+     "ko": "문학",
+     "en": "literature",
+     "desc": "예술작품으로 쓰여진 것",
+     "types": [
+      "유형",
+      "group of works",
+      "type of arts"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문학"
+    },
+    {
+     "qid": "Q58854",
+     "ko": "문학평론",
+     "en": "literary criticism",
+     "desc": "문학을 대상으로 한 연구, 비평 등의 활동",
+     "types": [
+      "문학 장르",
+      "인간의 활동",
+      "branch of literature"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문학"
+    },
+    {
+     "qid": "Q1765120",
+     "ko": "문학사",
+     "en": "Bachelor of Arts",
+     "desc": null,
+     "types": [
+      "학위",
+      "arts degree"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문학"
+    },
+    {
+     "qid": "Q6497044",
+     "ko": "문학사",
+     "en": "history of literature",
+     "desc": null,
+     "types": [
+      "주요 학문",
+      "학문",
+      "분야사"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문학"
+    }
+   ]
+  },
+  {
+   "id": "literature-goethe",
+   "dataset": "literature-west",
+   "title": "괴테",
+   "kind": null,
+   "linked": "Q5879",
+   "start_year": 1749,
+   "end_year": 1832,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q5879",
+    "ko": "요한 볼프강 폰 괴테",
+    "en": "Johann Wolfgang von Goethe",
+    "desc": "근대 독일의 작가, 정치인, 과학자",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1749,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1832,
+     "precision": 11
+    },
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-romanticism-lit",
+   "dataset": "literature-west",
+   "title": "낭만주의 문학",
+   "kind": null,
+   "linked": null,
+   "start_year": 1798,
+   "end_year": 1850,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q8242",
+     "ko": "문학",
+     "en": "literature",
+     "desc": "예술작품으로 쓰여진 것",
+     "types": [
+      "유형",
+      "group of works",
+      "type of arts"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문학"
+    },
+    {
+     "qid": "Q58854",
+     "ko": "문학평론",
+     "en": "literary criticism",
+     "desc": "문학을 대상으로 한 연구, 비평 등의 활동",
+     "types": [
+      "문학 장르",
+      "인간의 활동",
+      "branch of literature"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문학"
+    },
+    {
+     "qid": "Q1765120",
+     "ko": "문학사",
+     "en": "Bachelor of Arts",
+     "desc": null,
+     "types": [
+      "학위",
+      "arts degree"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문학"
+    },
+    {
+     "qid": "Q6497044",
+     "ko": "문학사",
+     "en": "history of literature",
+     "desc": null,
+     "types": [
+      "주요 학문",
+      "학문",
+      "분야사"
+     ],
+     "start": null,
+     "end": null,
+     "term": "문학"
+    }
+   ]
+  },
+  {
+   "id": "literature-realism-lit",
+   "dataset": "literature-west",
+   "title": "사실주의 소설",
+   "kind": null,
+   "linked": "Q667661",
+   "start_year": 1830,
+   "end_year": 1880,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q667661",
+    "ko": "사실주의",
+    "en": "literary realism",
+    "desc": null,
+    "types": [
+     "literary movement"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": 1830,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P582",
+     "year": 1900,
+     "precision": 9
+    },
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-russian-lit",
+   "dataset": "literature-west",
+   "title": "러시아 문학의 황금기",
+   "kind": null,
+   "linked": null,
+   "start_year": 1860,
+   "end_year": 1900,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "literature-naturalism",
+   "dataset": "literature-west",
+   "title": "자연주의(졸라)",
+   "kind": null,
+   "linked": "Q55996",
+   "start_year": 1870,
+   "end_year": 1900,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q55996",
+    "ko": "자연주의",
+    "en": "naturalism",
+    "desc": null,
+    "types": [
+     "literary movement"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-kafka",
+   "dataset": "literature-west",
+   "title": "카프카",
+   "kind": null,
+   "linked": "Q905",
+   "start_year": 1883,
+   "end_year": 1924,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q905",
+    "ko": "프란츠 카프카",
+    "en": "Franz Kafka",
+    "desc": "체코의 독일어 소설가 (1883–1924)",
+    "types": [
+     "사람"
+    ],
+    "start": {
+     "prop": "P569",
+     "year": 1883,
+     "precision": 11
+    },
+    "end": {
+     "prop": "P570",
+     "year": 1924,
+     "precision": 11
+    },
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-modernism-lit",
+   "dataset": "literature-west",
+   "title": "모더니즘 문학",
+   "kind": null,
+   "linked": "Q971480",
+   "start_year": 1910,
+   "end_year": 1940,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q971480",
+    "ko": "모더니즘 문학",
+    "en": "modernist literature",
+    "desc": null,
+    "types": [
+     "literary movement"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-latin-boom",
+   "dataset": "literature-west",
+   "title": "라틴아메리카 붐",
+   "kind": null,
+   "linked": "Q1352538",
+   "start_year": 1960,
+   "end_year": 1980,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q1352538",
+    "ko": "라틴아메리카 붐",
+    "en": "Latín mmg todos",
+    "desc": null,
+    "types": [
+     "literary movement"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-postmodern-lit",
+   "dataset": "literature-west",
+   "title": "포스트모던 문학",
+   "kind": null,
+   "linked": "Q113013",
+   "start_year": 1960,
+   "end_year": 2000,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q113013",
+    "ko": "포스트모던 문학",
+    "en": "postmodern literature",
+    "desc": null,
+    "types": [
+     "문학 장르",
+     "literary movement"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-digital-lit",
+   "dataset": "literature-west",
+   "title": "디지털 시대의 문학",
+   "kind": null,
+   "linked": "Q173167",
+   "start_year": 1995,
+   "end_year": 2025,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q173167",
+    "ko": "온라인 문학",
+    "en": "electronic literature",
+    "desc": null,
+    "types": [
+     "문학 장르",
+     "학문"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-rigveda",
+   "dataset": "literature-east",
+   "title": "『리그베다』",
+   "kind": null,
+   "linked": "Q727413",
+   "start_year": -1500,
+   "end_year": -1200,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q727413",
+    "ko": "리그베다",
+    "en": "Rigveda",
+    "desc": null,
+    "types": [
+     "슈루티",
+     "힌두교 경전",
+     "miscellany",
+     "컬렉션"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": -1500,
+     "precision": 9
+    },
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-shijing",
+   "dataset": "literature-east",
+   "title": "『시경』",
+   "kind": null,
+   "linked": "Q465108",
+   "start_year": -1000,
+   "end_year": -600,
+   "verdict": "어긋남",
+   "best": {
+    "qid": "Q465108",
+    "ko": "시경",
+    "en": "Classic of Poetry",
+    "desc": "서주의 말기로부터 동주에 걸쳐 완성된, 305편이 수록된 중국 최초의 시가집",
+    "types": [
+     "문학 작품"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": -701,
+     "precision": 7
+    },
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-indian-epic",
+   "dataset": "literature-east",
+   "title": "『마하바라타』와 『라마야나』",
+   "kind": null,
+   "linked": "Q8276",
+   "start_year": -400,
+   "end_year": 400,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q8276",
+    "ko": "마하바라타",
+    "en": "Mahabharata",
+    "desc": null,
+    "types": [
+     "경전",
+     "문학 작품"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-hyangga",
+   "dataset": "literature-east",
+   "title": "향가의 전성기",
+   "kind": null,
+   "linked": null,
+   "start_year": 680,
+   "end_year": 900,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q1474884",
+     "ko": "전성기 르네상스",
+     "en": "High Renaissance",
+     "desc": "16세기 초 이탈리아 도시국가에서 많은 수의 걸작들이 나온 시기",
+     "types": [
+      "건축 양식",
+      "예술 사조",
+      "style",
+      "시대"
+     ],
+     "start": {
+      "prop": "P580",
+      "year": 1494,
+      "precision": 9
+     },
+     "end": {
+      "prop": "P582",
+      "year": 1527,
+      "precision": 9
+     },
+     "term": "전성기"
+    },
+    {
+     "qid": "Q139558480",
+     "ko": "전성기",
+     "en": "Jeon Seong-gi",
+     "desc": null,
+     "types": [
+      "사람"
+     ],
+     "start": null,
+     "end": null,
+     "term": "전성기"
+    }
+   ]
+  },
+  {
+   "id": "literature-tangshi",
+   "dataset": "literature-east",
+   "title": "당시(이백·두보)",
+   "kind": null,
+   "linked": "Q3236984",
+   "start_year": 700,
+   "end_year": 770,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q3236984",
+    "ko": "당시",
+    "en": "Tang poetry",
+    "desc": null,
+    "types": [
+     "문학 장르"
+    ],
+    "start": null,
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-genji",
+   "dataset": "literature-east",
+   "title": "『겐지 이야기』",
+   "kind": null,
+   "linked": "Q8269",
+   "start_year": 1008,
+   "end_year": 1008,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q8269",
+    "ko": "겐지 이야기",
+    "en": "The Tale of Genji",
+    "desc": "1008년경 출판된 무라사키 시키부의 소설",
+    "types": [
+     "문학 작품"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": 1010,
+     "precision": 8
+    },
+    "end": null,
+    "term": "(지정한 번호)"
+   },
+   "others": []
+  },
+  {
+   "id": "literature-sijo",
+   "dataset": "literature-east",
+   "title": "시조의 형성",
+   "kind": null,
+   "linked": null,
+   "start_year": 1350,
+   "end_year": 1350,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q1209955",
+     "ko": "형성 평가",
+     "en": "formative assessment",
+     "desc": null,
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "형성"
+    },
+    {
+     "qid": "Q1147199",
+     "ko": "형성의 책",
+     "en": "Sefer Yetzirah",
+     "desc": null,
+     "types": [
+      "문학 작품"
+     ],
+     "start": null,
+     "end": null,
+     "term": "형성"
+    },
+    {
+     "qid": "Q117307190",
+     "ko": "양형성",
+     "en": "Yang Hyeong Seong",
+     "desc": null,
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 1969,
+      "precision": 11
+     },
+     "end": null,
+     "term": "형성"
+    },
+    {
+     "qid": "Q17990755",
+     "ko": "형성자",
+     "en": "phono-semantic compound character",
+     "desc": null,
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "형성"
+    }
+   ]
+  },
+  {
    "id": "literature-hunmin-lit",
-   "dataset": "literature",
+   "dataset": "literature-east",
    "title": "훈민정음과 국문 문학",
    "kind": null,
    "linked": null,
@@ -11150,93 +13445,8 @@
    ]
   },
   {
-   "id": "literature-shakespeare",
-   "dataset": "literature",
-   "title": "셰익스피어",
-   "kind": null,
-   "linked": "Q692",
-   "start_year": 1564,
-   "end_year": 1616,
-   "verdict": "일치",
-   "best": {
-    "qid": "Q692",
-    "ko": "윌리엄 셰익스피어",
-    "en": "William Shakespeare",
-    "desc": "잉글랜드의 극작가이자 시인",
-    "types": [
-     "사람"
-    ],
-    "start": {
-     "prop": "P569",
-     "year": 1564,
-     "precision": 10
-    },
-    "end": {
-     "prop": "P570",
-     "year": 1616,
-     "precision": 11
-    },
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-quixote",
-   "dataset": "literature",
-   "title": "세르반테스 『돈키호테』",
-   "kind": null,
-   "linked": "Q480",
-   "start_year": 1605,
-   "end_year": 1615,
-   "verdict": "부분 일치",
-   "best": {
-    "qid": "Q480",
-    "ko": "돈키호테",
-    "en": "Don Quixote",
-    "desc": "미겔 데 세르반테스의 소설",
-    "types": [
-     "문학 작품"
-    ],
-    "start": {
-     "prop": "P577",
-     "year": 1605,
-     "precision": 9
-    },
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-milton",
-   "dataset": "literature",
-   "title": "밀턴 『실낙원』",
-   "kind": null,
-   "linked": "Q28754",
-   "start_year": 1667,
-   "end_year": 1667,
-   "verdict": "일치",
-   "best": {
-    "qid": "Q28754",
-    "ko": "실낙원",
-    "en": "Paradise Lost",
-    "desc": null,
-    "types": [
-     "문학 작품"
-    ],
-    "start": {
-     "prop": "P571",
-     "year": 1667,
-     "precision": 9
-    },
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
    "id": "literature-chunhyang",
-   "dataset": "literature",
+   "dataset": "literature-east",
    "title": "판소리계 소설(『춘향전』)",
    "kind": null,
    "linked": "Q717065",
@@ -11258,295 +13468,33 @@
    "others": []
   },
   {
-   "id": "literature-enlightenment-lit",
-   "dataset": "literature",
-   "title": "계몽주의 문학",
+   "id": "literature-yeolha",
+   "dataset": "literature-east",
+   "title": "박지원 『열하일기』",
    "kind": null,
    "linked": null,
-   "start_year": 1700,
-   "end_year": 1789,
+   "start_year": 1780,
+   "end_year": 1780,
    "verdict": "못 찾음",
    "best": null,
    "others": [
     {
-     "qid": "Q8242",
-     "ko": "문학",
-     "en": "literature",
-     "desc": "예술작품으로 쓰여진 것",
-     "types": [
-      "유형",
-      "group of works",
-      "type of arts"
-     ],
-     "start": null,
-     "end": null,
-     "term": "문학"
-    },
-    {
-     "qid": "Q58854",
-     "ko": "문학평론",
-     "en": "literary criticism",
-     "desc": "문학을 대상으로 한 연구, 비평 등의 활동",
-     "types": [
-      "문학 장르",
-      "인간의 활동",
-      "branch of literature"
-     ],
-     "start": null,
-     "end": null,
-     "term": "문학"
-    },
-    {
-     "qid": "Q1765120",
-     "ko": "문학사",
-     "en": "Bachelor of Arts",
+     "qid": "Q8052430",
+     "ko": "열하일기",
+     "en": "Yeolha Ilgi",
      "desc": null,
      "types": [
-      "학위",
-      "arts degree"
+      "문학 작품"
      ],
      "start": null,
      "end": null,
-     "term": "문학"
-    },
-    {
-     "qid": "Q6497044",
-     "ko": "문학사",
-     "en": "history of literature",
-     "desc": null,
-     "types": [
-      "주요 학문",
-      "학문",
-      "분야사"
-     ],
-     "start": null,
-     "end": null,
-     "term": "문학"
+     "term": "열하일기"
     }
    ]
-  },
-  {
-   "id": "literature-goethe",
-   "dataset": "literature",
-   "title": "괴테",
-   "kind": null,
-   "linked": "Q5879",
-   "start_year": 1749,
-   "end_year": 1832,
-   "verdict": "일치",
-   "best": {
-    "qid": "Q5879",
-    "ko": "요한 볼프강 폰 괴테",
-    "en": "Johann Wolfgang von Goethe",
-    "desc": "근대 독일의 작가, 정치인, 과학자",
-    "types": [
-     "사람"
-    ],
-    "start": {
-     "prop": "P569",
-     "year": 1749,
-     "precision": 9
-    },
-    "end": {
-     "prop": "P570",
-     "year": 1832,
-     "precision": 11
-    },
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-romanticism-lit",
-   "dataset": "literature",
-   "title": "낭만주의 문학",
-   "kind": null,
-   "linked": null,
-   "start_year": 1798,
-   "end_year": 1850,
-   "verdict": "못 찾음",
-   "best": null,
-   "others": [
-    {
-     "qid": "Q8242",
-     "ko": "문학",
-     "en": "literature",
-     "desc": "예술작품으로 쓰여진 것",
-     "types": [
-      "유형",
-      "group of works",
-      "type of arts"
-     ],
-     "start": null,
-     "end": null,
-     "term": "문학"
-    },
-    {
-     "qid": "Q58854",
-     "ko": "문학평론",
-     "en": "literary criticism",
-     "desc": "문학을 대상으로 한 연구, 비평 등의 활동",
-     "types": [
-      "문학 장르",
-      "인간의 활동",
-      "branch of literature"
-     ],
-     "start": null,
-     "end": null,
-     "term": "문학"
-    },
-    {
-     "qid": "Q1765120",
-     "ko": "문학사",
-     "en": "Bachelor of Arts",
-     "desc": null,
-     "types": [
-      "학위",
-      "arts degree"
-     ],
-     "start": null,
-     "end": null,
-     "term": "문학"
-    },
-    {
-     "qid": "Q6497044",
-     "ko": "문학사",
-     "en": "history of literature",
-     "desc": null,
-     "types": [
-      "주요 학문",
-      "학문",
-      "분야사"
-     ],
-     "start": null,
-     "end": null,
-     "term": "문학"
-    }
-   ]
-  },
-  {
-   "id": "literature-realism-lit",
-   "dataset": "literature",
-   "title": "사실주의 소설",
-   "kind": null,
-   "linked": "Q667661",
-   "start_year": 1830,
-   "end_year": 1880,
-   "verdict": "부분 일치",
-   "best": {
-    "qid": "Q667661",
-    "ko": "사실주의",
-    "en": "literary realism",
-    "desc": null,
-    "types": [
-     "literary movement"
-    ],
-    "start": {
-     "prop": "P580",
-     "year": 1830,
-     "precision": 9
-    },
-    "end": {
-     "prop": "P582",
-     "year": 1900,
-     "precision": 9
-    },
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-russian-lit",
-   "dataset": "literature",
-   "title": "러시아 문학의 황금기",
-   "kind": null,
-   "linked": null,
-   "start_year": 1860,
-   "end_year": 1900,
-   "verdict": "못 찾음",
-   "best": null,
-   "others": []
-  },
-  {
-   "id": "literature-naturalism",
-   "dataset": "literature",
-   "title": "자연주의(졸라)",
-   "kind": null,
-   "linked": "Q55996",
-   "start_year": 1870,
-   "end_year": 1900,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q55996",
-    "ko": "자연주의",
-    "en": "naturalism",
-    "desc": null,
-    "types": [
-     "literary movement"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-kafka",
-   "dataset": "literature",
-   "title": "카프카",
-   "kind": null,
-   "linked": "Q905",
-   "start_year": 1883,
-   "end_year": 1924,
-   "verdict": "일치",
-   "best": {
-    "qid": "Q905",
-    "ko": "프란츠 카프카",
-    "en": "Franz Kafka",
-    "desc": "체코의 독일어 소설가 (1883–1924)",
-    "types": [
-     "사람"
-    ],
-    "start": {
-     "prop": "P569",
-     "year": 1883,
-     "precision": 11
-    },
-    "end": {
-     "prop": "P570",
-     "year": 1924,
-     "precision": 11
-    },
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-modernism-lit",
-   "dataset": "literature",
-   "title": "모더니즘 문학",
-   "kind": null,
-   "linked": "Q971480",
-   "start_year": 1910,
-   "end_year": 1940,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q971480",
-    "ko": "모더니즘 문학",
-    "en": "modernist literature",
-    "desc": null,
-    "types": [
-     "literary movement"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
   },
   {
    "id": "literature-korean-modern",
-   "dataset": "literature",
+   "dataset": "literature-east",
    "title": "한국 근대문학의 형성",
    "kind": null,
    "linked": null,
@@ -11558,7 +13506,7 @@
   },
   {
    "id": "literature-korean-contemporary",
-   "dataset": "literature",
+   "dataset": "literature-east",
    "title": "한국 현대문학",
    "kind": null,
    "linked": null,
@@ -11629,77 +13577,6 @@
      "term": "현대문학"
     }
    ]
-  },
-  {
-   "id": "literature-latin-boom",
-   "dataset": "literature",
-   "title": "라틴아메리카 붐",
-   "kind": null,
-   "linked": "Q1352538",
-   "start_year": 1960,
-   "end_year": 1980,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q1352538",
-    "ko": "라틴아메리카 붐",
-    "en": "Latín mmg todos",
-    "desc": null,
-    "types": [
-     "literary movement"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-postmodern-lit",
-   "dataset": "literature",
-   "title": "포스트모던 문학",
-   "kind": null,
-   "linked": "Q113013",
-   "start_year": 1960,
-   "end_year": 2000,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q113013",
-    "ko": "포스트모던 문학",
-    "en": "postmodern literature",
-    "desc": null,
-    "types": [
-     "문학 장르",
-     "literary movement"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
-  },
-  {
-   "id": "literature-digital-lit",
-   "dataset": "literature",
-   "title": "디지털 시대의 문학",
-   "kind": null,
-   "linked": "Q173167",
-   "start_year": 1995,
-   "end_year": 2025,
-   "verdict": "날짜 없음",
-   "best": {
-    "qid": "Q173167",
-    "ko": "온라인 문학",
-    "en": "electronic literature",
-    "desc": null,
-    "types": [
-     "문학 장르",
-     "학문"
-    ],
-    "start": null,
-    "end": null,
-    "term": "(지정한 번호)"
-   },
-   "others": []
   },
   {
    "id": "technology-agriculture",
@@ -12738,6 +14615,719 @@
     "end": null,
     "term": "(지정한 번호)"
    },
+   "others": []
+  },
+  {
+   "id": "economy-geonwon",
+   "dataset": "economy",
+   "title": "건원중보 주조",
+   "kind": null,
+   "linked": null,
+   "start_year": 996,
+   "end_year": 996,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q41207",
+     "ko": "동전",
+     "en": "coin",
+     "desc": "금속을 주물로 떠서 만든 화폐",
+     "types": [
+      "coin type"
+     ],
+     "start": null,
+     "end": null,
+     "term": "주조"
+    },
+    {
+     "qid": "Q496098",
+     "ko": "주조",
+     "en": "casting",
+     "desc": "재료를 녹여 주형에 부어 물건을 만드는 기법",
+     "types": [
+      "기술",
+      "artistic technique"
+     ],
+     "start": null,
+     "end": null,
+     "term": "주조"
+    },
+    {
+     "qid": "Q131734",
+     "ko": "맥주 주조장",
+     "en": "brewery",
+     "desc": "맥주를 만들어 파는 사업체 또는 장소",
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "주조"
+    },
+    {
+     "qid": "Q800975",
+     "ko": "주조 역 (도쿄 도)",
+     "en": "Jūjō Station",
+     "desc": null,
+     "types": [
+      "철도역",
+      "지상역",
+      "passenger railway station",
+      "directly managed station"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1910,
+      "precision": 11
+     },
+     "end": null,
+     "term": "주조"
+    }
+   ]
+  },
+  {
+   "id": "economy-daedong",
+   "dataset": "economy",
+   "title": "대동법 시행",
+   "kind": null,
+   "linked": null,
+   "start_year": 1608,
+   "end_year": 1708,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q12591447",
+     "ko": "대동법 시행 기념비",
+     "en": null,
+     "desc": "대동법의 시행을 알리는 기념비",
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "대동법 시행"
+    },
+    {
+     "qid": "Q2219080",
+     "ko": "시행착오",
+     "en": "trial and error",
+     "desc": null,
+     "types": [
+      "패러다임",
+      "problem-solving approach"
+     ],
+     "start": null,
+     "end": null,
+     "term": "시행"
+    },
+    {
+     "qid": "Q12584779",
+     "ko": "공포일",
+     "en": null,
+     "desc": "법령의 시행일",
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "시행"
+    }
+   ]
+  },
+  {
+   "id": "economy-sangpyeong",
+   "dataset": "economy",
+   "title": "상평통보 법화 채택",
+   "kind": null,
+   "linked": null,
+   "start_year": 1678,
+   "end_year": 1678,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "economy-gyunyeok",
+   "dataset": "economy",
+   "title": "균역법",
+   "kind": null,
+   "linked": null,
+   "start_year": 1750,
+   "end_year": 1750,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q16168883",
+    "ko": "균역법",
+    "en": null,
+    "desc": "조선 후기의 군역세법",
+    "types": [
+     "조세"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": 1750,
+     "precision": 9
+    },
+    "end": null,
+    "term": "균역법"
+   },
+   "others": []
+  },
+  {
+   "id": "economy-currency-reform",
+   "dataset": "economy",
+   "title": "화폐정리사업",
+   "kind": null,
+   "linked": null,
+   "start_year": 1904,
+   "end_year": 1904,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q12625709",
+    "ko": "화폐정리사업",
+    "en": null,
+    "desc": null,
+    "types": [],
+    "start": null,
+    "end": null,
+    "term": "화폐정리사업"
+   },
+   "others": []
+  },
+  {
+   "id": "economy-gukchae",
+   "dataset": "economy",
+   "title": "국채보상운동",
+   "kind": null,
+   "linked": null,
+   "start_year": 1907,
+   "end_year": 1908,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q623859",
+    "ko": "국채보상운동",
+    "en": "National Debt Repayment Movement",
+    "desc": "대한제국의 주권을 회복하기 위해 외채를 상환하려는 국민적 모금 운동",
+    "types": [
+     "사회 운동",
+     "저항운동",
+     "taxation"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": 1907,
+     "precision": 10
+    },
+    "end": {
+     "prop": "P582",
+     "year": 1908,
+     "precision": 10
+    },
+    "term": "국채보상운동"
+   },
+   "others": [
+    {
+     "qid": "Q115768294",
+     "ko": "국채보상운동 취지서(5)",
+     "en": "Declaration",
+     "desc": "취지서",
+     "types": [
+      "점"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1907,
+      "precision": 11
+     },
+     "end": null,
+     "term": "국채보상운동"
+    },
+    {
+     "qid": "Q122463955",
+     "ko": "국채보상운동 회문(16)",
+     "en": "Circular from Jo Hui-jeong and Kim Byeong-hong Sent to Buk-myeon",
+     "desc": "회문",
+     "types": [
+      "점"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 1907,
+      "precision": 11
+     },
+     "end": null,
+     "term": "국채보상운동"
+    },
+    {
+     "qid": "Q115000952",
+     "ko": "국채보상운동기념사업회",
+     "en": "The Commemorative Association of the National Debt Redemption Movement",
+     "desc": "구한말 거국적으로 전개한 국채보상운동의 구국정신을 계승, 발전시킴을 목적으로 하는 사단법인 단체",
+     "types": [
+      "단체",
+      "기록 보관소",
+      "기업"
+     ],
+     "start": {
+      "prop": "P571",
+      "year": 2002,
+      "precision": 9
+     },
+     "end": null,
+     "term": "국채보상운동"
+    }
+   ]
+  },
+  {
+   "id": "economy-bretton-woods",
+   "dataset": "economy",
+   "title": "브레턴우즈 회의",
+   "kind": null,
+   "linked": null,
+   "start_year": 1944,
+   "end_year": 1944,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q1194052",
+    "ko": "브레턴우즈 회의",
+    "en": "Bretton Woods Conference",
+    "desc": null,
+    "types": [
+     "국제회의"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": 1944,
+     "precision": 11
+    },
+    "end": {
+     "prop": "P582",
+     "year": 1944,
+     "precision": 11
+    },
+    "term": "브레턴우즈 회의"
+   },
+   "others": [
+    {
+     "qid": "Q2761147",
+     "ko": "회의",
+     "en": "meeting",
+     "desc": "두 명 이상의 사람이 모여, 어떤 주제에 관해 논의를 하는 것, 또는 그 일을 하는 모임",
+     "types": [
+      "행사 유형"
+     ],
+     "start": null,
+     "end": null,
+     "term": "회의"
+    },
+    {
+     "qid": "Q1395219",
+     "ko": "회의주의",
+     "en": "skepticism",
+     "desc": null,
+     "types": [
+      "태도",
+      "철학 사조"
+     ],
+     "start": null,
+     "end": null,
+     "term": "회의"
+    },
+    {
+     "qid": "Q365115",
+     "ko": "회의주의자 아그립파스",
+     "en": "Agrippa the Skeptic",
+     "desc": null,
+     "types": [
+      "사람"
+     ],
+     "start": {
+      "prop": "P569",
+      "year": 100,
+      "precision": 7
+     },
+     "end": {
+      "prop": "P570",
+      "year": 100,
+      "precision": 7
+     },
+     "term": "회의"
+    }
+   ]
+  },
+  {
+   "id": "economy-imf",
+   "dataset": "economy",
+   "title": "국제통화기금 발족",
+   "kind": null,
+   "linked": null,
+   "start_year": 1947,
+   "end_year": 1947,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q242727",
+     "ko": "⾜",
+     "en": "Radical 157",
+     "desc": "강희자전의 한자 부수",
+     "types": [
+      "부수",
+      "유니코드 문자"
+     ],
+     "start": null,
+     "end": null,
+     "term": "발족"
+    },
+    {
+     "qid": "Q836773",
+     "ko": "족발",
+     "en": "jokbal",
+     "desc": "돼지의 발을 익히고 조린 한국 요리",
+     "types": [],
+     "start": null,
+     "end": null,
+     "term": "발족"
+    }
+   ]
+  },
+  {
+   "id": "economy-five-year-plan",
+   "dataset": "economy",
+   "title": "경제개발 5개년 계획",
+   "kind": null,
+   "linked": null,
+   "start_year": 1962,
+   "end_year": 1962,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q5455783",
+    "ko": "대한민국의 경제 개발 5개년 계획",
+    "en": "Five-Year Plans of South Korea",
+    "desc": "1960년대부터 1990년대까지 대한민국 정부가 시행한 경제개발 계획",
+    "types": [
+     "경제 개발 5개년 계획"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": 1962,
+     "precision": 9
+    },
+    "end": {
+     "prop": "P582",
+     "year": 1996,
+     "precision": 9
+    },
+    "term": "경제개발 5개년 계획"
+   },
+   "others": [
+    {
+     "qid": "Q1042701",
+     "ko": "5개년 계획",
+     "en": "Pyatiletka",
+     "desc": "위키미디어 동음이의어 문서",
+     "types": [
+      "위키미디어 동음이의어 문서"
+     ],
+     "start": null,
+     "end": null,
+     "term": "5개년 계획"
+    },
+    {
+     "qid": "Q92767765",
+     "ko": "5개년 계획",
+     "en": "Five-year plan",
+     "desc": null,
+     "types": [
+      "위키미디어 동음이의어 문서"
+     ],
+     "start": null,
+     "end": null,
+     "term": "5개년 계획"
+    }
+   ]
+  },
+  {
+   "id": "economy-saemaul",
+   "dataset": "economy",
+   "title": "새마을운동",
+   "kind": null,
+   "linked": null,
+   "start_year": 1970,
+   "end_year": 1970,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q16168292",
+     "ko": "새마을운동중앙회",
+     "en": null,
+     "desc": null,
+     "types": [
+      "단체"
+     ],
+     "start": null,
+     "end": null,
+     "term": "새마을운동"
+    }
+   ]
+  },
+  {
+   "id": "economy-oil-shock",
+   "dataset": "economy",
+   "title": "석유파동",
+   "kind": null,
+   "linked": null,
+   "start_year": 1973,
+   "end_year": 1980,
+   "verdict": "부분 일치",
+   "best": {
+    "qid": "Q316817",
+    "ko": "유류 파동",
+    "en": "1973 oil crisis",
+    "desc": null,
+    "types": [
+     "경제 공황",
+     "oil crisis"
+    ],
+    "start": {
+     "prop": "P580",
+     "year": 1973,
+     "precision": 11
+    },
+    "end": {
+     "prop": "P582",
+     "year": 1974,
+     "precision": 11
+    },
+    "term": "석유파동"
+   },
+   "others": []
+  },
+  {
+   "id": "economy-real-name",
+   "dataset": "economy",
+   "title": "금융실명제",
+   "kind": null,
+   "linked": null,
+   "start_year": 1993,
+   "end_year": 1993,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q12586538",
+    "ko": "금융실명제",
+    "en": "real-name financial system",
+    "desc": null,
+    "types": [
+     "공공 정책"
+    ],
+    "start": null,
+    "end": null,
+    "term": "금융실명제"
+   },
+   "others": [
+    {
+     "qid": "Q78627437",
+     "ko": "금융실명거래 및 비밀보장에 관한 법률",
+     "en": null,
+     "desc": null,
+     "types": [
+      "대한민국 법률"
+     ],
+     "start": null,
+     "end": null,
+     "term": "금융실명제"
+    }
+   ]
+  },
+  {
+   "id": "economy-wto",
+   "dataset": "economy",
+   "title": "세계무역기구 출범",
+   "kind": null,
+   "linked": null,
+   "start_year": 1995,
+   "end_year": 1995,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "economy-1997-crisis",
+   "dataset": "economy",
+   "title": "외환위기",
+   "kind": null,
+   "linked": null,
+   "start_year": 1997,
+   "end_year": 1997,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q1417912",
+    "ko": "외환위기",
+    "en": "currency crisis",
+    "desc": null,
+    "types": [],
+    "start": null,
+    "end": null,
+    "term": "외환위기"
+   },
+   "others": []
+  },
+  {
+   "id": "architecture-hwangnyongsa",
+   "dataset": "architecture",
+   "title": "황룡사 구층목탑",
+   "kind": null,
+   "linked": null,
+   "start_year": 643,
+   "end_year": 645,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "architecture-bulguksa",
+   "dataset": "architecture",
+   "title": "불국사 창건",
+   "kind": null,
+   "linked": null,
+   "start_year": 751,
+   "end_year": 751,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q69508801",
+     "ko": "창건",
+     "en": "Chang-geon",
+     "desc": "이름",
+     "types": [
+      "이름"
+     ],
+     "start": null,
+     "end": null,
+     "term": "창건"
+    }
+   ]
+  },
+  {
+   "id": "architecture-seokguram",
+   "dataset": "architecture",
+   "title": "석굴암",
+   "kind": null,
+   "linked": null,
+   "start_year": 751,
+   "end_year": 751,
+   "verdict": "날짜 없음",
+   "best": {
+    "qid": "Q489820",
+    "ko": "석굴암",
+    "en": "Seokguram",
+    "desc": "대한민국 토함산에 있는 석굴",
+    "types": [
+     "동굴",
+     "대한민국 국보",
+     "사찰"
+    ],
+    "start": null,
+    "end": null,
+    "term": "석굴암"
+   },
+   "others": [
+    {
+     "qid": "Q65262603",
+     "ko": "석굴암 천룡도",
+     "en": null,
+     "desc": null,
+     "types": [
+      "문화유산"
+     ],
+     "start": null,
+     "end": null,
+     "term": "석굴암"
+    }
+   ]
+  },
+  {
+   "id": "architecture-muryangsujeon",
+   "dataset": "architecture",
+   "title": "부석사 무량수전 중건",
+   "kind": null,
+   "linked": null,
+   "start_year": 1376,
+   "end_year": 1376,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "architecture-jongmyo",
+   "dataset": "architecture",
+   "title": "종묘 건립",
+   "kind": null,
+   "linked": null,
+   "start_year": 1394,
+   "end_year": 1395,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": []
+  },
+  {
+   "id": "architecture-gyeongbokgung",
+   "dataset": "architecture",
+   "title": "경복궁 창건",
+   "kind": null,
+   "linked": null,
+   "start_year": 1394,
+   "end_year": 1395,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q69508801",
+     "ko": "창건",
+     "en": "Chang-geon",
+     "desc": "이름",
+     "types": [
+      "이름"
+     ],
+     "start": null,
+     "end": null,
+     "term": "창건"
+    }
+   ]
+  },
+  {
+   "id": "architecture-changdeokgung",
+   "dataset": "architecture",
+   "title": "창덕궁 창건",
+   "kind": null,
+   "linked": null,
+   "start_year": 1405,
+   "end_year": 1405,
+   "verdict": "못 찾음",
+   "best": null,
+   "others": [
+    {
+     "qid": "Q69508801",
+     "ko": "창건",
+     "en": "Chang-geon",
+     "desc": "이름",
+     "types": [
+      "이름"
+     ],
+     "start": null,
+     "end": null,
+     "term": "창건"
+    }
+   ]
+  },
+  {
+   "id": "architecture-hwaseong",
+   "dataset": "architecture",
+   "title": "수원 화성 축성",
+   "kind": null,
+   "linked": null,
+   "start_year": 1796,
+   "end_year": 1796,
+   "verdict": "못 찾음",
+   "best": null,
    "others": []
   }
  ]

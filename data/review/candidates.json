@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20",
+ "generated": "2026-10-25",
  "source": "Wikidata (CC0)",
  "candidates": {
   "world": [
@@ -44,7 +44,7 @@
     "ko": "고대 로마",
     "desc": "기원전 8세기부터 이탈리아 반도에서 성장하기 시작한 문명",
     "type": "과거에 존재했던 나라",
-    "sitelinks": 165,
+    "sitelinks": 166,
     "start": -753,
     "end": 476
    },
@@ -594,7 +594,7 @@
     "qid": "Q483458",
     "ko": "제주 4·3 사건",
     "desc": "1948년 분쟁",
-    "type": "학살",
+    "type": "반란",
     "sitelinks": 23,
     "start": 1948,
     "end": 1949
@@ -691,7 +691,7 @@
    },
    {
     "qid": "Q706428",
-    "ko": "여란전쟁",
+    "ko": "고려-거란 전쟁",
     "desc": "8세기 말~9세기 초 고려와 요나라 간의 전쟁",
     "type": "전쟁",
     "sitelinks": 14,
@@ -702,7 +702,7 @@
     "qid": "Q709191",
     "ko": "임오군란",
     "desc": "1882년에 발생한 조선 군인들의 폭동",
-    "type": "반란",
+    "type": "하극상",
     "sitelinks": 14,
     "start": 1882,
     "end": 1882
@@ -717,21 +717,21 @@
     "end": null
    },
    {
+    "qid": "Q126896555",
+    "ko": "조선민주주의인민공화국과 로씨야련방사이의 포괄적인 전략적동반자관계에 관한 조약",
+    "desc": "",
+    "type": "조약",
+    "sitelinks": 13,
+    "start": 2024,
+    "end": null
+   },
+   {
     "qid": "Q497034",
     "ko": "상주 전투",
     "desc": "",
     "type": "전투",
     "sitelinks": 12,
     "start": 1592,
-    "end": null
-   },
-   {
-    "qid": "Q126896555",
-    "ko": "조선민주주의인민공화국과 로씨야련방사이의 포괄적인 전략적동반자관계에 관한 조약",
-    "desc": "",
-    "type": "조약",
-    "sitelinks": 12,
-    "start": 2024,
     "end": null
    }
   ],
@@ -1030,7 +1030,7 @@
     "qid": "Q718763",
     "ko": "남양 군도",
     "desc": "제1차 세계대전 이후 국제연맹이 일본에 부여한 오세아니아의 위임통치령",
-    "type": "위임통치령",
+    "type": "과거에 존재했던 나라",
     "sitelinks": 34,
     "start": 1919,
     "end": 1947
@@ -1137,20 +1137,11 @@
   ],
   "science": [
    {
-    "qid": "Q155",
-    "ko": "브라질",
-    "desc": "남아메리카의 국가",
-    "type": "주권국",
-    "sitelinks": 387,
-    "start": 1822,
-    "end": null
-   },
-   {
     "qid": "Q51",
     "ko": "남극",
     "desc": "지구에서 가장 남쪽에 있는 대륙",
-    "type": "지역",
-    "sitelinks": 316,
+    "type": "무주지",
+    "sitelinks": 317,
     "start": 1820,
     "end": null
    },
@@ -1177,7 +1168,7 @@
     "ko": "천왕성",
     "desc": "태양계의 일곱 번째 행성",
     "type": "지구 과학/외행성",
-    "sitelinks": 261,
+    "sitelinks": 262,
     "start": 1781,
     "end": null
    },
@@ -1197,24 +1188,6 @@
     "type": "",
     "sitelinks": 246,
     "start": 1884,
-    "end": null
-   },
-   {
-    "qid": "Q339",
-    "ko": "명왕성",
-    "desc": "태양계의 왜행성",
-    "type": "왜행성",
-    "sitelinks": 223,
-    "start": 1930,
-    "end": null
-   },
-   {
-    "qid": "Q5372",
-    "ko": "농구",
-    "desc": "양 끝에 바스켓이 있는 코트에서 진행되는 팀 스포츠로 농구공을 사용하여 바스켓에 넣으면 득점을 하는 경기",
-    "type": "올림픽 경기 종목",
-    "sitelinks": 217,
-    "start": 1891,
     "end": null
    },
    {
@@ -1290,15 +1263,6 @@
     "end": null
    },
    {
-    "qid": "Q596",
-    "ko": "세레스",
-    "desc": "소행성",
-    "type": "왜행성",
-    "sitelinks": 145,
-    "start": 1801,
-    "end": null
-   },
-   {
     "qid": "Q2348",
     "ko": "중성자",
     "desc": "원소를 이루는 입자들 중 전하를 띠지 않는 입자",
@@ -1362,19 +1326,10 @@
     "end": null
    },
    {
-    "qid": "Q2565",
-    "ko": "타이탄",
-    "desc": "토성의 6번째 위성",
-    "type": "토성의 위성",
-    "sitelinks": 121,
-    "start": 1655,
-    "end": null
-   },
-   {
     "qid": "Q611",
     "ko": "에리스",
     "desc": "태양계의 왜소행성",
-    "type": "왜행성",
+    "type": "천체",
     "sitelinks": 121,
     "start": 2003,
     "end": null
@@ -1407,39 +1362,12 @@
     "end": null
    },
    {
-    "qid": "Q7547",
-    "ko": "포보스",
-    "desc": "",
-    "type": "화성의 위성",
-    "sitelinks": 116,
-    "start": 1877,
-    "end": null
-   },
-   {
-    "qid": "Q3143",
-    "ko": "유로파",
-    "desc": "목성의 둘째 위성이자 갈릴레이 위성의 구성원",
-    "type": "규칙 위성",
-    "sitelinks": 115,
-    "start": 1610,
-    "end": null
-   },
-   {
     "qid": "Q604",
     "ko": "마케마케 (왜행성)",
     "desc": "",
-    "type": "고전적 카이퍼대 천체",
+    "type": "명왕성형 천체",
     "sitelinks": 114,
     "start": 2005,
-    "end": null
-   },
-   {
-    "qid": "Q3123",
-    "ko": "이오",
-    "desc": "목성의 갈릴레이 위성 4개 중 가장 안쪽",
-    "type": "규칙 위성",
-    "sitelinks": 113,
-    "start": 1610,
     "end": null
    },
    {
@@ -1449,24 +1377,6 @@
     "type": "",
     "sitelinks": 112,
     "start": 1858,
-    "end": null
-   },
-   {
-    "qid": "Q3169",
-    "ko": "가니메데",
-    "desc": "목성의 위성",
-    "type": "규칙 위성",
-    "sitelinks": 111,
-    "start": 1610,
-    "end": null
-   },
-   {
-    "qid": "Q7548",
-    "ko": "데이모스",
-    "desc": "화성의 위성",
-    "type": "화성의 위성",
-    "sitelinks": 111,
-    "start": 1877,
     "end": null
    },
    {
@@ -1485,15 +1395,6 @@
     "type": "",
     "sitelinks": 111,
     "start": 1790,
-    "end": null
-   },
-   {
-    "qid": "Q601",
-    "ko": "하우메아",
-    "desc": "카이퍼대에 있는 왜행성",
-    "type": "왜행성",
-    "sitelinks": 109,
-    "start": 2003,
     "end": null
    },
    {
@@ -1524,19 +1425,10 @@
     "end": null
    },
    {
-    "qid": "Q3134",
-    "ko": "칼리스토",
-    "desc": "목성의 두번째로 큰 갈릴레이 위성이자 태양계에서 세번째로 큰 위성",
-    "type": "규칙 위성",
-    "sitelinks": 103,
-    "start": 1610,
-    "end": null
-   },
-   {
     "qid": "Q129072",
     "ko": "페르세폴리스",
     "desc": "역사 기념물, 아케메네스 궁전, 이란 국가 유산, 유네스코 세계유산",
-    "type": "고대 도시",
+    "type": "문화재",
     "sitelinks": 103,
     "start": -511,
     "end": -330
@@ -1560,66 +1452,12 @@
     "end": null
    },
    {
-    "qid": "Q23408",
-    "ko": "부베섬",
-    "desc": "",
-    "type": "지방 (지리)",
-    "sitelinks": 102,
-    "start": 1739,
-    "end": null
-   },
-   {
-    "qid": "Q48584",
-    "ko": "로제타석",
-    "desc": "",
-    "type": "비석",
-    "sitelinks": 101,
-    "start": -196,
-    "end": null
-   },
-   {
-    "qid": "Q3359",
-    "ko": "트리톤",
-    "desc": "해왕성의 가장 큰 위성",
-    "type": "해왕성의 위성",
-    "sitelinks": 100,
-    "start": 1846,
-    "end": null
-   },
-   {
-    "qid": "Q128015",
-    "ko": "단두대",
-    "desc": "사형수의 목을 자르는 대",
-    "type": "사형 방법",
-    "sitelinks": 99,
-    "start": 1792,
-    "end": null
-   },
-   {
     "qid": "Q101674",
     "ko": "진공 청소기(유선)",
     "desc": "전동기의 전기에너지에 의한 공기의 압력차를 이용해 티끌과 먼지를 흡수하는 청소 기구 이전하는 삼성전자서비스에서 만든 작품이다.",
     "type": "",
     "sitelinks": 97,
     "start": 1901,
-    "end": null
-   },
-   {
-    "qid": "Q3030",
-    "ko": "4 베스타",
-    "desc": "두 번째로 큰 소행성 대지단 소행성",
-    "type": "소행성",
-    "sitelinks": 96,
-    "start": 1807,
-    "end": null
-   },
-   {
-    "qid": "Q3002",
-    "ko": "2 팔라스",
-    "desc": "소행성",
-    "type": "소행성",
-    "sitelinks": 94,
-    "start": 1802,
     "end": null
    },
    {
@@ -1632,30 +1470,12 @@
     "end": null
    },
    {
-    "qid": "Q6604",
-    "ko": "카론",
-    "desc": "명왕성의 가장 큰 위성",
-    "type": "명왕성의 위성",
-    "sitelinks": 94,
-    "start": 1978,
-    "end": null
-   },
-   {
     "qid": "Q79757",
     "ko": "기압계",
     "desc": "대기압을 측정하는 장치",
     "type": "",
     "sitelinks": 94,
     "start": 1643,
-    "end": null
-   },
-   {
-    "qid": "Q3303",
-    "ko": "엔셀라두스",
-    "desc": "토성의 위성",
-    "type": "토성의 위성",
-    "sitelinks": 93,
-    "start": 1789,
     "end": null
    },
    {
@@ -1668,16 +1488,196 @@
     "end": null
    },
    {
-    "qid": "Q14266",
-    "ko": "센타우루스자리 프록시마",
-    "desc": "태양계에서 가장 가까운 별로, 센타우루스자리에 속한 적색왜성",
-    "type": "적색 왜성",
+    "qid": "Q127956",
+    "ko": "전자레인지",
+    "desc": "고주파로 가열하는 조리 기구",
+    "type": "",
     "sitelinks": 91,
-    "start": -4850000001,
+    "start": 1945,
+    "end": null
+   },
+   {
+    "qid": "Q161258",
+    "ko": "클리퍼턴섬",
+    "desc": "",
+    "type": "환초",
+    "sitelinks": 89,
+    "start": 1711,
+    "end": null
+   },
+   {
+    "qid": "Q9285",
+    "ko": "머리털자리",
+    "desc": "",
+    "type": "별자리",
+    "sitelinks": 89,
+    "start": -245,
+    "end": null
+   },
+   {
+    "qid": "Q10481",
+    "ko": "공기펌프자리",
+    "desc": "",
+    "type": "별자리",
+    "sitelinks": 89,
+    "start": 1752,
+    "end": null
+   },
+   {
+    "qid": "Q58148",
+    "ko": "저온 살균법",
+    "desc": "가열 살균법의 일종",
+    "type": "",
+    "sitelinks": 89,
+    "start": 1864,
+    "end": null
+   },
+   {
+    "qid": "Q101667",
+    "ko": "강입자",
+    "desc": "",
+    "type": "양자 입자의 종류",
+    "sitelinks": 88,
+    "start": 1962,
+    "end": null
+   },
+   {
+    "qid": "Q76436",
+    "ko": "도플러 효과",
+    "desc": "",
+    "type": "물리 현상",
+    "sitelinks": 88,
+    "start": 1842,
+    "end": null
+   },
+   {
+    "qid": "Q4360",
+    "ko": "펄사",
+    "desc": "",
+    "type": "천체 유형",
+    "sitelinks": 87,
+    "start": 1967,
+    "end": null
+   },
+   {
+    "qid": "Q15610",
+    "ko": "90377 세드나",
+    "desc": "소행성",
+    "type": "세드나족",
+    "sitelinks": 87,
+    "start": 2003,
+    "end": null
+   },
+   {
+    "qid": "Q83152",
+    "ko": "쿨롱 법칙",
+    "desc": "",
+    "type": "물리 법칙",
+    "sitelinks": 86,
+    "start": 1875,
+    "end": null
+   },
+   {
+    "qid": "Q10416",
+    "ko": "물뱀자리",
+    "desc": "별자리",
+    "type": "별자리",
+    "sitelinks": 86,
+    "start": 1597,
+    "end": null
+   },
+   {
+    "qid": "Q10428",
+    "ko": "외뿔소자리",
+    "desc": "",
+    "type": "별자리",
+    "sitelinks": 86,
+    "start": 1612,
+    "end": null
+   },
+   {
+    "qid": "Q10470",
+    "ko": "용골자리",
+    "desc": "",
+    "type": "별자리",
+    "sitelinks": 86,
+    "start": 1763,
+    "end": null
+   },
+   {
+    "qid": "Q1049294",
+    "ko": "에모지",
+    "desc": "그림 문자 및 그림 문자 표현 기술의 총칭",
+    "type": "표기법",
+    "sitelinks": 86,
+    "start": 1999,
+    "end": null
+   },
+   {
+    "qid": "Q122894",
+    "ko": "플랑크 상수",
+    "desc": "",
+    "type": "물리 상수",
+    "sitelinks": 85,
+    "start": 1901,
+    "end": null
+   },
+   {
+    "qid": "Q8832",
+    "ko": "기린자리",
+    "desc": "",
+    "type": "별자리",
+    "sitelinks": 85,
+    "start": 1612,
+    "end": null
+   },
+   {
+    "qid": "Q8913",
+    "ko": "화로자리",
+    "desc": "천구의 남쪽에 있는 별자리",
+    "type": "별자리",
+    "sitelinks": 85,
+    "start": 1756,
+    "end": null
+   },
+   {
+    "qid": "Q10488",
+    "ko": "조각칼자리",
+    "desc": "",
+    "type": "별자리",
+    "sitelinks": 85,
+    "start": 1750,
+    "end": null
+   },
+   {
+    "qid": "Q10519",
+    "ko": "여우자리",
+    "desc": "",
+    "type": "별자리",
+    "sitelinks": 85,
+    "start": 1683,
+    "end": null
+   },
+   {
+    "qid": "Q23118",
+    "ko": "리세르그산 디에틸아미드",
+    "desc": "환각제",
+    "type": "화학 물질의 종류",
+    "sitelinks": 85,
+    "start": 1948,
+    "end": null
+   },
+   {
+    "qid": "Q101761",
+    "ko": "지퍼",
+    "desc": "두 줄을 쇠고리로 밀고 당겨 여닫을 수 있도록 만든 물건",
+    "type": "기기",
+    "sitelinks": 84,
+    "start": 1893,
     "end": null
    }
   ],
-  "music": [
+  "music-west": [
    {
     "qid": "Q9554",
     "ko": "마르틴 루터",
@@ -1826,7 +1826,7 @@
     "qid": "Q41180",
     "ko": "프랑스의 국가",
     "desc": "국가",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 121,
     "start": 1792,
     "end": null
@@ -1898,7 +1898,7 @@
     "qid": "Q40807",
     "ko": "영국의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 105,
     "start": 1745,
     "end": null
@@ -1907,7 +1907,7 @@
     "qid": "Q44696",
     "ko": "미국의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 105,
     "start": 1814,
     "end": null
@@ -2006,7 +2006,7 @@
     "qid": "Q44042",
     "ko": "독일의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 97,
     "start": 1841,
     "end": null
@@ -2096,7 +2096,7 @@
     "qid": "Q83099",
     "ko": "인도의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 90,
     "start": 1911,
     "end": null
@@ -2105,7 +2105,7 @@
     "qid": "Q130865",
     "ko": "이스라엘의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 90,
     "start": 1878,
     "end": null
@@ -2114,7 +2114,7 @@
     "qid": "Q156136",
     "ko": "중화인민공화국의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 90,
     "start": 1934,
     "end": null
@@ -2123,7 +2123,7 @@
     "qid": "Q170601",
     "ko": "오스트레일리아의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 90,
     "start": 1878,
     "end": null
@@ -2147,10 +2147,19 @@
     "end": 1899
    },
    {
+    "qid": "Q505476",
+    "ko": "아비치",
+    "desc": "스웨덴의 DJ (1989–2018)",
+    "type": "사람",
+    "sitelinks": 90,
+    "start": 1989,
+    "end": 2018
+   },
+   {
     "qid": "Q45788",
     "ko": "헝가리의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 86,
     "start": 1829,
     "end": null
@@ -2159,7 +2168,7 @@
     "qid": "Q482988",
     "ko": "폴란드의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 85,
     "start": 1927,
     "end": null
@@ -2168,7 +2177,7 @@
     "qid": "Q187",
     "ko": "이탈리아인들의 노래",
     "desc": "이탈리아의 국가",
-    "type": "국가",
+    "type": "창작물",
     "sitelinks": 80,
     "start": 1859,
     "end": null
@@ -2177,7 +2186,7 @@
     "qid": "Q172152",
     "ko": "고요한 밤 거룩한 밤",
     "desc": "",
-    "type": "크리스마스 캐럴",
+    "type": "음악 작품/작곡",
     "sitelinks": 79,
     "start": 1815,
     "end": null
@@ -2186,7 +2195,7 @@
     "qid": "Q166350",
     "ko": "벨라루스의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 73,
     "start": 2002,
     "end": null
@@ -2204,22 +2213,14 @@
     "qid": "Q199506",
     "ko": "안도라의 국가",
     "desc": "",
-    "type": "국가",
+    "type": "음악 작품/작곡",
     "sitelinks": 69,
     "start": 1921,
     "end": null
-   },
-   {
-    "qid": "Q142260",
-    "ko": "인도네시아의 국가",
-    "desc": "",
-    "type": "국가",
-    "sitelinks": 67,
-    "start": 1945,
-    "end": null
    }
   ],
-  "art": [
+  "music-east": [],
+  "art-west": [
    {
     "qid": "Q12418",
     "ko": "모나리자",
@@ -2233,7 +2234,7 @@
     "qid": "Q6010",
     "ko": "랩",
     "desc": "힙합의 한 축을 이루는 음악 요소",
-    "type": "음악 장르",
+    "type": "예술 사조",
     "sitelinks": 109,
     "start": 1970,
     "end": null
@@ -2293,21 +2294,21 @@
     "end": null
    },
    {
+    "qid": "Q173782",
+    "ko": "아르데코",
+    "desc": "1920년대 프랑스에서 시작한 시각 예술 양식",
+    "type": "예술 사조",
+    "sitelinks": 73,
+    "start": 1910,
+    "end": null
+   },
+   {
     "qid": "Q185372",
     "ko": "진주 귀고리를 한 소녀",
     "desc": "",
     "type": "회화",
     "sitelinks": 72,
     "start": 1665,
-    "end": null
-   },
-   {
-    "qid": "Q173782",
-    "ko": "아르데코",
-    "desc": "1920년대 프랑스에서 시작한 시각 예술 양식",
-    "type": "예술 사조",
-    "sitelinks": 72,
-    "start": 1910,
     "end": null
    },
    {
@@ -2351,7 +2352,7 @@
     "ko": "쉬프레마티슴",
     "desc": "",
     "type": "예술 사조",
-    "sitelinks": 66,
+    "sitelinks": 67,
     "start": 1913,
     "end": null
    },
@@ -2360,7 +2361,7 @@
     "ko": "라파엘 전파",
     "desc": "1848년에 형성된 영국의 문예 유파",
     "type": "예술 사조",
-    "sitelinks": 63,
+    "sitelinks": 64,
     "start": 1848,
     "end": null
    },
@@ -2378,7 +2379,7 @@
     "ko": "구성주의",
     "desc": "",
     "type": "건축 양식",
-    "sitelinks": 60,
+    "sitelinks": 61,
     "start": 1913,
     "end": null
    },
@@ -2432,7 +2433,7 @@
     "ko": "옵아트",
     "desc": "",
     "type": "예술 사조",
-    "sitelinks": 55,
+    "sitelinks": 56,
     "start": 1960,
     "end": null
    },
@@ -2509,6 +2510,15 @@
     "end": null
    },
    {
+    "qid": "Q208208",
+    "ko": "빈 분리파",
+    "desc": "오스트리아의 예술 집단",
+    "type": "건축 양식",
+    "sitelinks": 50,
+    "start": 1897,
+    "end": null
+   },
+   {
     "qid": "Q330369",
     "ko": "아츠 앤 크래프츠 운동",
     "desc": "",
@@ -2516,15 +2526,6 @@
     "sitelinks": 50,
     "start": 1880,
     "end": 1910
-   },
-   {
-    "qid": "Q208208",
-    "ko": "빈 분리파",
-    "desc": "오스트리아의 예술 집단",
-    "type": "조합",
-    "sitelinks": 50,
-    "start": 1897,
-    "end": null
    },
    {
     "qid": "Q321303",
@@ -2554,6 +2555,15 @@
     "end": null
    },
    {
+    "qid": "Q108908",
+    "ko": "플럭서스",
+    "desc": "",
+    "type": "예술 사조",
+    "sitelinks": 48,
+    "start": 1960,
+    "end": 1970
+   },
+   {
     "qid": "Q212616",
     "ko": "메두사호의 뗏목",
     "desc": "프랑스 낭만주의파의 유화 작품",
@@ -2570,15 +2580,6 @@
     "sitelinks": 47,
     "start": 1991,
     "end": null
-   },
-   {
-    "qid": "Q108908",
-    "ko": "플럭서스",
-    "desc": "",
-    "type": "예술 사조",
-    "sitelinks": 47,
-    "start": 1960,
-    "end": 1970
    },
    {
     "qid": "Q478271",
@@ -2761,6 +2762,7 @@
     "end": null
    }
   ],
+  "art-east": [],
   "religion": [
    {
     "qid": "Q5043",
@@ -2857,7 +2859,7 @@
     "ko": "다르마계 종교",
     "desc": "",
     "type": "종교",
-    "sitelinks": 60,
+    "sitelinks": 61,
     "start": -5001,
     "end": null
    },
@@ -2916,7 +2918,7 @@
     "end": null
    }
   ],
-  "philosophy": [
+  "philosophy-west": [
    {
     "qid": "Q935",
     "ko": "아이작 뉴턴",
@@ -2985,7 +2987,7 @@
     "ko": "장폴 사르트르",
     "desc": "프랑스의 작가이자 철학자 (1905–1980)",
     "type": "사람",
-    "sitelinks": 201,
+    "sitelinks": 202,
     "start": 1905,
     "end": 1980
    },
@@ -3017,6 +3019,15 @@
     "end": 762
    },
    {
+    "qid": "Q7197",
+    "ko": "시몬 드 보부아르",
+    "desc": "프랑스의 작가이자 철학자",
+    "type": "사람",
+    "sitelinks": 188,
+    "start": 1908,
+    "end": 1986
+   },
+   {
     "qid": "Q9049",
     "ko": "노엄 촘스키",
     "desc": "언어학자",
@@ -3024,15 +3035,6 @@
     "sitelinks": 188,
     "start": 1928,
     "end": null
-   },
-   {
-    "qid": "Q7197",
-    "ko": "시몬 드 보부아르",
-    "desc": "프랑스의 작가이자 철학자",
-    "type": "사람",
-    "sitelinks": 187,
-    "start": 1908,
-    "end": 1986
    },
    {
     "qid": "Q22670",
@@ -3098,6 +3100,15 @@
     "end": -564
    },
    {
+    "qid": "Q1401",
+    "ko": "프란체스코 페트라르카",
+    "desc": "",
+    "type": "사람",
+    "sitelinks": 164,
+    "start": 1304,
+    "end": 1374
+   },
+   {
     "qid": "Q37151",
     "ko": "손무",
     "desc": "",
@@ -3105,15 +3116,6 @@
     "sitelinks": 164,
     "start": -544,
     "end": -496
-   },
-   {
-    "qid": "Q1401",
-    "ko": "프란체스코 페트라르카",
-    "desc": "",
-    "type": "사람",
-    "sitelinks": 163,
-    "start": 1304,
-    "end": 1374
    },
    {
     "qid": "Q25973",
@@ -3282,7 +3284,7 @@
     "ko": "올더스 헉슬리",
     "desc": "",
     "type": "사람",
-    "sitelinks": 144,
+    "sitelinks": 143,
     "start": 1894,
     "end": 1963
    },
@@ -3362,7 +3364,7 @@
     "qid": "Q42891",
     "ko": "크리슈나",
     "desc": "",
-    "type": "힌두교의 신",
+    "type": "실존이 불분명한 인물",
     "sitelinks": 129,
     "start": -3228,
     "end": -3102
@@ -3386,6 +3388,15 @@
     "end": 1994
    },
    {
+    "qid": "Q82778",
+    "ko": "대 플리니우스",
+    "desc": "고대 로마의 정치인, 군인, 박물학자",
+    "type": "사람",
+    "sitelinks": 127,
+    "start": 20,
+    "end": 79
+   },
+   {
     "qid": "Q129772",
     "ko": "크세노폰",
     "desc": "",
@@ -3402,15 +3413,6 @@
     "sitelinks": 126,
     "start": 1906,
     "end": 1975
-   },
-   {
-    "qid": "Q82778",
-    "ko": "대 플리니우스",
-    "desc": "고대 로마의 정치인, 군인, 박물학자",
-    "type": "사람",
-    "sitelinks": 126,
-    "start": 20,
-    "end": 79
    },
    {
     "qid": "Q132524",
@@ -3440,6 +3442,15 @@
     "end": -55
    },
    {
+    "qid": "Q42247",
+    "ko": "쉴리 프뤼돔",
+    "desc": "프랑스시인",
+    "type": "사람",
+    "sitelinks": 124,
+    "start": 1839,
+    "end": 1907
+   },
+   {
     "qid": "Q125249",
     "ko": "윌리엄 제임스",
     "desc": "미국의 철학자, 심리학자 (1842~1910)",
@@ -3447,23 +3458,15 @@
     "sitelinks": 124,
     "start": 1842,
     "end": 1910
-   },
-   {
-    "qid": "Q42247",
-    "ko": "쉴리 프뤼돔",
-    "desc": "프랑스시인",
-    "type": "사람",
-    "sitelinks": 123,
-    "start": 1839,
-    "end": 1907
    }
   ],
-  "literature": [
+  "philosophy-east": [],
+  "literature-west": [
    {
     "qid": "Q428",
     "ko": "쿠란",
     "desc": "이슬람교의 성서",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 282,
     "start": 631,
     "end": null
@@ -3472,7 +3475,7 @@
     "qid": "Q7813",
     "ko": "세계 인권 선언",
     "desc": "1948년 12월 10일 파리에서 열린 제3회 유엔 총회에서 채택된 인권에 관한 세계 선언문",
-    "type": "법령",
+    "type": "국제관습법",
     "sitelinks": 241,
     "start": 1948,
     "end": null
@@ -3481,7 +3484,7 @@
     "qid": "Q18813",
     "ko": "신약성경",
     "desc": "기독교의 경전",
-    "type": "경전",
+    "type": "저작물",
     "sitelinks": 200,
     "start": 100,
     "end": null
@@ -3491,7 +3494,7 @@
     "ko": "일리아스",
     "desc": "",
     "type": "문학 작품",
-    "sitelinks": 181,
+    "sitelinks": 182,
     "start": -801,
     "end": null
    },
@@ -3571,7 +3574,7 @@
     "qid": "Q11698",
     "ko": "미국의 헌법",
     "desc": "1789년 문서",
-    "type": "헌법",
+    "type": "저작물",
     "sitelinks": 127,
     "start": 2026,
     "end": null
@@ -3580,7 +3583,7 @@
     "qid": "Q459842",
     "ko": "몰몬경",
     "desc": "예수그리스도후기성도교회 및 기타 몰몬교 종파의 경전",
-    "type": "경전",
+    "type": "저작물",
     "sitelinks": 126,
     "start": 1830,
     "end": null
@@ -3607,7 +3610,7 @@
     "qid": "Q48203",
     "ko": "로마 신자들에게 보낸 서간",
     "desc": "신약성경 정경의 편지 가운데 하나",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 120,
     "start": 57,
     "end": null
@@ -3616,7 +3619,7 @@
     "qid": "Q80355",
     "ko": "코린토 신자들에게 보낸 첫째 서간",
     "desc": "사도 바울로가 쓴 편지이자 신약성경 중 한 권",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 119,
     "start": 54,
     "end": null
@@ -3643,7 +3646,7 @@
     "qid": "Q128620",
     "ko": "갈라티아 신자들에게 보낸 서간",
     "desc": "신약성경의 9번째 책",
-    "type": "서신서",
+    "type": "문학 작품",
     "sitelinks": 116,
     "start": 48,
     "end": null
@@ -3670,7 +3673,7 @@
     "qid": "Q408673",
     "ko": "에페소 신자들에게 보낸 서간",
     "desc": "신약성경의 열 번째 책",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 114,
     "start": 62,
     "end": null
@@ -3679,7 +3682,7 @@
     "qid": "Q128608",
     "ko": "히브리인들에게 보낸 편지",
     "desc": "신약성경을 이루는 성경 중의 하나",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 114,
     "start": 63,
     "end": null
@@ -3688,7 +3691,7 @@
     "qid": "Q51613",
     "ko": "필립비인들에게 보낸 서간",
     "desc": "신약성경의 11번째 책",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 113,
     "start": 54,
     "end": null
@@ -3697,7 +3700,7 @@
     "qid": "Q123808",
     "ko": "코린토 신자들에게 보낸 둘째 서간",
     "desc": "신약성경 중 한 권",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 113,
     "start": 56,
     "end": null
@@ -3706,7 +3709,7 @@
     "qid": "Q131104",
     "ko": "필레몬에게 보낸 편지",
     "desc": "신약성경의 한 권",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 112,
     "start": 57,
     "end": null
@@ -3715,7 +3718,7 @@
     "qid": "Q171328",
     "ko": "유엔 헌장",
     "desc": "1945년 유엔 기본 조약",
-    "type": "헌장",
+    "type": "저작물",
     "sitelinks": 112,
     "start": 1945,
     "end": null
@@ -3724,7 +3727,7 @@
     "qid": "Q131180",
     "ko": "티모테오에게 보낸 첫째 서간",
     "desc": "사도 파울로스가 제자 디모테오에게 보낸 서신서",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 110,
     "start": 64,
     "end": null
@@ -3760,7 +3763,7 @@
     "qid": "Q131489",
     "ko": "티모테오에게 보낸 둘째 서간",
     "desc": "신약성경의 서신",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 107,
     "start": 64,
     "end": null
@@ -3769,34 +3772,16 @@
     "qid": "Q131493",
     "ko": "티토에게 보낸 서간",
     "desc": "사도 바울로가 크레타 교회의 디도에게 보낸 서신서",
-    "type": "경전",
+    "type": "문학 작품",
     "sitelinks": 107,
     "start": 63,
-    "end": null
-   },
-   {
-    "qid": "Q131107",
-    "ko": "테살로니카 신자들에게 보낸 둘째 서간",
-    "desc": "신약성경의 바울로 서신들 가운데 하나",
-    "type": "경전",
-    "sitelinks": 105,
-    "start": 50,
-    "end": null
-   },
-   {
-    "qid": "Q131115",
-    "ko": "테살로니카 신자들에게 보낸 첫째 서간",
-    "desc": "신약성경의 바울로 서신들중 하나",
-    "type": "경전",
-    "sitelinks": 105,
-    "start": 50,
     "end": null
    },
    {
     "qid": "Q41675",
     "ko": "기네스 세계 기록",
     "desc": "기네스 사(社)에서 발간하는 천문 지리, 자연, 역사, 과학, 인문 등의 각 분야 세계 기록을 기술한 책",
-    "type": "연속간행물",
+    "type": "문학 작품",
     "sitelinks": 105,
     "start": 1955,
     "end": null
@@ -3808,6 +3793,24 @@
     "type": "문학 작품",
     "sitelinks": 105,
     "start": -501,
+    "end": null
+   },
+   {
+    "qid": "Q131107",
+    "ko": "테살로니카 신자들에게 보낸 둘째 서간",
+    "desc": "신약성경의 바울로 서신들 가운데 하나",
+    "type": "문학 작품",
+    "sitelinks": 105,
+    "start": 50,
+    "end": null
+   },
+   {
+    "qid": "Q131115",
+    "ko": "테살로니카 신자들에게 보낸 첫째 서간",
+    "desc": "신약성경의 바울로 서신들중 하나",
+    "type": "문학 작품",
+    "sitelinks": 105,
+    "start": 50,
     "end": null
    },
    {
@@ -4000,6 +4003,7 @@
     "end": null
    }
   ],
+  "literature-east": [],
   "technology": [
    {
     "qid": "Q68",
@@ -4064,6 +4068,8 @@
     "start": -20001,
     "end": null
    }
-  ]
+  ],
+  "economy": [],
+  "architecture": []
  }
 }
