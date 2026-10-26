@@ -596,3 +596,14 @@ npx esbuild entry.js --bundle --minify --format=iife --global-name=THREE --targe
    다만 오프라인일 때 광고 자리는 비어 보입니다.
 5. 콘텐츠 심사가 있는 광고 네트워크라면, **데이터를 `reviewed` 로 끌어올린 뒤** 신청하는 편이 유리합니다
    (현재 459개 전부 `draft`, 출처가 있는 것은 133개).
+
+## 9. 운영
+
+- **배포 확인**: `main` 에 푸시 → 1~2분 뒤 https://shiroleestudio.github.io/prettymuchtimelines/ . 서비스워커 때문에 이미 열어 둔 폰은 한 번 더 열어야 새 버전이 뜬다.
+- **되돌리기**: `git revert <커밋>` 후 푸시. 빌드 결과(`data/bundle.js` 등)도 그 커밋에 들어 있으므로 함께 돌아간다.
+- **깨졌을 때**: 화면이 비면 브라우저 콘솔부터. 데이터 오류는 `npm run validate` 가 잡는다. Pages 설정은 Settings → Pages → `main` / root.
+- **Node**: `.nvmrc`(22). 런타임 의존성이 없으므로 `npm install` 없이 `node scripts/…` 가 바로 돈다.
+- **예약 작업** `.github/workflows/sources.yml`(매주 Wikidata 대조)은 저장소에 60일간 커밋이 없으면 GitHub 이 자동으로 끈다. 리포트가 안 오면 Actions 탭에서 다시 켠다. 데이터 파일은 건드리지 않으니 꺼져도 사이트는 멀쩡하다.
+- **three.js** 는 `vendor/three.min.js`(r170) 고정. 올릴 이유가 생길 때만 6-4 절차로.
+- **릴리스**: `CHANGELOG.md` 한 줄 + Releases 에서 `vX.Y.Z` 태그.
+- 계정·정기 점검·다른 저장소: 허브 저장소의 `STUDIO.md`.

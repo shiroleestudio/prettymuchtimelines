@@ -2,6 +2,9 @@
   "name": "big-history-timeline",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "description": "빅 히스토리 스타일 통합 연표 — 왕조·국가사와 주제사를 한 시간축에서 비교하는 정적 웹앱",
   "scripts": {
     "validate": "node scripts/validate.js",
