@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25",
+ "generated": "2026-11-01",
  "sources": [
   {
    "name": "Wikidata",
@@ -208,7 +208,7 @@
      "historical ethnic group"
     ],
     "start": {
-     "prop": "P571",
+     "prop": "P580",
      "year": -1701,
      "precision": 7
     },
@@ -367,7 +367,7 @@
      "시대"
     ],
     "start": {
-     "prop": "P571",
+     "prop": "P580",
      "year": -550,
      "precision": 9
     },
@@ -7008,7 +7008,7 @@
      "과학 이론"
     ],
     "start": {
-     "prop": "P575",
+     "prop": "P571",
      "year": 1905,
      "precision": 9
     },
@@ -10505,9 +10505,9 @@
      "공의회"
     ],
     "start": {
-     "prop": "P580",
+     "prop": "P585",
      "year": 325,
-     "precision": 10
+     "precision": 9
     },
     "end": {
      "prop": "P582",
@@ -11493,7 +11493,7 @@
    "linked": "Q846933",
    "start_year": 1350,
    "end_year": 1500,
-   "verdict": "날짜 없음",
+   "verdict": "일치",
    "best": {
     "qid": "Q846933",
     "ko": "르네상스 인문주의자",
@@ -11502,8 +11502,16 @@
     "types": [
      "문화 운동"
     ],
-    "start": null,
-    "end": null,
+    "start": {
+     "prop": "P580",
+     "year": 1400,
+     "precision": 7
+    },
+    "end": {
+     "prop": "P582",
+     "year": 1600,
+     "precision": 7
+    },
     "term": "(지정한 번호)"
    },
    "others": []
@@ -12759,7 +12767,7 @@
      "문학 작품"
     ],
     "start": {
-     "prop": "P577",
+     "prop": "P571",
      "year": 1667,
      "precision": 9
     },
@@ -13423,7 +13431,7 @@
       "서적의 개별 복사본"
      ],
      "start": {
-      "prop": "P571",
+      "prop": "P577",
       "year": 1446,
       "precision": 9
      },
@@ -15051,8 +15059,24 @@
    "linked": null,
    "start_year": 1970,
    "end_year": 1970,
-   "verdict": "못 찾음",
-   "best": null,
+   "verdict": "일치",
+   "best": {
+    "qid": "Q497185",
+    "ko": "새마을 운동",
+    "en": "Saemaul Undong",
+    "desc": null,
+    "types": [
+     "사회 운동",
+     "political initiative"
+    ],
+    "start": {
+     "prop": "P571",
+     "year": 1970,
+     "precision": 9
+    },
+    "end": null,
+    "term": "새마을운동"
+   },
    "others": [
     {
      "qid": "Q16168292",
@@ -15087,9 +15111,9 @@
      "oil crisis"
     ],
     "start": {
-     "prop": "P580",
+     "prop": "P585",
      "year": 1973,
-     "precision": 11
+     "precision": 9
     },
     "end": {
      "prop": "P582",
