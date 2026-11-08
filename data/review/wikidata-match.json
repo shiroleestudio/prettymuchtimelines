@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01",
+ "generated": "2026-11-08",
  "sources": [
   {
    "name": "Wikidata",
@@ -208,7 +208,7 @@
      "historical ethnic group"
     ],
     "start": {
-     "prop": "P580",
+     "prop": "P571",
      "year": -1701,
      "precision": 7
     },
@@ -367,7 +367,7 @@
      "시대"
     ],
     "start": {
-     "prop": "P580",
+     "prop": "P571",
      "year": -550,
      "precision": 9
     },
@@ -1328,10 +1328,11 @@
     "desc": "1789년부터 1799년까지 프랑스에서 일어난 혁명",
     "types": [
      "혁명",
+     "시대",
      "역사적 사건"
     ],
     "start": {
-     "prop": "P585",
+     "prop": "P580",
      "year": 1789,
      "precision": 11
     },
@@ -3843,7 +3844,7 @@
      "precision": 9
     },
     "end": {
-     "prop": "P576",
+     "prop": "P582",
      "year": 220,
      "precision": 9
     },
@@ -4043,7 +4044,7 @@
      "precision": 9
     },
     "end": {
-     "prop": "P576",
+     "prop": "P582",
      "year": 907,
      "precision": 9
     },
@@ -7008,7 +7009,7 @@
      "과학 이론"
     ],
     "start": {
-     "prop": "P571",
+     "prop": "P575",
      "year": 1905,
      "precision": 9
     },
@@ -10068,7 +10069,9 @@
      "ko": "김홍도 필 풍속도 화첩",
      "en": "Danwon pungsokdo cheop",
      "desc": null,
-     "types": [],
+     "types": [
+      "artwork series"
+     ],
      "start": null,
      "end": null,
      "term": "김홍도"
@@ -10429,7 +10432,7 @@
     },
     "end": {
      "prop": "P570",
-     "year": 66,
+     "year": 68,
      "precision": 9
     },
     "term": "(지정한 번호)"
@@ -10505,9 +10508,9 @@
      "공의회"
     ],
     "start": {
-     "prop": "P585",
+     "prop": "P580",
      "year": 325,
-     "precision": 9
+     "precision": 10
     },
     "end": {
      "prop": "P582",
@@ -12767,7 +12770,7 @@
      "문학 작품"
     ],
     "start": {
-     "prop": "P571",
+     "prop": "P577",
      "year": 1667,
      "precision": 9
     },
@@ -13278,7 +13281,8 @@
     "en": "Tang poetry",
     "desc": null,
     "types": [
-     "문학 장르"
+     "문학 장르",
+     "poetry genre"
     ],
     "start": null,
     "end": null,
@@ -13793,11 +13797,10 @@
     "en": "The Great Dharani Sutra",
     "desc": "대승불교 경전의 하나",
     "types": [
-     "불경",
      "목판인쇄"
     ],
     "start": {
-     "prop": "P577",
+     "prop": "P571",
      "year": 800,
      "precision": 7
     },
@@ -15111,9 +15114,9 @@
      "oil crisis"
     ],
     "start": {
-     "prop": "P585",
+     "prop": "P580",
      "year": 1973,
-     "precision": 9
+     "precision": 11
     },
     "end": {
      "prop": "P582",
