@@ -449,7 +449,7 @@ UI 아이디어는 저작권 보호 대상이 아니지만, 화면 그림·아�
 
 1. `npm run build` 로 `data/bundle.js` 를 최신화하고 커밋합니다.
 2. GitHub 저장소 → **Settings → Pages → Source: Deploy from a branch**
-3. 브랜치(예: `main`)와 폴더 `/ (root)` 를 선택하면 `https://<계정>.github.io/<저장소>/` 로 열립니다. 지금 주소는 https://shiroleestudio.github.io/prettymuchtimelines/ (저장소 shiroleestudio/prettymuchtimelines). 옛 주소 dooholee96-code.github.io/THEBIGHISTORY 는 개인 계정의 리다이렉트 저장소가 넘겨줍니다.
+3. 브랜치(예: `main`)와 폴더 `/ (root)` 를 선택하면 `https://<계정>.github.io/<저장소>/` 로 열립니다. 지금 주소는 https://timeline.shiroleestudio.com/ (저장소 shiroleestudio/prettymuchtimelines, 저장소의 `CNAME` 파일이 주소를 정함). 옛 주소 shiroleestudio.github.io/prettymuchtimelines/ 는 GitHub 이, dooholee96-code.github.io/THEBIGHISTORY 는 개인 계정의 리다이렉트 저장소가 넘겨줍니다. 도메인·DNS 는 허브 저장소의 `STUDIO.md`.
 
 모든 경로가 상대 경로라서 하위 경로 배포에서도 그대로 동작합니다.
 
@@ -599,7 +599,7 @@ npx esbuild entry.js --bundle --minify --format=iife --global-name=THREE --targe
 
 ## 9. 운영
 
-- **배포 확인**: `main` 에 푸시 → 1~2분 뒤 https://shiroleestudio.github.io/prettymuchtimelines/ . 서비스워커 때문에 이미 열어 둔 폰은 한 번 더 열어야 새 버전이 뜬다.
+- **배포 확인**: `main` 에 푸시 → 1~2분 뒤 https://timeline.shiroleestudio.com/ . 서비스워커 때문에 이미 열어 둔 폰은 한 번 더 열어야 새 버전이 뜬다.
 - **되돌리기**: `git revert <커밋>` 후 푸시. 빌드 결과(`data/bundle.js` 등)도 그 커밋에 들어 있으므로 함께 돌아간다.
 - **깨졌을 때**: 화면이 비면 브라우저 콘솔부터. 데이터 오류는 `npm run validate` 가 잡는다. Pages 설정은 Settings → Pages → `main` / root.
 - **Node**: `.nvmrc`(22). 런타임 의존성이 없으므로 `npm install` 없이 `node scripts/…` 가 바로 돈다.
