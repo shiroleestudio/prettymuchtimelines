@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08",
+ "generated": "2026-11-15",
  "sources": [
   {
    "name": "Wikidata",
@@ -1224,6 +1224,7 @@
     "en": "British Empire",
     "desc": "영국 식민제국의 통칭",
     "types": [
+     "옛 지역",
      "식민지 제국"
     ],
     "start": {
@@ -13435,7 +13436,7 @@
       "서적의 개별 복사본"
      ],
      "start": {
-      "prop": "P577",
+      "prop": "P571",
       "year": 1446,
       "precision": 9
      },
@@ -13902,9 +13903,9 @@
      "서적의 개별 복사본"
     ],
     "start": {
-     "prop": "P571",
+     "prop": "P577",
      "year": 1377,
-     "precision": 9
+     "precision": 10
     },
     "end": null,
     "term": "(지정한 번호)"
@@ -15114,9 +15115,9 @@
      "oil crisis"
     ],
     "start": {
-     "prop": "P580",
+     "prop": "P585",
      "year": 1973,
-     "precision": 11
+     "precision": 9
     },
     "end": {
      "prop": "P582",
