@@ -9,7 +9,8 @@
  * '같은 시기 다른 나라·주제에서는' 목록. 맨 아래 버튼은 연표 화면의 그 항목으로 바로 데려간다(#e=<id>).
  *
  * 만드는 것
- *   p/<id>.html     항목 페이지(출처가 붙은 항목만 — 확인하지 않은 초안은 검색에 내보내지 않는다)
+ *   p/<id>.html     항목 페이지(출처가 붙은 항목만 — 확인하지 않은 초안은 검색에 내보내지 않는다).
+ *                   site.json 의 ads 가 있으면 이 페이지에만 애드센스 스크립트와 본문 아래 광고 자리 하나가 들어간다.
  *   p/index.html    항목 목록(카테고리별)
  *   sitemap.xml     위 페이지들과 첫 화면의 주소 목록(Search Console·서치어드바이저에 제출)
  *   robots.txt
@@ -77,6 +78,24 @@ function write(rel, text) {
   fs.writeFileSync(file, text);
 }
 
+const ADS = site.ads && site.ads.adsense ? site.ads : null;
+
+/** 항목 글 페이지에만 들어가는 애드센스 스크립트(연표 화면·목록 페이지에는 넣지 않는다). */
+function adsHead(o) {
+  if (!ADS || !o.ads) return '';
+  return `\n  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(ADS.adsense)}" crossorigin="anonymous"></script>`;
+}
+
+/** 본문 아래 광고 자리 하나. slot 이 비어 있으면(심사 전) 자리를 만들지 않는다. */
+function adBox() {
+  if (!ADS || !ADS.slot) return '';
+  return `    <aside class="ad" aria-label="광고">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ADS.adsense)}" data-ad-slot="${esc(ADS.slot)}" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </aside>
+`;
+}
+
 function head(o) {
   const verify = [
     site.verify && site.verify.google ? `<meta name="google-site-verification" content="${esc(site.verify.google)}" />` : '',
@@ -95,7 +114,7 @@ function head(o) {
   <meta property="og:image" content="${esc(BASE + site.image)}" />
   <meta property="og:locale" content="ko_KR" />
   <meta name="twitter:card" content="summary_large_image" />${verify ? '\n  ' + verify : ''}
-  <script type="application/ld+json">${JSON.stringify(o.ld)}</script>`;
+  <script type="application/ld+json">${JSON.stringify(o.ld)}</script>${adsHead(o)}`;
 }
 
 function page(o) {
@@ -153,7 +172,7 @@ ${e.detail.map((p) => `        <p>${esc(p)}</p>`).join('\n')}
 ` : ''}      <p class="src">출처 · ${srcs.map((s) => (s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>` : esc(s.name))).join(' · ')}${e.status !== 'reviewed' ? ' <span class="draft">(검토 전 초안)</span>' : ''}</p>
       <p><a class="cta" href="../index.html#e=${esc(e.id)}">연표에서 펼쳐 보기 →</a></p>
     </article>
-${groups.length ? `    <section>
+${adBox()}${groups.length ? `    <section>
       <h2>같은 시기 다른 곳에서는</h2>
 ${groups.map((g) => `      <h3><span class="dot" style="background:${esc(g.ds.color)}"></span>${esc(g.ds.label)}</h3>
       <ul class="list">
@@ -194,7 +213,7 @@ ${g.list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)}</a>
   write('p/' + e.id + '.html', page({
     title: `${e.title} (${period(e)}) — 같은 시기 세계는 | ${site.name}`,
     ogTitle: `${e.title} (${period(e)})`,
-    description, url, ld, body
+    description, url, ld, body, ads: true
   }));
 }
 
