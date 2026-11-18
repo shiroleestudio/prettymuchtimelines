@@ -224,6 +224,7 @@ npm run build     # 검증 + bundle.js 갱신
 | `datasets[].order` | 레인 정렬 순서 (작을수록 위) |
 | `datasets[].hidden_by_default` | `true` 면 처음에 꺼진 상태로 시작 |
 | `datasets[].periods` | (국가사) **시대 묶음** `{label, start_year, end_year, note}` — 열 왼쪽 띠에 세로로 적힌다. 시작 순, 겹치지 않게. 경계 연도는 공인 자료(교과서·국사편찬위원회 등)의 시대 구분을 따르고, 어디서 끊었는지는 `note` 에 |
+| `sources[]` | **데이터 출처 목록** `{id, name, org, url, match, field, terms, use}` — 설정 탭 '데이터 출처'와 `p/index.html` 에 그대로 나오고, 자료마다 그 자료를 쓴 항목 수를 센다(`match` = 항목 `sources` 주소의 호스트, `field` = 항목 필드명). 항목에 새 자료의 주소를 적으면 여기에도 한 줄 더한다(없으면 검증 경고). 이용 조건은 `data/LICENSE.md` 표와 맞춘다 |
 | `eras[]` | **시대 구간**. 화면의 시대 섹션·계기판 구간·배경 팔레트가 전부 여기서 만들어진다 |
 | `eras[].start_year` / `end_year` | 그 시대에 들어갈 사건의 `start_year` 범위 (끝값은 포함하지 않음) |
 | `eras[].day` / `night` | 배경 그라데이션 두 색 (위→아래). 낮/야경 각각 |

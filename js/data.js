@@ -154,6 +154,7 @@
       manifest: manifest,
       datasets: datasets,
       tracks: tracks,
+      sources: manifest.sources || [],   // 설정 탭 '데이터 출처'·검증 자료 목록
       entries: all,
       eras: (manifest.eras || []).slice().sort(function (a, b) {
         return a.start_year - b.start_year;

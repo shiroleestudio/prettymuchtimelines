@@ -76,5 +76,9 @@ h3 { font-size: 19px; margin: 16px 0 6px; display: flex; align-items: center; }
 .list li { font-size: 15px; }
 .yr { font-size: 12px; color: var(--ink-2); }
 
+.sources { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
+.sources li { margin: 0 0 6px; }
+.sources a { color: var(--ink); }
+
 .pager { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; margin: 0 4px; }
 .foot { max-width: 720px; margin: 0 auto; padding: 0 20px 32px; font-size: 12px; color: var(--ink-2); }

@@ -130,6 +130,7 @@ for (const era of manifest.eras || []) {
 
 // ----------------------------------------------------------- 데이터 파일 검사
 const globalIds = new Map();
+const sourceHosts = new Set((manifest.sources || []).map((s) => s.match).filter(Boolean));
 const wikidataIds = new Map();   // Q번호 → 처음 쓴 항목 id
 let wikidataCount = 0;
 let entryCount = 0;
@@ -211,6 +212,14 @@ for (const ds of manifest.datasets || []) {
         warn(file, `${where} — era_note("${entry.era_note}") 가 연도(${entry.start_year}~${entry.end_year})와 어긋나 보입니다.`);
       }
     }
+
+    // 출처 주소의 호스트는 매니페스트 sources(설정 탭 '데이터 출처'에 나오는 목록)에 있어야 한다.
+    (entry.sources || []).forEach(function (src) {
+      const m = /https?:\/\/([^/\s]+)/.exec(src);
+      if (m && !sourceHosts.has(m[1])) {
+        warn(file, `${where} — 출처 주소 ${m[1]} 가 data/index.json 의 sources 에 없습니다. 자료 이름·이용 조건을 그 목록에 더해 주세요.`);
+      }
+    });
 
     // 라이선스 주의: 위키 계열은 CC BY-SA 라 문장을 옮기면 데이터 전체가 묶인다.
     // 링크를 '확인용 자료'로 적는 것은 문제가 없으므로 경고로만 알린다.
