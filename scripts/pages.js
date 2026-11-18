@@ -218,7 +218,14 @@ ${datasets.slice().sort(NATION_FIRST).map((d) => {
 ${list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)}</a> <span class="yr">${esc(shortPeriod(x))}</span></li>`).join('\n')}
       </ul>
     </section>`;
-}).filter(Boolean).join('\n')}`;
+}).filter(Boolean).join('\n')}
+    <section id="sources">
+      <h2>데이터 출처</h2>
+      <p class="desc">연도와 사실은 아래 공개 자료로 확인했고, 설명문과 해설은 이 프로젝트에서 직접 썼습니다. 항목마다 쓴 자료는 각 항목 페이지 맨 아래에 있습니다.</p>
+      <ul class="sources">
+${(manifest.sources || []).map((s) => `        <li><a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>${s.org ? ' (' + esc(s.org) + ')' : ''} — ${esc(s.use)}. ${esc(s.terms)}</li>`).join('\n')}
+      </ul>
+    </section>`;
 
 write('p/index.html', page({
   title: `항목 목록 — ${site.name}`,

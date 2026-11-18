@@ -11,6 +11,25 @@
     "schema_version": { "type": "integer", "minimum": 1 },
     "title": { "type": "string" },
     "description": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "description": "확인에 쓰는 공개 자료 목록(설정 탭 '데이터 출처'와 글 페이지 목록에 그대로 나온다). 항목의 sources 에 적는 주소는 여기 match(호스트)와 맞아야 한다(검증 경고). data/LICENSE.md 의 표와 같은 내용.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "url", "terms", "use"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "name": { "type": "string", "minLength": 1 },
+          "org": { "type": "string", "description": "만든 기관" },
+          "url": { "type": "string", "pattern": "^https?://" },
+          "match": { "type": "string", "description": "항목 sources 의 주소 호스트. 있으면 그 자료를 쓴 항목 수를 센다" },
+          "field": { "type": "string", "description": "항목의 어떤 필드가 이 자료를 가리키는지(예: wikidata). 있으면 그 필드가 있는 항목 수를 센다" },
+          "terms": { "type": "string", "description": "이용 조건·라이선스" },
+          "use": { "type": "string", "description": "이 연표에서 어떻게 쓰는지" }
+        }
+      }
+    },
     "tracks": {
       "type": "array",
       "minItems": 1,

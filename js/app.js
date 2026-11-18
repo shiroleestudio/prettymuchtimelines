@@ -450,6 +450,31 @@
   }
 
   /** 설정 탭의 '명화 오마주' 출처 — 매니페스트 장면의 after 에서 그대로 만든다 */
+  /** 설정 탭 '데이터 출처' — 매니페스트 sources 를 그대로, 자료마다 그 자료를 쓴 항목 수를 센다 */
+  function buildSourceList() {
+    var list = document.getElementById('data-sources');
+    if (!list) return;
+    list.textContent = '';
+    var entries = state.data.entries;
+    (state.data.sources || []).forEach(function (s) {
+      var n = 0;
+      if (s.match) n = entries.filter(function (e) { return (e.sources || []).some(function (x) { return x.indexOf('//' + s.match) !== -1; }); }).length;
+      else if (s.field) n = entries.filter(function (e) { return e[s.field] != null; }).length;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = s.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = s.name;
+      var what = document.createElement('strong');
+      what.appendChild(a);
+      li.appendChild(what);
+      var tail = (s.org ? ' (' + s.org + ')' : '') + ' — ' + s.use + '. ' + s.terms + (n ? ' · 항목 ' + n + '개' : '');
+      li.appendChild(document.createTextNode(tail));
+      list.appendChild(li);
+    });
+  }
+
   function buildCredits() {
     var list = document.getElementById('art-credits');
     if (!list) return;
@@ -1155,6 +1180,7 @@
     buildTabs();
     buildStage();
     buildCredits();
+    buildSourceList();
     buildCategories();
     buildSuggestions();
     bindEvents();

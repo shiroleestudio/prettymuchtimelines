@@ -3,6 +3,52 @@
   "schema_version": 1,
   "title": "Timeline of Pretty Much Everything",
   "description": "왕조·국가사와 주제사를 하나의 시간축 위에서 비교하는 통합 연표.",
+  "sources": [
+    {
+      "id": "encykorea",
+      "name": "한국민족문화대백과사전",
+      "org": "한국학중앙연구원",
+      "url": "https://encykorea.aks.ac.kr/",
+      "match": "encykorea.aks.ac.kr",
+      "terms": "항목 원고는 공공저작물 자유이용(저작권법 제24조의2). 출처 표기 「[항목명],『한국민족문화대백과사전』」",
+      "use": "한국사·주제사 항목의 연도와 사실 확인. 설명문과 해설은 직접 씀"
+    },
+    {
+      "id": "nabunken",
+      "name": "時代区分－西暦対応表 (『英文スタイル・マニュアル：基礎編』 2022)",
+      "org": "奈良文化財研究所",
+      "url": "https://sitereports.nabunken.go.jp/ja/article/26028",
+      "match": "sitereports.nabunken.go.jp",
+      "terms": "국립 연구소가 공개한 시대 구분표. 연도(사실)만 확인",
+      "use": "일본사 시대 구분의 시작·끝 연도 확인"
+    },
+    {
+      "id": "sinocal",
+      "name": "兩千年中西曆轉換",
+      "org": "中央研究院 (대만)",
+      "url": "https://sinocal.sinica.edu.tw/",
+      "match": "sinocal.sinica.edu.tw",
+      "terms": "날짜 변환 도구. 서기 날짜에 쓰이던 왕조·연호(사실)만 확인",
+      "use": "중국 왕조 연도 확인(서기 1년 이후)"
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "org": "Wikimedia Foundation",
+      "url": "https://www.wikidata.org/",
+      "field": "wikidata",
+      "terms": "CC0 (퍼블릭 도메인 헌정)",
+      "use": "항목 번호 연결과 연도 교차 확인(scripts/sources). 근거 자료로는 쓰지 않음"
+    },
+    {
+      "id": "cliopatria",
+      "name": "Cliopatria",
+      "org": "Seshat: Global History Databank",
+      "url": "https://github.com/Seshat-Global-History-Databank/cliopatria",
+      "terms": "CC BY 4.0",
+      "use": "국가사 항목의 '지도에 그려진 기간' 참고(대조 리포트에만, 데이터에는 넣지 않음)"
+    }
+  ],
   "eras": [
     {
       "id": "prehistory",
