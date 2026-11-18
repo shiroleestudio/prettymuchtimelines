@@ -206,7 +206,11 @@
     var plane = opts.plane;                 // 눕는 판
     var octx = canvas.getContext('2d');     // 납작한 덮개
     var ctx = octx;                         // 덮개에 그리는 도우미들이 쓴다
-    var pp = global.BigHistoryPlane.create(plane, { force2d: opts.force2d });   // 판을 칠하는 붓
+    var pp = global.BigHistoryPlane.create(plane, { force2d: opts.force2d, onAsset: function () { invalidate(); } });   // 판을 칠하는 붓
+
+    /** 사건의 카테고리 아이콘(js/icons.js) — 없는 카테고리면 '' 이고 그때는 색 점을 그린다 */
+    function iconOf(ev) { return global.ICONS ? global.ICONS.svg('category', ev._dataset) : ''; }
+    var ICON = 14;
     var dpr = 1;
     var W = 0;
     var H = 0;      // 판 높이 — 눕히면 화면보다 길어진다(먼 곳까지)
@@ -1030,7 +1034,9 @@
       var years = ev.end_year !== ev.start_year ? yearText(ev.start_year) + '–' + yearText(ev.end_year) : yearText(ev.start_year);
       var fy = font(11);
       var ft = font(14, '700');
-      pp.text(pfit(years, w - 26, fy), x + 16, y + 20, fy, colors.ink2);
+      var ic = iconOf(ev);
+      if (ic) pp.icon(ic, x + 15, y + 9, ICON, ev._color);
+      pp.text(pfit(years, w - (ic ? 44 : 26), fy), x + (ic ? 34 : 16), y + 20, fy, colors.ink2);
       pp.text(pfit(ev.title, w - 26, ft), x + 16, y + 42, ft, colors.ink);
       hits.push({ x: x, y: y, w: w, h: CARD_H, entry: ev });
     }
@@ -1038,8 +1044,10 @@
     function drawLabel(ev, x, y, w) {
       var f = font(13);
       pp.rect(x, y, w, LABEL_H, colors.foam, 0.92, 12);
-      pp.circle(x + 12, y + LABEL_H / 2, 4.5, ev._color);
-      pp.text(pfit(ev.title, w - 30, f), x + 22, y + LABEL_H / 2 + 4.5, f, colors.ink);
+      var ic = iconOf(ev);
+      if (ic) pp.icon(ic, x + 7, y + (LABEL_H - ICON) / 2, ICON, ev._color);
+      else pp.circle(x + 12, y + LABEL_H / 2, 4.5, ev._color);
+      pp.text(pfit(ev.title, w - (ic ? 34 : 30), f), x + (ic ? 25 : 22), y + LABEL_H / 2 + 4.5, f, colors.ink);
       hits.push({ x: x, y: y, w: w, h: LABEL_H, entry: ev });
     }
 
@@ -1152,8 +1160,10 @@
         var fe = font(12, '700', true);
         var C = global.BigHistoryCommon;
         y += 22;
-        pp.circle(x + 3, y - 4, 4, e._color, G);
-        pp.text(e.era_note || (C ? C.periodLabel(e.start_year, e.end_year) : yearText(e.start_year)), x + 13, y, fe, colors.ink2, G);
+        var ic = iconOf(e);
+        if (ic) pp.icon(ic, x - 1, y - 11.5, ICON, e._color, G);
+        else pp.circle(x + 3, y - 4, 4, e._color, G);
+        pp.text(e.era_note || (C ? C.periodLabel(e.start_year, e.end_year) : yearText(e.start_year)), x + (ic ? 17 : 13), y, fe, colors.ink2, G);
         var body = bodyRows(e, focus.links, w);
         drawRows(body.rows, x, y + 4, w, G, bottom - 6);
         y += 4 + body.h;
@@ -1172,7 +1182,9 @@
       var years = ev.era_note || (ev.end_year !== ev.start_year ? yearText(ev.start_year) + '–' + yearText(ev.end_year) : yearText(ev.start_year));
       var fy = font(11);
       var ft = font(14, '700');
-      pp.text(pfit(years, w - 26, fy), x + 16, y + 20, fy, colors.ink2);
+      var ic = iconOf(ev);
+      if (ic) pp.icon(ic, x + 15, y + 9, ICON, ev._color);
+      pp.text(pfit(years, w - (ic ? 44 : 26), fy), x + (ic ? 34 : 16), y + 20, fy, colors.ink2);
       pp.text(pfit(ev.title, w - 26, ft), x + 16, y + 42, ft, colors.ink);
       if (G > 0.02) drawRows(body.rows, x + 16, y + CARD_H - 2, w - 32, G, y + h);
       return h;
