@@ -63,15 +63,7 @@
     { id: 'info', label: '설정', view: document.getElementById('view-info') }
   ];
 
-  // 탭 아이콘 — 발자국(연표) · 카드(퀴즈) · 갈래길(갈림길) · 당근(카테고리) · 돋보기(검색) · 톱니(설정)
-  var TAB_ICONS = {
-    timeline: '<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="16" rx="5.5" ry="4.5" fill="currentColor"/><circle cx="5" cy="9" r="2.6" fill="currentColor"/><circle cx="12" cy="6" r="2.6" fill="currentColor"/><circle cx="19" cy="9" r="2.6" fill="currentColor"/></svg>',
-    quiz: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="11" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(-8 9 12.5)"/><rect x="10" y="4" width="11" height="15" rx="2.5" fill="currentColor" opacity=".85" transform="rotate(8 15.5 11.5)"/></svg>',
-    branch: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-8M12 14C12 9 6 8 6 3M12 14c0-5 6-6 6-11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3.5 5.5L6 3l2.5 2.5M15.5 5.5L18 3l2.5 2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    category: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8c2-1.5 6-1.5 8 0l-6.5 13z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13 7c-1-3 1-5 3-5M13 7c1-3 4-4 6-3M13 7c-3-2-6-1-7 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
-    search: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
-    info: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
-  };
+  // 탭 아이콘은 js/icons.js(ICONS.svg('tab', id)) — 연표 탭의 위쪽 점이 시로 귀
 
   var SUGGESTIONS = ['증기기관', '청자', '피카소', '전쟁', '인쇄'];
 
@@ -261,7 +253,7 @@
     var start = 0;
     zoomSegs.forEach(function (g) { g.width /= sum; g.start = start; start += g.width; });
     hud.build(zoomSegs.map(function (g) {
-      return { start: g.start, width: g.width, label: g.era.label, color: g.era.strip || '#8c6a4f' };
+      return { start: g.start, width: g.width, label: g.era.label, icon: ICONS.svg('era', g.era.id), color: g.era.strip || '#8c6a4f' };
     }), entries.map(function (e) { return ratioOf(e.start_year); }));
   }
 
@@ -322,7 +314,7 @@
       hud.setOngoing(ongoingAt(shown));
     }
     hud.setRatio(ratioOf(year));
-    hud.setMeta(era.label, 0, updateStage(year, info.s));
+    hud.setMeta(era.label, 0, updateStage(year, info.s), era.id);
   }
 
   // ------------------------------------------------------- 시대 이동
@@ -389,7 +381,7 @@
       btn.setAttribute('data-tab', tab.id);
       var icon = document.createElement('span');
       icon.className = 'tab__icon';
-      icon.innerHTML = TAB_ICONS[tab.id] || '';
+      icon.innerHTML = ICONS.svg('tab', tab.id);
       btn.appendChild(icon);
       var label = document.createElement('span');
       label.textContent = tab.label;
@@ -520,6 +512,15 @@
         var dot = document.createElement('span');
         dot.className = 'pick__dot';
         btn.appendChild(dot);
+
+        // 카테고리 그림(js/icons.js) — 켜지면 그 줄의 색을 받는다. 그림이 없는 id 는 칸을 만들지 않는다
+        var glyph = ICONS.svg('category', ds.id);
+        if (glyph) {
+          var ico = document.createElement('span');
+          ico.className = 'pick__icon';
+          ico.innerHTML = glyph;
+          btn.appendChild(ico);
+        }
 
         var name = document.createElement('span');
         name.className = 'pick__name';

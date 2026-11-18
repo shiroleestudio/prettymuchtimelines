@@ -26,6 +26,7 @@ const ASSETS = [
   'fonts/fonts.css',
   'js/data.js',
   'js/common.js',
+  'js/icons.js',
   'js/hud.js',
   'js/branch.js',
   'js/quiz.js',

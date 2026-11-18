@@ -1305,6 +1305,16 @@ body {
   box-shadow: var(--shadow-1);
 }
 
+/* 카테고리 그림(js/icons.js) — 켜지면 그 줄의 색, 꺼지면 흐리게 */
+.pick__icon {
+  width: 18px; height: 18px;
+  flex: 0 0 auto;
+  color: var(--ink-bg-2);
+  opacity: .6;
+}
+.pick__icon svg { width: 100%; height: 100%; display: block; }
+.pick.is-on .pick__icon { color: var(--pc, var(--caramel)); opacity: 1; }
+
 .pick__name {
   flex: 1 1 auto;
   text-align: left;
@@ -1771,6 +1781,16 @@ body {
   font-weight: 700;
 }
 
+/* 시대 그림(js/icons.js) — 시대 이름 앞 */
+.hud__era-icon {
+  display: inline-block;
+  width: 18px; height: 18px;
+  margin-right: 4px;
+  vertical-align: -3px;
+}
+.hud__era-icon svg { width: 100%; height: 100%; display: block; }
+.hud.is-mini .hud__era-icon { width: 15px; height: 15px; margin-right: 3px; vertical-align: -2px; }
+
 .hud__count {
   font-size: 11.5px;
   color: var(--ink-2);
@@ -1892,6 +1912,17 @@ body {
   padding: 0 0 2px 7px;
   overflow: hidden;
 }
+
+/* 시대 띠의 그림 — 글자와 같은 흰색. 좁은 화면에서는 글자만 */
+.scrub__icon {
+  width: 14px; height: 14px;
+  flex: 0 0 auto;
+  margin-right: 3px;
+  color: #fff8ef;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .35));
+}
+.scrub__icon svg { width: 100%; height: 100%; display: block; }
+@media (max-width: 560px) { .scrub__icon { display: none; } }
 
 .scrub__seg span {
   font-size: 11px;
