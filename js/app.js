@@ -27,6 +27,7 @@
     bgGradient: document.getElementById('bg-gradient'),
     bgBlob: document.getElementById('bg-blob'),
     themeSeg: document.getElementById('theme-seg'),
+    detailSeg: document.getElementById('detail-seg'),
     toast: document.getElementById('toast'),
     viewTimeline: document.getElementById('view-timeline'),
     stage: document.getElementById('stage'),
@@ -79,6 +80,7 @@
     tab: 'timeline',
     night: false,      // 다크 팔레트인지. 테마 설정(system/light/dark)에서 정해진다
     theme: 'light',
+    detail: false,     // 설정의 '상세 해설'(기본 끔) — 켜면 펼친 칸에 '해설 읽기' 단추
     eraIndex: 0,
     off: {},          // 꺼진 카테고리 id
     query: '',
@@ -620,7 +622,7 @@
 
   // -------------------------------------------------------- 상세 팝업
 
-  /** 연도 · 사건 · 한 줄 설명 · 출처 — 그 이상은 넣지 않는다 */
+  /** 연도 · 사건 · 한 줄 설명 · 출처 — 그 이상은 넣지 않는다(긴 해설은 설정을 켠 사람만 '해설 읽기'로) */
   /** 상세 내용(연도·사건·한 문장 설명·출처, 갈림길) — 펼친 카드와 아래 팝업이 함께 쓴다 */
   function fillEntry(entry, eyebrow, title, body, leave) {
     eyebrow.textContent = '';
@@ -690,6 +692,37 @@
     reveal(el.sheetScrim);
   }
 
+  /**
+   * 상세 해설 시트 — 설정의 '상세 해설'을 켠 사람이 펼친 칸의 '해설 읽기'를 눌렀을 때.
+   * 본문은 항목의 detail(문단 배열) 그대로. 검색 엔진용 글 페이지(p/<id>.html)에도 같은 글이 있다.
+   */
+  function openDetailSheet(entry) {
+    el.sheetEyebrow.textContent = '';
+    var dot = document.createElement('span');
+    dot.className = 'dot';
+    dot.style.backgroundColor = entry._color;
+    el.sheetEyebrow.appendChild(dot);
+    el.sheetEyebrow.appendChild(document.createTextNode((entry.era_note || C.periodLabel(entry.start_year, entry.end_year)) + ' · 시로의 해설'));
+    el.sheetTitle.textContent = entry.title;
+    el.sheetBody.textContent = '';
+    (entry.detail || []).forEach(function (para) {
+      var p = document.createElement('p');
+      p.className = 'sheet__para';
+      p.textContent = para;
+      el.sheetBody.appendChild(p);
+    });
+    var tail = document.createElement('p');
+    tail.className = 'sheet__source';
+    tail.textContent = '연도와 사실은 펼친 칸 아래의 출처로 확인했고, 글은 이 연표에서 직접 썼어요. 해설은 설정 탭에서 끌 수 있습니다.';
+    el.sheetBody.appendChild(tail);
+    el.sheetBody.scrollTop = 0;
+    el.sheet.style.transform = '';
+    el.sheet.style.transition = '';
+    el.sheet.style.opacity = '';
+    reveal(el.sheet);
+    reveal(el.sheetScrim);
+  }
+
   // ------------------------------------------------ 펼치기(왕조가 확대되며 상세)
 
   /**
@@ -712,6 +745,13 @@
         run: function () { zoom.blur(); setTab('branch'); branch.open(sc.id); }
       };
     }) : [];
+    // 설정의 '상세 해설'을 켰고 해설이 있는 항목이면 긴 글을 읽는 길(끄면 단추 자체가 없다)
+    if (state.detail && entry.detail && entry.detail.length) {
+      links.unshift({
+        label: '해설 읽기',
+        run: function () { openDetailSheet(entry); }
+      });
+    }
     // 이 항목으로 바로 오는 주소를 나누기(폰은 공유 시트, PC는 복사)
     links.push({
       label: '이 항목 공유',
@@ -892,6 +932,37 @@
     }
   }
 
+  // ------------------------------------------------------------ 상세 해설 설정
+
+  /* 설정 탭의 끔 / 켬. 기본은 끔 — 연표의 본분은 간략한 비교라, 긴 해설은 원하는 사람만 켠다.
+     켜도 펼친 칸에는 '해설 읽기' 단추만 늘고 긴 글은 시트에서 읽는다(칸이 길어지지 않게). */
+  var DETAIL_KEY = 'bighistory.detail';
+
+  function loadDetail() {
+    try { return localStorage.getItem(DETAIL_KEY) === 'on'; } catch (err) { return false; }
+  }
+
+  function placeDetailPill() {
+    var pill = el.detailSeg.querySelector('.seg__pill');
+    var on = el.detailSeg.querySelector('.is-active');
+    if (!pill || !on || !on.offsetWidth) return;
+    pill.style.width = on.offsetWidth + 'px';
+    pill.style.transform = 'translate3d(' + on.offsetLeft + 'px,0,0)';
+  }
+
+  function applyDetail(on, save) {
+    state.detail = !!on;
+    Array.prototype.forEach.call(el.detailSeg.querySelectorAll('[data-detail]'), function (btn) {
+      var active = (btn.getAttribute('data-detail') === 'on') === state.detail;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-checked', String(active));
+    });
+    placeDetailPill();
+    if (save) {
+      try { localStorage.setItem(DETAIL_KEY, state.detail ? 'on' : 'off'); } catch (err) { /* 저장 못 해도 동작엔 지장 없음 */ }
+    }
+  }
+
   function showToast(text, ms) {
     var t = el.toast;
     clearTimeout(t._leave);
@@ -958,6 +1029,12 @@
   function bindEvents() {
     Array.prototype.forEach.call(el.themeSeg.querySelectorAll('[data-theme]'), function (btn) {
       btn.addEventListener('click', function () { applyTheme(btn.getAttribute('data-theme'), true); });
+    });
+    Array.prototype.forEach.call(el.detailSeg.querySelectorAll('[data-detail]'), function (btn) {
+      btn.addEventListener('click', function () {
+        applyDetail(btn.getAttribute('data-detail') === 'on', true);
+        showToast(state.detail ? '항목을 펼치면 해설 읽기가 나와요' : '해설을 끄고 간략하게 봐요');
+      });
     });
     if (darkQuery) {
       var onScheme = function () { if (state.theme === 'system') applyTheme('system', false); };
@@ -1036,6 +1113,7 @@
   function start(data) {
     state.data = data;
     applyTheme(loadTheme(), false, true);
+    applyDetail(loadDetail(), false);
 
     hud = H.create(el.hud, { scrub: onScrub, step: stepEra, pick: openEntry });
     hud.setCompact(true);   // 그림판에 연도 눈금·시대 제목이 있으니 계기판은 알약으로 접어 둔다
@@ -1106,7 +1184,16 @@
       el.tabs.classList.add('is-ready');
       placeThemePill();
       el.themeSeg.classList.add('is-ready');
+      placeDetailPill();
+      el.detailSeg.classList.add('is-ready');
     });
+
+    // 설정 탭 '상세 해설' 문구의 숫자(해설이 있는 항목 수)
+    var dc = document.getElementById('detail-count');
+    if (dc) {
+      var detailed = data.entries.filter(function (e) { return e.detail && e.detail.length; }).length;
+      dc.textContent = detailed + '개';
+    }
 
     // 설정 탭 신뢰도 문구의 숫자(출처 있는 항목 수 / 전체)
     var sc = document.getElementById('sourced-count');

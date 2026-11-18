@@ -5,7 +5,7 @@
  * 검색 엔진(구글·네이버)이 읽을 수 있는 글 페이지를 만든다.
  *
  * 연표 화면은 캔버스에 그려서 검색 엔진이 내용을 거의 읽지 못한다. 그래서 출처를 확인한 항목마다
- * 정적인 HTML 페이지(p/<id>.html)를 따로 만들어 둔다 — 이름·연도·설명·출처, 그리고 이 연표의 핵심인
+ * 정적인 HTML 페이지(p/<id>.html)를 따로 만들어 둔다 — 이름·연도·설명·상세 해설(detail, 있으면 항상)·출처, 그리고 이 연표의 핵심인
  * '같은 시기 다른 나라·주제에서는' 목록. 맨 아래 버튼은 연표 화면의 그 항목으로 바로 데려간다(#e=<id>).
  *
  * 만드는 것
@@ -113,7 +113,7 @@ function page(o) {
 ${o.body}
   </main>
   <footer class="foot">
-    <p>${esc(site.name)} — ${esc(site.tagline)}. 설명문은 이 프로젝트에서 직접 쓴 한 문장 요약이며, 연도와 사실은 출처에 적은 공공 자료로 확인했습니다. 데이터 CC BY 4.0.</p>
+    <p>${esc(site.name)} — ${esc(site.tagline)}. 설명문과 해설은 이 프로젝트에서 직접 썼으며, 연도와 사실은 출처에 적은 공공 자료로 확인했습니다. 데이터 CC BY 4.0.</p>
   </footer>
 </body>
 </html>
@@ -147,7 +147,10 @@ for (const e of paged) {
       <p class="eyebrow"><span class="dot" style="background:${esc(ds.color)}"></span>${esc(ds.label)} · ${esc(period(e))}</p>
       <h1>${esc(e.title)}</h1>
       <p class="desc">${esc(e.description)}</p>
-      <p class="src">출처 · ${srcs.map((s) => (s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>` : esc(s.name))).join(' · ')}${e.status !== 'reviewed' ? ' <span class="draft">(검토 전 초안)</span>' : ''}</p>
+${e.detail && e.detail.length ? `      <section class="detail" aria-label="상세 해설">
+${e.detail.map((p) => `        <p>${esc(p)}</p>`).join('\n')}
+      </section>
+` : ''}      <p class="src">출처 · ${srcs.map((s) => (s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>` : esc(s.name))).join(' · ')}${e.status !== 'reviewed' ? ' <span class="draft">(검토 전 초안)</span>' : ''}</p>
       <p><a class="cta" href="../index.html#e=${esc(e.id)}">연표에서 펼쳐 보기 →</a></p>
     </article>
 ${groups.length ? `    <section>
@@ -169,6 +172,7 @@ ${g.list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)}</a>
         '@type': 'Article',
         headline: e.title + ' (' + period(e) + ')',
         description: e.description,
+        articleBody: e.detail && e.detail.length ? [e.description].concat(e.detail).join('\n\n') : e.description,
         inLanguage: 'ko',
         url,
         image: BASE + site.image,
