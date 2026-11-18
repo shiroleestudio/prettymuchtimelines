@@ -145,11 +145,20 @@
       if (!s.raf) s.raf = requestAnimationFrame(roll);
     }
 
-    /** 시대 이름(크게) + 장면 이름 · 그해 사건 수(작게). 시대나 장면이 바뀌면 톡 튄다 */
-    function setMeta(eraLabel, n, sceneLabel) {
+    /** 시대 그림 + 이름(크게) + 장면 이름 · 그해 사건 수(작게). 시대나 장면이 바뀌면 톡 튄다.
+     *  eraId 는 js/icons.js 의 시대 아이콘 열쇠 — 없으면 글자만 */
+    function setMeta(eraLabel, n, sceneLabel, eraId) {
       if (eraLabel !== s.eraText) {
         s.eraText = eraLabel;
-        era.textContent = eraLabel;
+        era.textContent = '';
+        var glyph = eraId && global.ICONS ? global.ICONS.svg('era', eraId) : '';
+        if (glyph) {
+          var ico = document.createElement('span');
+          ico.className = 'hud__era-icon';
+          ico.innerHTML = glyph;
+          era.appendChild(ico);
+        }
+        era.appendChild(document.createTextNode(eraLabel));
         pop(era, 'translateY(-7px) scale(1.15)');
       }
       var text = [sceneLabel || '', n ? '사건 ' + n + '건' : ''].filter(Boolean).join(' · ');
@@ -204,6 +213,12 @@
         node.style.left = (seg.start * 100).toFixed(3) + '%';
         node.style.width = (seg.width * 100).toFixed(3) + '%';
         node.style.setProperty('--seg', seg.color);
+        if (seg.icon) {   // 시대 그림 — 좁은 구간에서는 CSS 가 숨긴다
+          var ico = document.createElement('i');
+          ico.className = 'scrub__icon';
+          ico.innerHTML = seg.icon;
+          node.appendChild(ico);
+        }
         var label = document.createElement('span');
         label.textContent = seg.label;
         node.appendChild(label);
