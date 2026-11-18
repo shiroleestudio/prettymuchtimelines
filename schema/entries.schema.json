@@ -84,6 +84,12 @@
           "description": "BC/AD 등 표기 보조 설명. 비워두면 검증 스크립트가 자동으로 채운다."
         },
         "description": { "type": "string", "minLength": 1 },
+        "detail": {
+          "type": "array",
+          "description": "상세 해설(선택). 문단 하나가 문자열 하나, 2~3문단·합쳐서 400~800자. 설정의 '상세 해설'을 켠 사람이 펼친 칸의 '해설 읽기'로 읽고, 글 페이지(p/<id>.html)에는 항상 실린다. 해설이 있으면 sources 가 필수. 다른 저작물의 문장을 옮기지 않고 사실만 가져와 직접 쓴다.",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
         "summary": {
           "type": "string",
           "description": "연표 막대에 함께 표시할 한 줄 요약(선택). 비워두면 description 의 첫 문장을 줄여서 자동으로 만든다.",

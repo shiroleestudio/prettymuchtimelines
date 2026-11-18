@@ -35,6 +35,8 @@ const QUIET = args.includes('--quiet');
 const errors = [];
 const warnings = [];
 const DESC_MAX = 100;   // 설명 길이 한도(글자)
+const DETAIL_MIN = 400; // 상세 해설(detail) 길이 — 문단을 합친 글자 수
+const DETAIL_MAX = 800;
 const fixes = [];
 
 const rel = (p) => path.relative(ROOT, p);
@@ -223,6 +225,20 @@ for (const ds of manifest.datasets || []) {
     const sentences = desc.split(/(?<=[.!?。])\s+/).filter(Boolean).length;
     if (sentences > 1 || desc.length > DESC_MAX) {
       warn(file, `${where} — 설명은 한 문장, ${DESC_MAX}자 이내로 적어 주세요(지금 ${sentences}문장 ${desc.length}자).`);
+    }
+
+    // 상세 해설(detail): 출처가 있는 항목에만, 합쳐서 400~800자. 글 페이지에 그대로 나가는 글이라 출처 없는 해설은 막는다.
+    if (entry.detail) {
+      const paras = entry.detail.map((p) => String(p).trim());
+      const len = paras.join('').length;
+      if (!entry.sources || entry.sources.length === 0) {
+        fail(file, `${where} — detail(상세 해설)이 있는데 sources 가 비어 있습니다. 확인한 자료를 적거나 해설을 빼세요.`);
+      }
+      if (paras.some((p) => !p)) fail(file, `${where} — detail 에 빈 문단이 있습니다.`);
+      if (len < DETAIL_MIN || len > DETAIL_MAX) {
+        warn(file, `${where} — 상세 해설은 ${DETAIL_MIN}~${DETAIL_MAX}자로 적어 주세요(지금 ${paras.length}문단 ${len}자).`);
+      }
+      if (paras.some((p) => p === desc)) warn(file, `${where} — detail 에 description 과 같은 문장이 있습니다. 해설은 설명을 되풀이하지 않고 이어 씁니다.`);
     }
 
     // 왕조·국가사는 kind 가 있어야 색 띠와 '지금 이때'에 들어간다(없으면 빠진다).

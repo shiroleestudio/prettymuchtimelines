@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <!-- 글꼴은 저장소 안 사본(fonts/, SIL OFL). 제목(영문 Gaegu)은 첫 화면에 바로 쓰이므로 미리 받는다 -->
   <link rel="preload" href="fonts/gaegu-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="fonts/fonts.css?v=394fa6e2" />
+  <link rel="stylesheet" href="fonts/fonts.css?v=fb67fcd1" />
   <!-- 저장된 테마를 스타일보다 먼저 적용해, 다크로 쓰던 사람에게 밝은 화면이 깜빡이지 않게 -->
   <script>
     (function () {
@@ -36,7 +36,7 @@
       } catch (err) { /* 저장소를 못 읽어도 기본(라이트)으로 */ }
     })();
   </script>
-  <link rel="stylesheet" href="css/styles.css?v=394fa6e2" />
+  <link rel="stylesheet" href="css/styles.css?v=fb67fcd1" />
 </head>
 <body>
   <!-- 테마는 <html class="is-night"> 로 바뀐다(설정 탭, app.js). 기본은 라이트 -->
@@ -174,6 +174,15 @@
             <p class="card__text card__text--hint" style="margin: 10px 0 0;">시스템은 기기의 화면 설정을 따릅니다.</p>
           </div>
           <div class="card" style="margin-bottom: 14px;">
+            <p class="card__label">상세 해설</p>
+            <div class="seg seg--theme" id="detail-seg" role="radiogroup" aria-label="상세 해설">
+              <span class="seg__pill" aria-hidden="true"></span>
+              <button class="seg__btn" type="button" role="radio" aria-checked="false" data-detail="off">끔</button>
+              <button class="seg__btn" type="button" role="radio" aria-checked="false" data-detail="on">켬</button>
+            </div>
+            <p class="card__text card__text--hint" style="margin: 10px 0 0;">켜면 항목을 펼쳤을 때 '해설 읽기' 단추가 생겨 시로가 들려주는 긴 해설을 볼 수 있어요. 끄면 연도·한 문장 설명·출처만 보여 다른 연표와 비교하기 좋습니다. 해설이 있는 항목은 <span id="detail-count">아직 일부</span>입니다.</p>
+          </div>
+          <div class="card" style="margin-bottom: 14px;">
             <p class="card__label">사용법</p>
             <p class="card__text">처음 열 때 나왔던 안내를 다시 볼 수 있어요.</p>
             <div class="pane__actions" style="margin: 10px 0 0;"><button class="pill-btn" id="tour-again" type="button">사용법 다시 보기</button></div>
@@ -211,7 +220,7 @@
 
             <p class="card__label">개인정보</p>
             <p class="card__text">
-              분석 도구와 추적 스크립트를 쓰지 않고, 쿠키도 사용하지 않으며, 이용자 정보를 수집하지 않습니다. 테마 선택·사용법 안내를 봤는지·퀴즈 결과·갈림길 진행 상황만 이 기기의 브라우저 저장소에 남고 어디로도 보내지 않습니다.
+              분석 도구와 추적 스크립트를 쓰지 않고, 쿠키도 사용하지 않으며, 이용자 정보를 수집하지 않습니다. 테마·상세 해설 선택, 사용법 안내를 봤는지, 퀴즈 결과·갈림길 진행 상황만 이 기기의 브라우저 저장소에 남고 어디로도 보내지 않습니다.
               글꼴까지 모두 이 사이트 안에 있어 바깥으로 나가는 요청이 없고, 홈 화면에 추가하면 오프라인에서도 열립니다.
             </p>
           </div>
@@ -239,15 +248,15 @@
     <div class="loading" id="loading">불러오는 중…</div>
   </div>
 
-  <script src="js/data.js?v=394fa6e2"></script>
-  <script src="js/common.js?v=394fa6e2"></script>
-  <script src="js/hud.js?v=394fa6e2"></script>
-  <script src="js/branch.js?v=394fa6e2"></script>
-  <script src="js/quiz.js?v=394fa6e2"></script>
-  <script src="js/tour.js?v=394fa6e2"></script>
-  <script src="vendor/three.min.js?v=394fa6e2"></script>
-  <script src="js/plane.js?v=394fa6e2"></script>
-  <script src="js/zoom.js?v=394fa6e2"></script>
-  <script src="js/app.js?v=394fa6e2"></script>
+  <script src="js/data.js?v=fb67fcd1"></script>
+  <script src="js/common.js?v=fb67fcd1"></script>
+  <script src="js/hud.js?v=fb67fcd1"></script>
+  <script src="js/branch.js?v=fb67fcd1"></script>
+  <script src="js/quiz.js?v=fb67fcd1"></script>
+  <script src="js/tour.js?v=fb67fcd1"></script>
+  <script src="vendor/three.min.js?v=fb67fcd1"></script>
+  <script src="js/plane.js?v=fb67fcd1"></script>
+  <script src="js/zoom.js?v=fb67fcd1"></script>
+  <script src="js/app.js?v=fb67fcd1"></script>
 </body>
 </html>

@@ -1682,6 +1682,15 @@ body {
   text-wrap: pretty;
 }
 
+/* 상세 해설 시트의 문단(설정 '상세 해설' 켬) */
+.sheet__para {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.85;
+  text-wrap: pretty;
+  word-break: keep-all;
+}
+
 @keyframes pop-in {
   from { opacity: 0; transform: scale(.82) translateY(14px); }
 }

@@ -57,6 +57,8 @@ h3 { font-size: 19px; margin: 16px 0 6px; display: flex; align-items: center; }
 .count { font-family: var(--sans); font-size: 14px; color: var(--ink-2); margin-left: 6px; }
 
 .desc { font-size: 17px; margin: 0 0 14px; }
+.detail { background: none; border-radius: 0; padding: 0; margin: 0 0 14px; border-top: 1px dashed var(--line); }
+.detail p { font-size: 16px; line-height: 1.85; margin: 14px 0 0; word-break: keep-all; text-wrap: pretty; }
 .src { font-size: 13px; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: 10px; margin: 0 0 14px; }
 .draft { opacity: .8; }
 
