@@ -253,6 +253,8 @@
     function viewW() { return Math.max(1, W - MARGIN * 2); }
     function cw() { return colWidth(cam.s); }
     function focusY() { return unproj(W / 2, opts.focusY ? opts.focusY() : Hv * 0.36).y; }
+    /** 화면 y → 판 y (가운데 열 기준). 눕혀져 있으면 둘이 다르므로, 화면 위치로 연도를 셈할 때는 꼭 이걸 거친다 */
+    function planeY(screenY) { return unproj(W / 2, screenY).y; }
     function yOf(year) { return (year - cam.t0) * cam.s; }
     function yearAt(y) { return cam.t0 + y / cam.s; }
 
@@ -1274,7 +1276,7 @@
         var p = clamp((t - f.t0) / f.dur, 0, 1);
         var v = f.path.at(easeInOutCubic(p));
         cam.s = clamp(Hv / v.w, sMin() * 0.5, S_MAX);
-        cam.t0 = v.c - f.fy / cam.s;
+        cam.t0 = v.c - focusY() / cam.s;   // 초점선은 지금 값으로 — 나는 동안 눕히기가 바뀌어도(펼치며 세울 때) 목표 해가 초점선에 온다
         pinU(f.u0 + (f.u1 - f.u0) * v.k, W / 2);   // 가운데 보던 자리(또는 고른 열)를 가운데에 — 이동이 진행된 만큼
         if (p >= 1) motion.mode = 'idle';
         return motion.mode !== 'idle';
@@ -1317,7 +1319,7 @@
       var path = zoomPath(y0, Hv / cam.s, year, Hv / s);
       motion.fly = {
         t0: now(), dur: clamp(path.S * 620, 420, 1900),
-        path: path, fy: fy, u0: u0, u1: u1
+        path: path, u0: u0, u1: u1
       };
       motion.mode = 'fly';
       lastT = 0;
@@ -1328,7 +1330,7 @@
     function flyToRange(a, b, o) {
       var span = Math.max(1, b - a);
       var s = ((Hv - HEAD_H) * 0.84) / span;
-      flyTo(a + (focusY() - HEAD_H) / s - (Hv * 0.05) / s, s, o);
+      flyTo(a + (focusY() - planeY(HEAD_H)) / s - (Hv * 0.05) / s, s, o);
     }
 
     function zoomAround(x, y, factor) {
@@ -1378,12 +1380,16 @@
       grow.target = col >= 0 ? 1 : 0;
       var o = { col: col };
       var span = entry.end_year - entry.start_year;
+      // 눕힌 채로는 읽기 어렵고, 아래 셈은 납작한 화면 기준이라(눕힌 판 좌표로 셈하면 수천 px 만큼
+      // 미래로 튀어 연표 맨 아래로 간다) 펼칠 때는 먼저 납작하게 세운다. 세우는 동안 초점선의 해는 그대로다
+      if (tilt.target > 0) setTilt(0);
       if (span >= 1) {
         // 위아래로 숨 쉴 틈을 두고 기간을 화면에 맞춘다(아래쪽 계기판 자리도 남겨 둔다)
         var room = Math.max(120, Hv - HEAD_H - (opts.bottomCover ? opts.bottomCover() : 0));
         var s = clamp((room * 0.62) / span, sMin(), S_MAX);
         var top = HEAD_H + room * 0.12;
-        flyTo(entry.start_year + (focusY() - top) / s, s, o);
+        var fyScreen = opts.focusY ? opts.focusY() : Hv * 0.36;   // 납작할 때의 초점선(화면 px)
+        flyTo(entry.start_year + (fyScreen - top) / s, s, o);
       } else {
         flyTo(entry.start_year, clamp(Math.max(cam.s, Hv / 70), sMin(), S_MAX), o);
       }
