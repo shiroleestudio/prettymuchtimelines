@@ -481,6 +481,14 @@ UI 아이디어는 저작권 보호 대상이 아니지만, 화면 그림·아�
 
 대표 이미지 `icons/og.jpg`(1200×630)는 연표 화면을 찍은 것입니다. 이름이 바뀌면 다시 찍어 두세요.
 
+**`favicon.ico` 는 꼭 둡니다.** 브라우저와 검색 로봇은 `<link>` 와 상관없이 `/favicon.ico` 를 자동으로 요청합니다. 없으면
+네이버 서치어드바이저 '사이트 진단'에 '서버 접근 불가로 수집 실패' 1건이 매일 잡힙니다(2026-11 실제 겪음). 파일은
+`icons/icon.svg` 를 16·32·48px 로 그려 ICO 로 묶은 것이고, 아이콘이 바뀌면 다시 만듭니다 — Playwright 가 있는 환경에서:
+
+```bash
+node scripts/favicon.js      # icons/icon.svg → favicon.ico (의존성 없음, 설치된 playwright 만 씀)
+```
+
 ### 6-2. PWA (앱스토어 없이 "홈 화면에 추가")
 
 `manifest.webmanifest` 와 `sw.js` 가 이미 들어 있습니다. **https 또는 localhost** 로 열면
