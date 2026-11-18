@@ -30,12 +30,12 @@ const PRECACHE = [
   './manifest.webmanifest',
   './icons/icon.svg',
   './favicon.ico',
-  './art/prehistory.svg',
-  './art/ancient.svg',
-  './art/medieval.svg',
-  './art/earlymodern.svg',
-  './art/modern.svg',
-  './art/contemporary.svg',
+  './art/prehistory.webp',
+  './art/ancient.webp',
+  './art/homage-qingming.webp',
+  './art/earlymodern.webp',
+  './art/modern.webp',
+  './art/contemporary.webp',
   './data/index.json'
 ];
 
