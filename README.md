@@ -67,8 +67,8 @@ npm run build          # validate + 버전 스탬프 + data/bundle.js 재생성
 ```
 index.html                  화면 뼈대 (6개 탭 + 상세 팝업)
 css/styles.css              디자인 토큰과 스타일 (시대 팔레트는 데이터에 있음)
-art/<시대>.svg              시대별 첫 장면 디오라마 (매니페스트 eras[].diorama · scenes)
-art/<장면>.svg, art/homage-*.svg   시대 안의 장면들 · 명화 오마주 장면 (eras[].scenes[].diorama)
+art/<시대>.webp             시대별 배경 그림 1600px(매니페스트 eras[].diorama · scenes). 원본 PNG 를 아래 5% 잘라(생성 표식) WebP 로
+art/homage-*.webp           명화 오마주 장면 (eras[].scenes[].diorama · after). 아직 그림이 없는 장면(주사위·병마용)은 art/*.svg 선화. 중세 배경은 homage-qingming.webp 가 겸함
 js/data.js                  데이터 로딩 (fetch ↔ bundle 자동 전환)
 js/common.js                공용 도우미 (연도 글자, 장면 목록)
 js/icons.js                 탭·시대·카테고리 선 아이콘(인라인 SVG, currentColor). 열쇠는 index.json 의 id
@@ -491,6 +491,15 @@ UI 아이디어는 저작권 보호 대상이 아니지만, 화면 그림·아�
 ```bash
 node scripts/favicon.js      # icons/icon.svg → favicon.ico (의존성 없음, 설치된 playwright 만 씀)
 ```
+
+**배경 그림(`art/*.webp`)** 은 나노바나나(제미나이)로 뽑은 PNG(2752×1536)를 ImageMagick 으로 줄인 것입니다.
+오른쪽 아래 생성 표식을 없애려고 아래 5% 를 잘라 내고, 폭 1600px·품질 82 로 WebP 를 만듭니다(장당 10~80KB).
+프롬프트는 프로젝트 공유 폴더의 `assets/나노바나나_프롬프트_연표_배경_2026-11-18.md`.
+
+```bash
+convert 원본.png -gravity North -crop 100%x95%+0+0 +repage -resize 1600x -quality 82 -define webp:method=6 art/<id>.webp
+```
+
 
 ### 6-2. PWA (앱스토어 없이 "홈 화면에 추가")
 
