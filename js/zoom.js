@@ -206,7 +206,11 @@
     var plane = opts.plane;                 // 눕는 판
     var octx = canvas.getContext('2d');     // 납작한 덮개
     var ctx = octx;                         // 덮개에 그리는 도우미들이 쓴다
-    var pp = global.BigHistoryPlane.create(plane, { force2d: opts.force2d });   // 판을 칠하는 붓
+    var pp = global.BigHistoryPlane.create(plane, { force2d: opts.force2d, onAsset: function () { invalidate(); } });   // 판을 칠하는 붓
+
+    /** 사건의 카테고리 아이콘(js/icons.js) — 없는 카테고리면 '' 이고 그때는 색 점을 그린다 */
+    function iconOf(ev) { return global.ICONS ? global.ICONS.svg('category', ev._dataset) : ''; }
+    var ICON = 14;
     var dpr = 1;
     var W = 0;
     var H = 0;      // 판 높이 — 눕히면 화면보다 길어진다(먼 곳까지)
@@ -249,6 +253,8 @@
     function viewW() { return Math.max(1, W - MARGIN * 2); }
     function cw() { return colWidth(cam.s); }
     function focusY() { return unproj(W / 2, opts.focusY ? opts.focusY() : Hv * 0.36).y; }
+    /** 화면 y → 판 y (가운데 열 기준). 눕혀져 있으면 둘이 다르므로, 화면 위치로 연도를 셈할 때는 꼭 이걸 거친다 */
+    function planeY(screenY) { return unproj(W / 2, screenY).y; }
     function yOf(year) { return (year - cam.t0) * cam.s; }
     function yearAt(y) { return cam.t0 + y / cam.s; }
 
@@ -1030,7 +1036,9 @@
       var years = ev.end_year !== ev.start_year ? yearText(ev.start_year) + '–' + yearText(ev.end_year) : yearText(ev.start_year);
       var fy = font(11);
       var ft = font(14, '700');
-      pp.text(pfit(years, w - 26, fy), x + 16, y + 20, fy, colors.ink2);
+      var ic = iconOf(ev);
+      if (ic) pp.icon(ic, x + 15, y + 9, ICON, ev._color);
+      pp.text(pfit(years, w - (ic ? 44 : 26), fy), x + (ic ? 34 : 16), y + 20, fy, colors.ink2);
       pp.text(pfit(ev.title, w - 26, ft), x + 16, y + 42, ft, colors.ink);
       hits.push({ x: x, y: y, w: w, h: CARD_H, entry: ev });
     }
@@ -1038,8 +1046,10 @@
     function drawLabel(ev, x, y, w) {
       var f = font(13);
       pp.rect(x, y, w, LABEL_H, colors.foam, 0.92, 12);
-      pp.circle(x + 12, y + LABEL_H / 2, 4.5, ev._color);
-      pp.text(pfit(ev.title, w - 30, f), x + 22, y + LABEL_H / 2 + 4.5, f, colors.ink);
+      var ic = iconOf(ev);
+      if (ic) pp.icon(ic, x + 7, y + (LABEL_H - ICON) / 2, ICON, ev._color);
+      else pp.circle(x + 12, y + LABEL_H / 2, 4.5, ev._color);
+      pp.text(pfit(ev.title, w - (ic ? 34 : 30), f), x + (ic ? 25 : 22), y + LABEL_H / 2 + 4.5, f, colors.ink);
       hits.push({ x: x, y: y, w: w, h: LABEL_H, entry: ev });
     }
 
@@ -1152,8 +1162,10 @@
         var fe = font(12, '700', true);
         var C = global.BigHistoryCommon;
         y += 22;
-        pp.circle(x + 3, y - 4, 4, e._color, G);
-        pp.text(e.era_note || (C ? C.periodLabel(e.start_year, e.end_year) : yearText(e.start_year)), x + 13, y, fe, colors.ink2, G);
+        var ic = iconOf(e);
+        if (ic) pp.icon(ic, x - 1, y - 11.5, ICON, e._color, G);
+        else pp.circle(x + 3, y - 4, 4, e._color, G);
+        pp.text(e.era_note || (C ? C.periodLabel(e.start_year, e.end_year) : yearText(e.start_year)), x + (ic ? 17 : 13), y, fe, colors.ink2, G);
         var body = bodyRows(e, focus.links, w);
         drawRows(body.rows, x, y + 4, w, G, bottom - 6);
         y += 4 + body.h;
@@ -1172,7 +1184,9 @@
       var years = ev.era_note || (ev.end_year !== ev.start_year ? yearText(ev.start_year) + '–' + yearText(ev.end_year) : yearText(ev.start_year));
       var fy = font(11);
       var ft = font(14, '700');
-      pp.text(pfit(years, w - 26, fy), x + 16, y + 20, fy, colors.ink2);
+      var ic = iconOf(ev);
+      if (ic) pp.icon(ic, x + 15, y + 9, ICON, ev._color);
+      pp.text(pfit(years, w - (ic ? 44 : 26), fy), x + (ic ? 34 : 16), y + 20, fy, colors.ink2);
       pp.text(pfit(ev.title, w - 26, ft), x + 16, y + 42, ft, colors.ink);
       if (G > 0.02) drawRows(body.rows, x + 16, y + CARD_H - 2, w - 32, G, y + h);
       return h;
@@ -1262,7 +1276,7 @@
         var p = clamp((t - f.t0) / f.dur, 0, 1);
         var v = f.path.at(easeInOutCubic(p));
         cam.s = clamp(Hv / v.w, sMin() * 0.5, S_MAX);
-        cam.t0 = v.c - f.fy / cam.s;
+        cam.t0 = v.c - focusY() / cam.s;   // 초점선은 지금 값으로 — 나는 동안 눕히기가 바뀌어도(펼치며 세울 때) 목표 해가 초점선에 온다
         pinU(f.u0 + (f.u1 - f.u0) * v.k, W / 2);   // 가운데 보던 자리(또는 고른 열)를 가운데에 — 이동이 진행된 만큼
         if (p >= 1) motion.mode = 'idle';
         return motion.mode !== 'idle';
@@ -1305,7 +1319,7 @@
       var path = zoomPath(y0, Hv / cam.s, year, Hv / s);
       motion.fly = {
         t0: now(), dur: clamp(path.S * 620, 420, 1900),
-        path: path, fy: fy, u0: u0, u1: u1
+        path: path, u0: u0, u1: u1
       };
       motion.mode = 'fly';
       lastT = 0;
@@ -1316,7 +1330,7 @@
     function flyToRange(a, b, o) {
       var span = Math.max(1, b - a);
       var s = ((Hv - HEAD_H) * 0.84) / span;
-      flyTo(a + (focusY() - HEAD_H) / s - (Hv * 0.05) / s, s, o);
+      flyTo(a + (focusY() - planeY(HEAD_H)) / s - (Hv * 0.05) / s, s, o);
     }
 
     function zoomAround(x, y, factor) {
@@ -1366,12 +1380,16 @@
       grow.target = col >= 0 ? 1 : 0;
       var o = { col: col };
       var span = entry.end_year - entry.start_year;
+      // 눕힌 채로는 읽기 어렵고, 아래 셈은 납작한 화면 기준이라(눕힌 판 좌표로 셈하면 수천 px 만큼
+      // 미래로 튀어 연표 맨 아래로 간다) 펼칠 때는 먼저 납작하게 세운다. 세우는 동안 초점선의 해는 그대로다
+      if (tilt.target > 0) setTilt(0);
       if (span >= 1) {
         // 위아래로 숨 쉴 틈을 두고 기간을 화면에 맞춘다(아래쪽 계기판 자리도 남겨 둔다)
         var room = Math.max(120, Hv - HEAD_H - (opts.bottomCover ? opts.bottomCover() : 0));
         var s = clamp((room * 0.62) / span, sMin(), S_MAX);
         var top = HEAD_H + room * 0.12;
-        flyTo(entry.start_year + (focusY() - top) / s, s, o);
+        var fyScreen = opts.focusY ? opts.focusY() : Hv * 0.36;   // 납작할 때의 초점선(화면 px)
+        flyTo(entry.start_year + (fyScreen - top) / s, s, o);
       } else {
         flyTo(entry.start_year, clamp(Math.max(cam.s, Hv / 70), sMin(), S_MAX), o);
       }

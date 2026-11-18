@@ -71,7 +71,7 @@ art/<시대>.webp             시대별 배경 그림 1600px(매니페스트 era
 art/homage-*.webp           명화 오마주 장면 (eras[].scenes[].diorama · after). 아직 그림이 없는 장면(주사위·병마용)은 art/*.svg 선화. 중세 배경은 homage-qingming.webp 가 겸함
 js/data.js                  데이터 로딩 (fetch ↔ bundle 자동 전환)
 js/common.js                공용 도우미 (연도 글자, 장면 목록)
-js/icons.js                 탭·시대·카테고리 선 아이콘(인라인 SVG, currentColor). 열쇠는 index.json 의 id
+js/icons.js                 탭·시대·카테고리 선 아이콘(인라인 SVG, currentColor). 열쇠는 index.json 의 id. 그림판 사건 마커(이름표·카드)에도 쓴다
 js/hud.js                   시간 계기판 (굴러가는 연도 숫자 + 시대 구간 스크러버)
 js/branch.js                갈림길(대체역사 게임) — 스테이지 목록·게이지·룰렛·결말 등급·결말 도감
 js/quiz.js                  퀴즈(데모) — 연표 끼워 넣기(오늘의 퀴즈·연습), 결과 나누기

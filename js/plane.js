@@ -21,10 +21,25 @@
     return (f.weight ? f.weight + ' ' : '') + f.px + 'px ' + f.family;
   }
 
+  // --- 아이콘(SVG 문자열 → 흰 그림 한 장). 처음 한 번 비동기로 받고, 받자마자 onAsset 으로 다시 그리게 한다.
+  //     색은 붓이 입힌다(GL 은 글자판의 알파로, 2D 는 source-in 으로).
+  var iconImgs = {};
+  function iconImage(svg, onAsset) {
+    var it = iconImgs[svg];
+    if (it) return it;
+    it = { img: new Image(), ready: false };
+    var white = svg.replace(/currentColor/g, '#ffffff').replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" ');   // 그림 파일로 읽히려면 xmlns 가 있어야 한다
+    it.img.onload = function () { it.ready = true; if (onAsset) onAsset(); };
+    it.img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(white);
+    iconImgs[svg] = it;
+    return it;
+  }
+
   // ------------------------------------------------------------ 2D 붓
 
-  function create2D(canvas) {
+  function create2D(canvas, onAsset) {
     var ctx = canvas.getContext('2d');
+    var tinted = {};   // 색 입힌 아이콘 캔버스 — 크기·색·그림마다 하나
     var pdpr = 1;
     var W = 0;
     var H = 0;
@@ -111,6 +126,27 @@
         ctx.font = fontCss(font);
         return ctx.measureText(str).width;
       },
+      /** 아이콘 — (x, y) 가 왼쪽 위, size 는 한 변. 아직 안 받아졌으면 이번 프레임은 비운다 */
+      icon: function (svg, x, y, size, color, alpha) {
+        var it = iconImage(svg, onAsset);
+        if (!it.ready) return;
+        var key = size + '|' + color + '|' + svg;
+        var c = tinted[key];
+        if (!c) {
+          c = document.createElement('canvas');
+          var px = Math.ceil(size * 2);
+          c.width = px; c.height = px;
+          var cx = c.getContext('2d');
+          cx.drawImage(it.img, 0, 0, px, px);
+          cx.globalCompositeOperation = 'source-in';
+          cx.fillStyle = color;
+          cx.fillRect(0, 0, px, px);
+          tinted[key] = c;
+        }
+        ctx.globalAlpha = alpha == null ? 1 : alpha;
+        ctx.drawImage(c, x, y, size, size);
+        ctx.globalAlpha = 1;
+      },
       clip: function (x, y, w, h) {
         ctx.save();
         ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
@@ -187,7 +223,7 @@
     '}'
   ].join('\n');
 
-  function createGL(canvas) {
+  function createGL(canvas, onAsset) {
     var THREE = global.THREE;
     if (!THREE || !THREE.WebGLRenderer) return null;
     var renderer;
@@ -239,6 +275,53 @@
       return props && props.__webglTexture;
     }
 
+    /** 글자판에서 cw×ch 칸을 잡는다 — 높이가 맞는 줄(선반)을 찾고, 없으면 새 줄. 가득 차면 비우고 null */
+    function alloc(cw, ch) {
+      var shelf = null;
+      for (var i = 0; i < shelves.length; i += 1) {
+        var s = shelves[i];
+        if (s.h >= ch && s.h <= ch * 1.3 && s.x + cw <= AW) { shelf = s; break; }
+      }
+      if (!shelf) {
+        if (shelfY + ch > AH) { resetAtlas(); return null; }
+        shelf = { y: shelfY, h: ch, x: 0 };
+        shelves.push(shelf);
+        shelfY += ch + GAP;
+      }
+      var at = { x: shelf.x, y: shelf.y };
+      shelf.x += cw + GAP;
+      return at;
+    }
+
+    function prepScratch(cw, ch) {
+      if (scratch.width < cw || scratch.height < ch) {
+        scratch.width = Math.max(scratch.width, cw);
+        scratch.height = Math.max(scratch.height, ch);
+      }
+      sctx.setTransform(1, 0, 0, 1, 0, 0);
+      sctx.clearRect(0, 0, scratch.width, scratch.height);
+    }
+
+    /** 아이콘 칸 — 흰 그림을 글자판에 올려 두고 글자처럼 색을 입혀 그린다. 안 받아졌으면 null */
+    function iconGlyph(svg, size) {
+      var it = iconImage(svg, onAsset);
+      if (!it.ready) return null;
+      var key = 'icon\u0000' + size + '\u0000' + svg;
+      var g = glyphs[key];
+      if (g) return g;
+      var px = Math.ceil(size * TS);
+      var cw = px + PAD * 3;
+      var ch = px + PAD * 2;
+      var at = alloc(cw, ch);
+      if (!at) return iconGlyph(svg, size);
+      prepScratch(cw, ch);
+      sctx.drawImage(it.img, PAD, PAD, px, px);
+      upload(at.x, at.y, cw, ch);
+      g = { pw: cw / TS, h: ch / TS, u0: at.x / AW, v0: at.y / AH, u1: (at.x + cw) / AW, v1: (at.y + ch) / AH };
+      glyphs[key] = g;
+      return g;
+    }
+
     function glyph(str, font) {
       var css = fontCss(font);
       var key = css + '\u0000' + str;
@@ -251,28 +334,12 @@
       var cw = Math.ceil(w * TS) + PAD * 3;   // 왼쪽 여백 PAD + 오른쪽 2PAD(밉맵에서 이웃 글자가 번지지 않게)
       var ch = Math.ceil((asc + desc) * TS);
       if (cw > AW) cw = AW;
-      // 높이가 맞는 줄(선반)을 찾고, 없으면 새 줄
-      var shelf = null;
-      for (var i = 0; i < shelves.length; i += 1) {
-        var s = shelves[i];
-        if (s.h >= ch && s.h <= ch * 1.3 && s.x + cw <= AW) { shelf = s; break; }
-      }
-      if (!shelf) {
-        if (shelfY + ch > AH) { resetAtlas(); return glyph(str, font); }
-        shelf = { y: shelfY, h: ch, x: 0 };
-        shelves.push(shelf);
-        shelfY += ch + GAP;
-      }
-      var sx = shelf.x;
-      var sy = shelf.y;
-      shelf.x += cw + GAP;
+      var at = alloc(cw, ch);
+      if (!at) return glyph(str, font);   // 글자판을 비웠으니 다시
+      var sx = at.x;
+      var sy = at.y;
 
-      if (scratch.width < cw || scratch.height < ch) {
-        scratch.width = Math.max(scratch.width, cw);
-        scratch.height = Math.max(scratch.height, ch);
-      }
-      sctx.setTransform(1, 0, 0, 1, 0, 0);
-      sctx.clearRect(0, 0, scratch.width, scratch.height);
+      prepScratch(cw, ch);
       sctx.setTransform(TS, 0, 0, TS, 0, 0);
       sctx.font = css;
       sctx.fillStyle = '#fff';
@@ -447,6 +514,12 @@
         measureCtx.font = fontCss(font);
         return measureCtx.measureText(str).width;
       },
+      /** 아이콘 — (x, y) 가 왼쪽 위, size 는 한 변 */
+      icon: function (svg, x, y, size, color, alpha) {
+        var g = iconGlyph(svg, size);
+        if (!g) return;
+        push(x - PAD / TS, y - PAD / TS, g.pw, g.h, color, alpha, 1, 0, 0, 0, [g.u0, g.v0, g.u1, g.v1]);
+      },
       clip: function (x, y, w, h) {
         clipStack.push(clip);
         clip = [Math.max(clip[0], x), Math.max(clip[1], y), Math.min(clip[2], x + w), Math.min(clip[3], y + h)];
@@ -491,10 +564,12 @@
    * 쓸 수 있는 붓을 고른다 — WebGL2(Three.js)가 되면 GL, 아니면 2D.
    * 한 캔버스에서 WebGL 을 한 번 잡으면 2D 로 바꿀 수 없으므로 여기서 한 번만 정한다.
    */
+  /** @param opts { force2d, onAsset() } — onAsset 은 아이콘 그림이 늦게 도착했을 때 다시 그리라는 신호 */
   function create(canvas, opts) {
     var want = !(opts && opts.force2d);
-    var p = want ? createGL(canvas) : null;
-    return p || create2D(canvas);
+    var onAsset = opts && opts.onAsset;
+    var p = want ? createGL(canvas, onAsset) : null;
+    return p || create2D(canvas, onAsset);
   }
 
   global.BigHistoryPlane = { create: create };
