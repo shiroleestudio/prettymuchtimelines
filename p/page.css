@@ -80,5 +80,6 @@ h3 { font-size: 19px; margin: 16px 0 6px; display: flex; align-items: center; }
 .sources li { margin: 0 0 6px; }
 .sources a { color: var(--ink); }
 
+.ad { margin: 8px 0 20px; min-height: 100px; }
 .pager { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; margin: 0 4px; }
 .foot { max-width: 720px; margin: 0 auto; padding: 0 20px 32px; font-size: 12px; color: var(--ink-2); }
