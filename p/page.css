@@ -1,79 +1,237 @@
-/* 검색용 항목 페이지(scripts/pages.js 가 만든다) — 연표 앱과 같은 색·글꼴 */
+/* 검색용 항목 페이지(scripts/pages.js 가 만든다) — 연표 화면(css/styles.css)과 같은 테마
+
+   색 토큰·규칙은 css/styles.css 맨 위와 같다(그 파일은 연표 화면 전용이라 여기 따로 둔다 — 색을 바꾸면 두 곳 다).
+   · 라이트  연한 종이 위. 토큰의 기본값.
+   · 다크    <html class="is-night"> — 연표 화면과 같은 저장값(localStorage 'bighistory.theme')을 페이지 머리의 스크립트가 읽는다.
+   · 크림 면(카드) 위 글자는 두 모드 모두 먹색 고정, 바탕 위 글자만 --ink-bg 로 바뀐다.
+   · 바탕 그라데이션은 항목이 속한 시대의 색(data/index.json eras[].day / night) — <html style> 로 들어온다. */
+
 :root {
-  --bg: #f3e7d8;
-  --card: #fff8ef;
   --ink: #3a2a24;
   --ink-2: #7a6058;
+  --foam: #fff8ef;
+  --foam-2: #f3e7d8;
+  --bean: #5c3d2e;
   --line: rgba(92, 61, 46, .18);
+  --caramel: #c9956b;
+
+  --sky: #f3e7d8;
+  --sky-a: var(--day-a, #f3e7d8);
+  --sky-b: var(--day-b, #f3e7d8);
+  --ink-bg: #3a2a24;
+  --ink-bg-2: #7a6058;
+  --line-bg: rgba(92, 61, 46, .2);
   --star: #b57a3e;
-  --display: 'Gaegu', 'Gowun Dodum', sans-serif;
-  --sans: 'Gowun Dodum', system-ui, sans-serif;
+
+  --shadow-1: 0 6px 20px rgba(92, 61, 46, .12);
+  --shadow-2: 0 10px 30px rgba(92, 61, 46, .18);
+
+  --display: 'Gaegu', 'Gowun Dodum', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --sans: 'Gowun Dodum', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1c1724;
-    --card: #2a2333;
-    --ink: #f3e7d8;
-    --ink-2: #c9b8ad;
-    --line: rgba(243, 231, 216, .16);
-    --star: #ffd98a;
-  }
+.is-night {
+  --sky: #1c1724;
+  --sky-a: var(--night-a, #1c1724);
+  --sky-b: var(--night-b, #1c1724);
+  --ink-bg: #fff8ef;
+  --ink-bg-2: #c8bbb6;
+  --line-bg: rgba(255, 248, 239, .18);
+  --star: #ffd98a;
+  --shadow-1: 0 6px 20px rgba(0, 0, 0, .25);
+  --shadow-2: 0 10px 30px rgba(0, 0, 0, .4);
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 
+html { background: var(--sky); }
+
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--ink);
+  min-height: 100vh;
   font-family: var(--sans);
+  font-size: 15px;
   line-height: 1.7;
+  color: var(--ink-bg);
+  /* 바탕은 html 에만 — body 에 칠하면 뒤(z-index -1)의 .bg·.art 가 가려진다 */
 }
 
 a { color: inherit; text-underline-offset: 3px; }
 
-.top { padding: 14px 16px; }
-.brand { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-size: 22px; font-weight: 700; text-decoration: none; }
+/* ------------------------------------------------------------ 배경 (연표 화면의 시대 하늘·종이결·디오라마) */
 
-.wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; }
-
-article, section {
-  background: var(--card);
-  border-radius: 22px;
-  padding: 20px 22px;
-  margin: 0 0 16px;
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(180deg, var(--sky-a), var(--sky-b));
 }
 
-.crumbs { font-size: 13px; color: var(--ink-2); margin: 4px 4px 10px; }
-.eyebrow { display: flex; align-items: center; gap: 7px; margin: 0; font-size: 14px; font-weight: 700; color: var(--ink-2); }
-.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; flex: 0 0 auto; }
-.eyebrow .dot { margin-right: 0; }
+.bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .35;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, .06) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, .05) 0 1px, transparent 1px 4px);
+}
+
+/* 시대 배경 삽화 — 글 위쪽에 한 장, 아래로 갈수록 바탕에 녹는다 */
+.art {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  height: min(60vw, 620px);
+  background-image: var(--art);
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: cover;
+  opacity: .55;
+  -webkit-mask-image: linear-gradient(180deg, #000 0, #000 35%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0, #000 35%, transparent 100%);
+}
+
+.is-night .art { opacity: .6; }
+
+/* ------------------------------------------------------------ 머리 (연표 화면의 .head 와 같은 짜임) */
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1 1 auto;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.brand__mark {
+  width: 36px; height: 36px;
+  flex: 0 0 auto;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .3));
+}
+
+.brand__text { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+
+.brand__title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand__sub {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.2;
+  opacity: .72;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pill-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--foam);
+  color: var(--ink);
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: var(--shadow-1);
+}
+
+@media (max-width: 640px) {
+  .head { padding: 12px 14px 8px; gap: 8px; }
+  .brand__title { font-size: 20px; }
+  .brand__sub { display: none; }
+}
+
+/* ------------------------------------------------------------ 본문 */
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 8px 16px 40px; }
+
+.crumbs { font-size: 13px; color: var(--ink-bg-2); margin: 4px 4px 12px; }
+
+/* 카드 — 연표 화면의 .card 와 같은 크림 면 */
+.card {
+  background: var(--foam);
+  border-radius: 20px;
+  padding: 20px 22px 22px;
+  margin: 0 0 16px;
+  box-shadow: var(--shadow-1);
+  color: var(--ink);
+}
+
+.eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin: 0; font-size: 14px; font-weight: 700; color: var(--ink-2); }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; }
+.era {
+  display: inline-block;
+  padding: 1px 9px;
+  border-radius: 999px;
+  background: var(--foam-2);
+  font-family: var(--display);
+  font-size: 14px;
+  color: var(--ink);
+}
 
 h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.15; }
-h1 { font-size: 40px; margin: 4px 0 10px; }
-h2 { font-size: 26px; margin: 0 0 10px; }
-h3 { font-size: 19px; margin: 16px 0 6px; display: flex; align-items: center; }
+h1 { font-size: 40px; margin: 6px 0 10px; }
+h2 { font-size: 26px; margin: 0 0 12px; }
+h3 { font-size: 19px; margin: 16px 0 8px; display: flex; align-items: center; gap: 7px; }
 .count { font-family: var(--sans); font-size: 14px; color: var(--ink-2); margin-left: 6px; }
 
-.desc { font-size: 17px; margin: 0 0 14px; }
-.detail { background: none; border-radius: 0; padding: 0; margin: 0 0 14px; border-top: 1px dashed var(--line); }
+.desc { font-size: 17px; margin: 0 0 14px; word-break: keep-all; }
+.detail { margin: 0 0 14px; border-top: 1px dashed var(--line); }
 .detail p { font-size: 16px; line-height: 1.85; margin: 14px 0 0; word-break: keep-all; text-wrap: pretty; }
 .src { font-size: 13px; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: 10px; margin: 0 0 14px; }
 .draft { opacity: .8; }
 
+/* 주 행동 — 연표 화면의 먹색 알약 */
 .cta {
   display: inline-block;
   padding: 10px 18px;
   border-radius: 999px;
   background: var(--ink);
-  color: var(--card);
+  color: var(--foam);
   font-weight: 700;
   text-decoration: none;
 }
 
-.list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; }
-.list li { font-size: 15px; }
+/* 같은 시기 목록 — 연표 화면의 이름표(알약)와 같은 모양 */
+.list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.list a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--foam-2);
+  font-size: 14px;
+  text-decoration: none;
+}
+.list a:hover { background: #fff; }
 .yr { font-size: 12px; color: var(--ink-2); }
 
 .sources { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: var(--ink-2); }
@@ -81,5 +239,8 @@ h3 { font-size: 19px; margin: 16px 0 6px; display: flex; align-items: center; }
 .sources a { color: var(--ink); }
 
 .ad { margin: 8px 0 20px; min-height: 100px; }
+
 .pager { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; margin: 0 4px; }
-.foot { max-width: 720px; margin: 0 auto; padding: 0 20px 32px; font-size: 12px; color: var(--ink-2); }
+.pager a { color: var(--ink-bg); }
+
+.foot { max-width: 720px; margin: 0 auto; padding: 0 20px 32px; font-size: 12px; color: var(--ink-bg-2); }
