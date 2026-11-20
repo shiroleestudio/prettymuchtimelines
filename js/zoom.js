@@ -986,7 +986,7 @@
 
     function measureLabel(ev) {
       if (labelWidth[ev.id]) return labelWidth[ev.id];
-      var w = Math.min(190, pp.measure(ev.title, font(13))) + 30;
+      var w = Math.min(190, pp.measure(ev.title, font(13))) + (iconOf(ev) ? 34 : 30);   // drawLabel 의 왼쪽 여백과 같아야 글자가 잘리지 않는다
       labelWidth[ev.id] = w;
       return w;
     }
