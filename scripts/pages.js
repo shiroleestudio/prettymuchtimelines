@@ -10,6 +10,7 @@
  *
  * 만드는 것
  *   p/<id>.html     항목 페이지(출처가 붙은 항목만 — 확인하지 않은 초안은 검색에 내보내지 않는다).
+ *                   겉모습은 연표 화면과 같은 테마(p/page.css) — 저장된 테마, 항목이 속한 시대의 바탕색과 배경 삽화.
  *                   site.json 의 ads 가 있으면 이 페이지에만 애드센스 스크립트와 본문 아래 광고 자리 하나가 들어간다.
  *   p/index.html    항목 목록(카테고리별)
  *   sitemap.xml     위 페이지들과 첫 화면의 주소 목록(Search Console·서치어드바이저에 제출)
@@ -117,17 +118,58 @@ function head(o) {
   <script type="application/ld+json">${JSON.stringify(o.ld)}</script>${adsHead(o)}`;
 }
 
+/** 항목이 속한 시대(data/index.json eras) — 바탕색과 배경 삽화를 연표 화면과 맞추는 데 쓴다. 못 찾으면 마지막 시대. */
+const ERAS = manifest.eras || [];
+function eraOf(e) {
+  return ERAS.find((r) => e.start_year >= r.start_year && e.start_year < r.end_year) || ERAS[ERAS.length - 1] || null;
+}
+
+/** 시대 색을 <html style> 의 CSS 변수로 — page.css 가 라이트/다크에 맞는 쪽을 고른다. */
+function eraStyle(era) {
+  if (!era || !era.day || !era.night) return '';
+  const v = [
+    '--day-a:' + era.day[0], '--day-b:' + era.day[1],
+    '--night-a:' + era.night[0], '--night-b:' + era.night[1],
+    era.diorama ? '--art:url(../' + era.diorama + ')' : ''
+  ].filter(Boolean).join(';');
+  return ` style="${esc(v)}"`;
+}
+
+// 시로 얼굴 — index.html 의 .brand__mark 와 같은 그림. TODO(character-sheet): 캐릭터 시트가 나오면 두 곳을 함께 바꾼다.
+const SHIRO = `<svg class="brand__mark" viewBox="24 4 72 92" aria-hidden="true"><ellipse cx="47" cy="30" rx="8" ry="22" transform="rotate(-8 47 30)" fill="#FFF8EF" stroke="#CFAFB8" stroke-width="1.5"/><ellipse cx="47" cy="32" rx="3.5" ry="14" transform="rotate(-8 47 32)" fill="#F2C4CE"/><ellipse cx="73" cy="30" rx="8" ry="22" transform="rotate(8 73 30)" fill="#FFF8EF" stroke="#CFAFB8" stroke-width="1.5"/><ellipse cx="73" cy="32" rx="3.5" ry="14" transform="rotate(8 73 32)" fill="#F2C4CE"/><circle cx="60" cy="66" r="28" fill="#FFF8EF" stroke="#CFAFB8" stroke-width="1.5"/><circle cx="49" cy="64" r="3" fill="#3A2A24"/><circle cx="71" cy="64" r="3" fill="#3A2A24"/><circle cx="41" cy="74" r="5.5" fill="#F2C4CE"/><circle cx="79" cy="74" r="5.5" fill="#F2C4CE"/><path d="M56 74q4 4 8 0" fill="none" stroke="#3A2A24" stroke-width="2" stroke-linecap="round"/></svg>`;
+
+// 머리말: site.tagline 의 앞부분이 한글 제목, 나머지는 영문 이름과 함께 부제(연표 화면과 같은 두 줄)
+const TAGLINE = site.tagline.split(' · ');
+const BRAND_TITLE = TAGLINE[0];
+const BRAND_SUB = [site.name].concat(TAGLINE.slice(1)).join(' · ');
+
 function page(o) {
   return `<!doctype html>
-<html lang="ko">
+<html lang="ko"${eraStyle(o.era)}>
 <head>
   ${head(o)}
+  <meta name="theme-color" content="#f3e7d8" />
+  <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="icon" href="../icons/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../fonts/fonts.css" />
+  <!-- 연표 화면과 같은 테마 저장값(설정 탭에서 고른 것)을 스타일보다 먼저 적용한다. 기본은 라이트 -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('bighistory.theme');
+        var dark = t === 'dark' || (t === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('is-night');
+      } catch (err) { /* 저장소를 못 읽어도 기본(라이트)으로 */ }
+    })();
+  </script>
   <link rel="stylesheet" href="page.css" />
 </head>
 <body>
-  <header class="top"><a class="brand" href="../index.html"><img src="../icons/icon.svg" alt="" width="28" height="28" />${esc(site.name)}</a></header>
+  <div class="bg" aria-hidden="true"></div>${o.era && o.era.diorama ? '\n  <div class="art" aria-hidden="true"></div>' : ''}
+  <header class="head">
+    <a class="brand" href="../index.html">${SHIRO}<span class="brand__text"><span class="brand__title">${esc(BRAND_TITLE)}</span><span class="brand__sub">${esc(BRAND_SUB)}</span></span></a>
+    <a class="pill-btn" href="../index.html${o.entryId ? '#e=' + esc(o.entryId) : ''}">연표 열기</a>
+  </header>
   <main class="wrap">
 ${o.body}
   </main>
@@ -161,9 +203,10 @@ for (const e of paged) {
   const url = BASE + 'p/' + e.id + '.html';
   const srcs = e.sources.map(source);
 
+  const era = eraOf(e);
   const body = `    <nav class="crumbs" aria-label="위치"><a href="index.html">항목 목록</a> › <a href="index.html#${esc(ds.id)}">${esc(ds.label)}</a></nav>
-    <article>
-      <p class="eyebrow"><span class="dot" style="background:${esc(ds.color)}"></span>${esc(ds.label)} · ${esc(period(e))}</p>
+    <article class="card">
+      <p class="eyebrow">${era ? `<span class="era">${esc(era.label)}</span>` : ''}<span class="dot" style="background:${esc(ds.color)}"></span>${esc(ds.label)} · ${esc(period(e))}</p>
       <h1>${esc(e.title)}</h1>
       <p class="desc">${esc(e.description)}</p>
 ${e.detail && e.detail.length ? `      <section class="detail" aria-label="상세 해설">
@@ -172,11 +215,11 @@ ${e.detail.map((p) => `        <p>${esc(p)}</p>`).join('\n')}
 ` : ''}      <p class="src">출처 · ${srcs.map((s) => (s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>` : esc(s.name))).join(' · ')}${e.status !== 'reviewed' ? ' <span class="draft">(검토 전 초안)</span>' : ''}</p>
       <p><a class="cta" href="../index.html#e=${esc(e.id)}">연표에서 펼쳐 보기 →</a></p>
     </article>
-${adBox()}${groups.length ? `    <section>
+${adBox()}${groups.length ? `    <section class="card">
       <h2>같은 시기 다른 곳에서는</h2>
 ${groups.map((g) => `      <h3><span class="dot" style="background:${esc(g.ds.color)}"></span>${esc(g.ds.label)}</h3>
       <ul class="list">
-${g.list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)}</a> <span class="yr">${esc(shortPeriod(x))}</span></li>`).join('\n')}
+${g.list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)} <span class="yr">${esc(shortPeriod(x))}</span></a></li>`).join('\n')}
       </ul>`).join('\n')}
     </section>` : ''}
     <nav class="pager" aria-label="${esc(ds.label)} 앞뒤">
@@ -213,7 +256,7 @@ ${g.list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)}</a>
   write('p/' + e.id + '.html', page({
     title: `${e.title} (${period(e)}) — 같은 시기 세계는 | ${site.name}`,
     ogTitle: `${e.title} (${period(e)})`,
-    description, url, ld, body, ads: true
+    description, url, ld, body, ads: true, era, entryId: e.id
   }));
 }
 
@@ -225,20 +268,22 @@ for (const name of fs.readdirSync(OUT_DIR)) {
 
 // ------------------------------------------------------------ 목록 페이지
 
-const listBody = `    <h1>항목 목록</h1>
-    <p class="desc">${esc(site.description)}</p>
-    <p><a class="cta" href="../index.html">연표 열기 →</a></p>
+const listBody = `    <article class="card">
+      <h1>항목 목록</h1>
+      <p class="desc">${esc(site.description)}</p>
+      <p><a class="cta" href="../index.html">연표 열기 →</a></p>
+    </article>
 ${datasets.slice().sort(NATION_FIRST).map((d) => {
   const list = paged.filter((x) => x._ds.id === d.id).sort((p, q) => p.start_year - q.start_year);
   if (!list.length) return '';
-  return `    <section id="${esc(d.id)}">
+  return `    <section class="card" id="${esc(d.id)}">
       <h2><span class="dot" style="background:${esc(d.color)}"></span>${esc(d.label)} <span class="count">${list.length}</span></h2>
       <ul class="list">
-${list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)}</a> <span class="yr">${esc(shortPeriod(x))}</span></li>`).join('\n')}
+${list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)} <span class="yr">${esc(shortPeriod(x))}</span></a></li>`).join('\n')}
       </ul>
     </section>`;
 }).filter(Boolean).join('\n')}
-    <section id="sources">
+    <section class="card" id="sources">
       <h2>데이터 출처</h2>
       <p class="desc">연도와 사실은 아래 공개 자료로 확인했고, 설명문과 해설은 이 프로젝트에서 직접 썼습니다. 항목마다 쓴 자료는 각 항목 페이지 맨 아래에 있습니다.</p>
       <ul class="sources">

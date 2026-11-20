@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" style="--day-a:#F4E6E0;--day-b:#ECD8CF;--night-a:#2A1E22;--night-b:#1C1724;--art:url(../art/modern.webp)">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,16 +18,33 @@
   <meta name="naver-site-verification" content="037914cece8c0d3d48870d95121457cf303e1ea6" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"화폐정리사업 (1904년)","description":"대한제국의 옛 화폐를 거두어들이고 새 화폐로 바꾼 사업이다.","articleBody":"대한제국의 옛 화폐를 거두어들이고 새 화폐로 바꾼 사업이다.\n\n화폐정리사업은 1904년 일본이 재정 고문 메가타 다네타로를 대한제국에 파견해 추진한 화폐 개혁으로, 1905년부터 실제 교환이 시작되었다. 당시 대한제국은 전환국에서 찍은 백동화가 남발되고 위조가 많아 가치가 떨어져 있었고, 일본은 이를 정리한다는 명분으로 한국의 화폐를 일본 화폐 체계에 묶으려 했다.\n\n백동화를 품질에 따라 갑·을·병으로 나누어 갑종만 액면대로 바꿔 주고 병종은 받지 않았으며, 상평통보와 엽전도 회수했다. 새 화폐는 일본 제일은행이 발행한 은행권으로, 사실상 일본 돈이 한국의 법화가 된 셈이다. 전환국은 폐지되었다.\n\n교환 기준이 가혹해 많은 상인과 농민이 재산을 잃었고, 돈이 갑자기 줄어드는 전황으로 한국인 상인과 금융기관이 몰락했다. 이 과정은 1905년 을사늑약과 같은 시기에 진행되어 경제 주권을 먼저 빼앗는 결과가 되었고, 1907년 국채보상운동이 일어나는 배경이 되었다.","inLanguage":"ko","url":"https://timeline.shiroleestudio.com/p/economy-currency-reform.html","image":"https://timeline.shiroleestudio.com/icons/og.jpg","isPartOf":{"@type":"WebSite","name":"Timeline of Pretty Much Everything","url":"https://timeline.shiroleestudio.com/"},"citation":[{"@type":"CreativeWork","name":"화폐정리사업,『한국민족문화대백과사전』","url":"https://encykorea.aks.ac.kr/Article/E0064926"}],"about":{"@type":"Thing","name":"화폐정리사업"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"항목 목록","item":"https://timeline.shiroleestudio.com/p/index.html"},{"@type":"ListItem","position":2,"name":"경제사","item":"https://timeline.shiroleestudio.com/p/index.html#economy"},{"@type":"ListItem","position":3,"name":"화폐정리사업","item":"https://timeline.shiroleestudio.com/p/economy-currency-reform.html"}]}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8077516962923071" crossorigin="anonymous"></script>
+  <meta name="theme-color" content="#f3e7d8" />
+  <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="icon" href="../icons/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../fonts/fonts.css" />
+  <!-- 연표 화면과 같은 테마 저장값(설정 탭에서 고른 것)을 스타일보다 먼저 적용한다. 기본은 라이트 -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('bighistory.theme');
+        var dark = t === 'dark' || (t === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('is-night');
+      } catch (err) { /* 저장소를 못 읽어도 기본(라이트)으로 */ }
+    })();
+  </script>
   <link rel="stylesheet" href="page.css" />
 </head>
 <body>
-  <header class="top"><a class="brand" href="../index.html"><img src="../icons/icon.svg" alt="" width="28" height="28" />Timeline of Pretty Much Everything</a></header>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="art" aria-hidden="true"></div>
+  <header class="head">
+    <a class="brand" href="../index.html"><svg class="brand__mark" viewBox="24 4 72 92" aria-hidden="true"><ellipse cx="47" cy="30" rx="8" ry="22" transform="rotate(-8 47 30)" fill="#FFF8EF" stroke="#CFAFB8" stroke-width="1.5"/><ellipse cx="47" cy="32" rx="3.5" ry="14" transform="rotate(-8 47 32)" fill="#F2C4CE"/><ellipse cx="73" cy="30" rx="8" ry="22" transform="rotate(8 73 30)" fill="#FFF8EF" stroke="#CFAFB8" stroke-width="1.5"/><ellipse cx="73" cy="32" rx="3.5" ry="14" transform="rotate(8 73 32)" fill="#F2C4CE"/><circle cx="60" cy="66" r="28" fill="#FFF8EF" stroke="#CFAFB8" stroke-width="1.5"/><circle cx="49" cy="64" r="3" fill="#3A2A24"/><circle cx="71" cy="64" r="3" fill="#3A2A24"/><circle cx="41" cy="74" r="5.5" fill="#F2C4CE"/><circle cx="79" cy="74" r="5.5" fill="#F2C4CE"/><path d="M56 74q4 4 8 0" fill="none" stroke="#3A2A24" stroke-width="2" stroke-linecap="round"/></svg><span class="brand__text"><span class="brand__title">거의 모든 것의 타임라인</span><span class="brand__sub">Timeline of Pretty Much Everything · 한·중·일 역사를 한 시간축에 나란히</span></span></a>
+    <a class="pill-btn" href="../index.html#e=economy-currency-reform">연표 열기</a>
+  </header>
   <main class="wrap">
     <nav class="crumbs" aria-label="위치"><a href="index.html">항목 목록</a> › <a href="index.html#economy">경제사</a></nav>
-    <article>
-      <p class="eyebrow"><span class="dot" style="background:#b7a46a"></span>경제사 · 1904년</p>
+    <article class="card">
+      <p class="eyebrow"><span class="era">근대</span><span class="dot" style="background:#b7a46a"></span>경제사 · 1904년</p>
       <h1>화폐정리사업</h1>
       <p class="desc">대한제국의 옛 화폐를 거두어들이고 새 화폐로 바꾼 사업이다.</p>
       <section class="detail" aria-label="상세 해설">
@@ -38,19 +55,19 @@
       <p class="src">출처 · <a href="https://encykorea.aks.ac.kr/Article/E0064926" rel="noopener">화폐정리사업,『한국민족문화대백과사전』</a> <span class="draft">(검토 전 초안)</span></p>
       <p><a class="cta" href="../index.html#e=economy-currency-reform">연표에서 펼쳐 보기 →</a></p>
     </article>
-    <section>
+    <section class="card">
       <h2>같은 시기 다른 곳에서는</h2>
       <h3><span class="dot" style="background:#d99a92"></span>한국사</h3>
       <ul class="list">
-        <li><a href="korea-daehan-empire.html">대한제국</a> <span class="yr">1897–1910</span></li>
+        <li><a href="korea-daehan-empire.html">대한제국 <span class="yr">1897–1910</span></a></li>
       </ul>
       <h3><span class="dot" style="background:#d9a37e"></span>중국사</h3>
       <ul class="list">
-        <li><a href="china-qing.html">청</a> <span class="yr">1636–1912</span></li>
+        <li><a href="china-qing.html">청 <span class="yr">1636–1912</span></a></li>
       </ul>
       <h3><span class="dot" style="background:#b9a3d4"></span>일본사</h3>
       <ul class="list">
-        <li><a href="japan-meiji.html">메이지 시대</a> <span class="yr">1868–1912</span></li>
+        <li><a href="japan-meiji.html">메이지 시대 <span class="yr">1868–1912</span></a></li>
       </ul>
     </section>
     <nav class="pager" aria-label="경제사 앞뒤">
