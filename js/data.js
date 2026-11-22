@@ -159,6 +159,7 @@
       eras: (manifest.eras || []).slice().sort(function (a, b) {
         return a.start_year - b.start_year;
       }),
+      timeScale: manifest.time_scale || [],   // 연표 화면의 시간 눌러 보기 매듭(js/zoom.js makeWarp)
       scenarios: normalizeAlt(alt, all),
       source: source
     };

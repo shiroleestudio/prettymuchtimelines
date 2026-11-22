@@ -128,6 +128,14 @@ for (const era of manifest.eras || []) {
   }
 }
 
+// ----------------------------------------------------------- 시간 눌러 보기 검사
+(manifest.time_scale || []).forEach((k, i, list) => {
+  const where = `time_scale[${i}] (${k.year})`;
+  if (i > 0 && k.year <= list[i - 1].year) fail(MANIFEST, `${where} — 매듭은 연도 순으로, 같은 해 없이 적습니다.`);
+  if (k.year === 0) fail(MANIFEST, `${where} — 연도 0 은 사용하지 않습니다.`);
+});
+if ((manifest.time_scale || []).length === 1) warn(MANIFEST, 'time_scale — 매듭이 하나뿐이면 눌러 보기가 꺼집니다(둘 이상 적으세요).');
+
 // ----------------------------------------------------------- 데이터 파일 검사
 const globalIds = new Map();
 const sourceHosts = new Set((manifest.sources || []).map((s) => s.match).filter(Boolean));

@@ -85,6 +85,19 @@
         }
       }
     },
+    "time_scale": {
+      "type": "array",
+      "description": "연표 화면의 시간 눌러 보기. 매듭마다 그 해 부근에서 1년이 차지하는 길이의 비율(1 = 근현대). 사이는 로그 직선으로 이어진다. 둘 미만이면 실제 비율 그대로.",
+      "items": {
+        "type": "object",
+        "required": ["year", "scale"],
+        "additionalProperties": false,
+        "properties": {
+          "year": { "type": "integer" },
+          "scale": { "type": "number", "exclusiveMinimum": 0, "maximum": 4 }
+        }
+      }
+    },
     "datasets": {
       "type": "array",
       "minItems": 1,
