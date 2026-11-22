@@ -203,6 +203,107 @@ body {
 }
 @media (max-width: 640px) { .brand__sub { display: none; } }
 
+/* 머리말의 고르기·찾기 칸 — 비어 있으면 카테고리 칩, 글자를 치면 항목 결과가 판으로 내려온다 */
+.finder {
+  position: relative;
+  flex: 0 1 320px;
+  min-width: 0;
+}
+
+.finder__input {
+  width: 100%;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--foam);
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  outline: none;
+  box-shadow: var(--shadow-1);
+}
+.finder__input:focus { box-shadow: 0 0 0 2px var(--star), var(--shadow-1); }
+.finder__input::placeholder { color: var(--ink-2); }
+.finder__input::-webkit-search-cancel-button { display: none; }
+
+.finder__panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: min(440px, calc(100vw - 28px));
+  max-height: min(62vh, 460px);
+  overflow: auto;
+  padding: 12px;
+  border-radius: 20px;
+  background: var(--foam);
+  color: var(--ink);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .22);
+  z-index: 40;
+}
+
+.finder__lead {
+  margin: 2px 4px 8px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+
+.finder__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.finder__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 12px 0 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: transparent;
+  font: inherit;
+  font-size: 13.5px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.finder__chip.is-on {
+  border-color: transparent;
+  background: var(--foam-2);
+  font-weight: 700;
+}
+.finder__chip i {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--pc, var(--caramel));
+  flex: 0 0 auto;
+}
+.finder__chip svg { width: 16px; height: 16px; color: var(--pc, var(--caramel)); flex: 0 0 auto; }
+.finder__chip--all { border-style: dashed; }
+
+.finder__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+}
+.finder__item:hover, .finder__item:focus-visible { background: var(--foam-2); outline: none; }
+.finder__item i { width: 10px; height: 10px; border-radius: 50%; background: var(--c, var(--caramel)); flex: 0 0 auto; }
+.finder__item b { font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.finder__item small { font-size: 12.5px; color: var(--ink-2); white-space: nowrap; margin-left: auto; }
+.finder__more { display: block; width: 100%; margin-top: 6px; padding: 9px; border: 0; border-radius: 14px; background: var(--foam-2); font: inherit; font-size: 13.5px; color: var(--ink); cursor: pointer; }
+.finder__empty { margin: 6px 4px; font-size: 14px; color: var(--ink-2); }
+
 .brand__title {
   margin: 0;
   font-family: var(--display);
@@ -2085,7 +2186,11 @@ body {
 /* ---------------------------------------------------------- 반응형 */
 
 @media (max-width: 640px) {
-  .head { padding: max(12px, env(safe-area-inset-top)) 14px 8px; gap: 8px; }
+  .head { padding: max(12px, env(safe-area-inset-top)) 14px 8px; gap: 8px; flex-wrap: wrap; }
+  .brand { flex-basis: 100%; }
+  .finder { flex: 1 1 100%; }
+  .finder__input { height: 38px; font-size: 14px; }
+  .finder__panel { right: 0; left: 0; width: auto; }
   .brand__title { font-size: 20px; }
   
   .focus-line::before { right: 10px; }

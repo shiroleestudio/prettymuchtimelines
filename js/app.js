@@ -40,6 +40,9 @@
     categoryGroups: document.getElementById('category-groups'),
     categoryCount: document.getElementById('category-count'),
 
+    finder: document.getElementById('finder-input'),
+    finderPanel: document.getElementById('finder-panel'),
+
     search: document.getElementById('search-input'),
     searchSuggest: document.getElementById('search-suggest'),
     searchCount: document.getElementById('search-count'),
@@ -646,6 +649,157 @@
     el.searchResults.appendChild(frag);
   }
 
+  // ------------------------------------------- 머리말의 고르기·찾기 칸
+
+  var FINDER_MAX = 8;   // 판에 보이는 항목 결과 수 — 그 이상은 검색 탭으로
+
+  /** 이 카테고리만 켠다(나머지는 끔). 카테고리 탭의 '전체 선택'으로 되돌릴 수 있다. */
+  function showOnly(ds) {
+    state.data.datasets.forEach(function (d) { state.off[d.id] = d.id !== ds.id; });
+    syncCategories();
+    refresh();
+    if (zoom && ds.entries.length) {
+      var a = Infinity, b = -Infinity;
+      ds.entries.forEach(function (e) { a = Math.min(a, e.start_year); b = Math.max(b, e.end_year); });
+      zoom.flyToRange(a, b);
+    }
+    showToast(ds.label + '만 보여요 · 되돌리려면 카테고리 탭에서 전체 선택');
+  }
+
+  function openFinder() {
+    el.finderPanel.hidden = false;
+    el.finder.setAttribute('aria-expanded', 'true');
+    renderFinder();
+  }
+
+  function closeFinder() {
+    el.finderPanel.hidden = true;
+    el.finder.setAttribute('aria-expanded', 'false');
+  }
+
+  /** 비어 있으면 카테고리 칩(하나 누르면 그 연표만), 글자를 치면 항목 결과(누르면 연표에서 펼침). */
+  function renderFinder() {
+    var query = el.finder.value.trim().toLowerCase();
+    var panel = el.finderPanel;
+    panel.textContent = '';
+
+    if (!query) {
+      var lead = document.createElement('p');
+      lead.className = 'finder__lead';
+      lead.textContent = '보고 싶은 연표를 고르세요';
+      panel.appendChild(lead);
+
+      var onCount = activeColumns().length;
+      var total = state.data.datasets.length;
+      var chips = document.createElement('div');
+      chips.className = 'finder__chips';
+
+      var all = document.createElement('button');
+      all.type = 'button';
+      all.className = 'finder__chip finder__chip--all' + (onCount === total ? ' is-on' : '');
+      all.textContent = '전부 나란히';
+      all.addEventListener('click', function () {
+        setAllCategories(false);
+        closeFinder();
+        el.finder.blur();
+      });
+      chips.appendChild(all);
+
+      state.data.datasets.forEach(function (ds) {
+        var chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = 'finder__chip' + (onCount === 1 && !state.off[ds.id] ? ' is-on' : '');
+        chip.style.setProperty('--pc', ds.color);
+        var glyph = ICONS.svg('category', ds.id);
+        if (glyph) chip.insertAdjacentHTML('beforeend', glyph);
+        else chip.appendChild(document.createElement('i'));
+        chip.appendChild(document.createTextNode(ds.label));
+        chip.addEventListener('click', function () {
+          showOnly(ds);
+          closeFinder();
+          el.finder.blur();
+          if (state.tab !== 'timeline') setTab('timeline');
+        });
+        chips.appendChild(chip);
+      });
+      panel.appendChild(chips);
+
+      var hint = document.createElement('p');
+      hint.className = 'finder__lead';
+      hint.textContent = '사람·나라·사건 이름을 치면 바로 찾아요';
+      panel.appendChild(hint);
+      return;
+    }
+
+    // 이름에 든 것이 먼저, 그 안에서는 시대순 — "고구려"를 치면 고구려가 맨 위
+    var inTitle = function (e) { return e.title.toLowerCase().indexOf(query) !== -1 ? 0 : 1; };
+    var results = state.data.entries
+      .filter(function (e) { return e._search.indexOf(query) !== -1; })
+      .sort(function (a, b) { return inTitle(a) - inTitle(b) || a.start_year - b.start_year || a.end_year - b.end_year; });
+
+    if (!results.length) {
+      var none = document.createElement('p');
+      none.className = 'finder__empty';
+      none.textContent = '"' + el.finder.value.trim() + '" 는 아직 연표에 없어요';
+      panel.appendChild(none);
+      return;
+    }
+
+    results.slice(0, FINDER_MAX).forEach(function (entry) {
+      var item = document.createElement('button');
+      item.type = 'button';
+      item.className = 'finder__item';
+      item.style.setProperty('--c', entry._color);
+      item.appendChild(document.createElement('i'));
+      var name = document.createElement('b');
+      name.textContent = entry.title;
+      item.appendChild(name);
+      var meta = document.createElement('small');
+      meta.textContent = entry._label + ' · ' + yearsOf(entry);
+      item.appendChild(meta);
+      item.addEventListener('click', function () {
+        closeFinder();
+        el.finder.blur();
+        openEntry(entry);
+      });
+      panel.appendChild(item);
+    });
+
+    if (results.length > FINDER_MAX) {
+      var more = document.createElement('button');
+      more.type = 'button';
+      more.className = 'finder__more';
+      more.textContent = '결과 ' + results.length + '건 모두 보기';
+      more.addEventListener('click', function () {
+        el.search.value = el.finder.value;
+        state.query = el.finder.value;
+        renderSearch();
+        closeFinder();
+        setTab('search');
+      });
+      panel.appendChild(more);
+    }
+  }
+
+  function bindFinder() {
+    el.finder.addEventListener('focus', openFinder);
+    el.finder.addEventListener('input', debounce(renderFinder, 80));
+    el.finder.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { closeFinder(); el.finder.blur(); return; }
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        var first = el.finderPanel.querySelector('.finder__item, .finder__more');
+        if (first && el.finder.value.trim()) first.click();
+      }
+    });
+    // 칸 밖을 누르면 닫는다 (판 안의 단추는 그대로)
+    document.addEventListener('pointerdown', function (e) {
+      if (el.finderPanel.hidden) return;
+      if (e.target === el.finder || el.finderPanel.contains(e.target)) return;
+      closeFinder();
+    });
+  }
+
   // -------------------------------------------------------- 상세 팝업
 
   /** 연도 · 사건 · 한 줄 설명 · 출처 — 그 이상은 넣지 않는다(긴 해설은 설정을 켠 사람만 '해설 읽기'로) */
@@ -1078,6 +1232,7 @@
       state.query = el.search.value;
       renderSearch();
     }, 120));
+    bindFinder();
 
     el.sheetClose.addEventListener('click', function () { closeSheet(); });
     el.sheetScrim.addEventListener('click', function () { closeSheet(); });
