@@ -26,7 +26,7 @@
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <!-- 글꼴은 저장소 안 사본(fonts/, SIL OFL). 제목(영문 Gaegu)은 첫 화면에 바로 쓰이므로 미리 받는다 -->
   <link rel="preload" href="fonts/gaegu-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="fonts/fonts.css?v=d8763eec" />
+  <link rel="stylesheet" href="fonts/fonts.css?v=c8fa1391" />
   <!-- 저장된 테마를 스타일보다 먼저 적용해, 다크로 쓰던 사람에게 밝은 화면이 깜빡이지 않게 -->
   <script>
     (function () {
@@ -37,7 +37,7 @@
       } catch (err) { /* 저장소를 못 읽어도 기본(라이트)으로 */ }
     })();
   </script>
-  <link rel="stylesheet" href="css/styles.css?v=d8763eec" />
+  <link rel="stylesheet" href="css/styles.css?v=c8fa1391" />
 </head>
 <body>
   <!-- 테마는 <html class="is-night"> 로 바뀐다(설정 탭, app.js). 기본은 라이트 -->
@@ -68,6 +68,13 @@
             <h1 class="brand__title">거의 모든 것의 연표</h1>
             <p class="brand__sub">Timeline of Pretty Much Everything · 한·중·일 역사를 한 시간축에 나란히</p>
           </div>
+        </div>
+        <!-- 어떤 연표를 볼지 고르고 찾는 칸 — 비어 있으면 카테고리 칩, 글자를 치면 항목 결과. js/app.js 의 finder -->
+        <div class="finder" id="finder">
+          <label class="sr-only" for="finder-input">어떤 연표를 볼지 고르거나 항목 찾기</label>
+          <input id="finder-input" class="finder__input" type="search" placeholder="어떤 연표를 볼까요?"
+                 autocomplete="off" spellcheck="false" aria-controls="finder-panel" aria-expanded="false" />
+          <div class="finder__panel" id="finder-panel" hidden></div>
         </div>
       </header>
 
@@ -255,16 +262,16 @@
     <div class="loading" id="loading">불러오는 중…</div>
   </div>
 
-  <script src="js/data.js?v=d8763eec"></script>
-  <script src="js/common.js?v=d8763eec"></script>
-  <script src="js/icons.js?v=d8763eec"></script>
-  <script src="js/hud.js?v=d8763eec"></script>
-  <script src="js/branch.js?v=d8763eec"></script>
-  <script src="js/quiz.js?v=d8763eec"></script>
-  <script src="js/tour.js?v=d8763eec"></script>
-  <script src="vendor/three.min.js?v=d8763eec"></script>
-  <script src="js/plane.js?v=d8763eec"></script>
-  <script src="js/zoom.js?v=d8763eec"></script>
-  <script src="js/app.js?v=d8763eec"></script>
+  <script src="js/data.js?v=c8fa1391"></script>
+  <script src="js/common.js?v=c8fa1391"></script>
+  <script src="js/icons.js?v=c8fa1391"></script>
+  <script src="js/hud.js?v=c8fa1391"></script>
+  <script src="js/branch.js?v=c8fa1391"></script>
+  <script src="js/quiz.js?v=c8fa1391"></script>
+  <script src="js/tour.js?v=c8fa1391"></script>
+  <script src="vendor/three.min.js?v=c8fa1391"></script>
+  <script src="js/plane.js?v=c8fa1391"></script>
+  <script src="js/zoom.js?v=c8fa1391"></script>
+  <script src="js/app.js?v=c8fa1391"></script>
 </body>
 </html>
