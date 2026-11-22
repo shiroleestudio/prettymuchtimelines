@@ -374,6 +374,18 @@
       "strip": "#6E5BA8"
     }
   ],
+  "time_scale": [
+    { "year": -32000, "scale": 0.004 },
+    { "year": -10000, "scale": 0.004 },
+    { "year": -3500, "scale": 0.06 },
+    { "year": -1000, "scale": 0.15 },
+    { "year": -500, "scale": 0.4 },
+    { "year": 1, "scale": 0.5 },
+    { "year": 1000, "scale": 0.6 },
+    { "year": 1400, "scale": 0.8 },
+    { "year": 1800, "scale": 1 },
+    { "year": 2030, "scale": 1 }
+  ],
   "tracks": [
     {
       "id": "nation",

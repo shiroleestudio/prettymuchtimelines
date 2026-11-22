@@ -314,7 +314,7 @@
       hud.setOngoing(ongoingAt(shown));
     }
     hud.setRatio(ratioOf(year));
-    hud.setMeta(era.label, 0, updateStage(year, info.s), era.id);
+    hud.setMeta(era.label, 0, updateStage(year, info.sYear || info.s), era.id);
   }
 
   // ------------------------------------------------------- 시대 이동
@@ -1150,6 +1150,7 @@
       plane: document.getElementById('zoom-plane'),
       force2d: /[?&]2d\b/.test(location.search),   // ?2d — WebGL 없는 기기처럼(확인용)
       eras: data.eras,
+      timeScale: data.timeScale,
       present: presentYear(),
       focusY: function () { return layout.focus; },
       onCamera: onZoomCamera,
