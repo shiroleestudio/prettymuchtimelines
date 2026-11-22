@@ -254,7 +254,7 @@ ${g.list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)} <sp
   };
 
   write('p/' + e.id + '.html', page({
-    title: `${e.title} (${period(e)}) — 같은 시기 세계는 | ${site.name}`,
+    title: `${e.title} (${period(e)}) — 같은 시기 세계는 | ${BRAND_TITLE}`,
     ogTitle: `${e.title} (${period(e)})`,
     description, url, ld, body, ads: true, era, entryId: e.id
   }));
@@ -292,7 +292,7 @@ ${(manifest.sources || []).map((s) => `        <li><a href="${esc(s.url)}" rel="
     </section>`;
 
 write('p/index.html', page({
-  title: `항목 목록 — ${site.name}`,
+  title: `항목 목록 — ${BRAND_TITLE}`,
   description: site.description,
   url: BASE + 'p/index.html',
   type: 'website',
@@ -321,8 +321,8 @@ const indexPath = path.join(ROOT, 'index.html');
 let html = fs.readFileSync(indexPath, 'utf8');
 const seo = `<!-- seo:start — scripts/pages.js 가 site.json 으로 만든다. 직접 고치지 말 것 -->
   ${head({
-    title: `${site.name} — ${site.tagline}`,
-    ogTitle: site.name,
+    title: site.tagline,
+    ogTitle: BRAND_TITLE,
     description: site.description,
     url: BASE,
     type: 'website',
@@ -330,6 +330,7 @@ const seo = `<!-- seo:start — scripts/pages.js 가 site.json 으로 만든다.
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: site.name,
+      alternateName: [BRAND_TITLE].concat(site.alternateNames || []),
       url: BASE,
       description: site.description,
       inLanguage: 'ko'
