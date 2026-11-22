@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15",
+ "generated": "2026-11-22",
  "sources": [
   {
    "name": "Wikidata",
@@ -31,7 +31,7 @@
     "types": [
      "문화",
      "문화",
-     "style",
+     "스타일",
      "옛 지역"
     ],
     "start": {
@@ -246,7 +246,7 @@
      "문명",
      "문화",
      "문화",
-     "style"
+     "스타일"
     ],
     "start": {
      "prop": "P580",
@@ -285,7 +285,7 @@
     "desc": "상메소포타미아에 존재했던 고대 제국",
     "types": [
      "제국",
-     "style",
+     "스타일",
      "과거에 존재했던 나라",
      "시대"
     ],
@@ -1046,7 +1046,7 @@
    "linked": "Q133641",
    "start_year": 1415,
    "end_year": 1600,
-   "verdict": "부분 일치",
+   "verdict": "어긋남",
    "best": {
     "qid": "Q133641",
     "ko": "대항해시대",
@@ -1058,13 +1058,13 @@
     ],
     "start": {
      "prop": "P580",
-     "year": 1500,
-     "precision": 7
+     "year": 1418,
+     "precision": 9
     },
     "end": {
      "prop": "P582",
-     "year": 1800,
-     "precision": 7
+     "year": 1620,
+     "precision": 9
     },
     "term": "(지정한 번호)"
    },
@@ -1535,7 +1535,7 @@
    "linked": "Q8698",
    "start_year": 1929,
    "end_year": 1939,
-   "verdict": "부분 일치",
+   "verdict": "일치",
    "best": {
     "qid": "Q8698",
     "ko": "대공황",
@@ -1554,7 +1554,7 @@
     },
     "end": {
      "prop": "P582",
-     "year": 1941,
+     "year": 1939,
      "precision": 9
     },
     "term": "(지정한 번호)"
@@ -3443,7 +3443,7 @@
     "qid": "Q482705",
     "ko": "대한민국 제5공화국",
     "en": "Fifth Republic of South Korea",
-    "desc": "전두환 정부(1980.9.1~1988.2.24) 및 12.12쿠데타와 5.17 비상계엄 전국확대 이후, 헌법 개정을 통해 탄생한 대한민국의 다섯 번째 헌정 공화 체제 (1981~1988)",
+    "desc": "대한민국의 다섯 번째 헌정 공화 체제",
     "types": [
      "정부",
      "과거에 존재했던 나라",
@@ -3575,7 +3575,7 @@
     "types": [
      "문화",
      "제후",
-     "style",
+     "스타일",
      "시대"
     ],
     "start": {
@@ -3835,7 +3835,7 @@
     "desc": "중국의 왕조 중 하나, 한나라에 속해. 존속 기간(25년~220년)",
     "types": [
      "문화",
-     "style",
+     "스타일",
      "시대",
      "historical Chinese state"
     ],
@@ -3845,7 +3845,7 @@
      "precision": 9
     },
     "end": {
-     "prop": "P582",
+     "prop": "P576",
      "year": 220,
      "precision": 9
     },
@@ -4035,7 +4035,7 @@
     "desc": "중국의 왕조",
     "types": [
      "문화",
-     "style",
+     "스타일",
      "시대",
      "중국 왕조"
     ],
@@ -4045,7 +4045,7 @@
      "precision": 9
     },
     "end": {
-     "prop": "P582",
+     "prop": "P576",
      "year": 907,
      "precision": 9
     },
@@ -4156,7 +4156,7 @@
     "desc": "중국의 왕조",
     "types": [
      "문화",
-     "style",
+     "스타일",
      "시대",
      "시대"
     ],
@@ -6709,7 +6709,7 @@
      "배터리"
     ],
     "start": {
-     "prop": "P575",
+     "prop": "P571",
      "year": 1800,
      "precision": 9
     },
@@ -9054,7 +9054,7 @@
     "types": [
      "건축 양식",
      "예술 사조",
-     "style",
+     "스타일",
      "문화 운동"
     ],
     "start": null,
@@ -9080,7 +9080,7 @@
     "types": [
      "건축 양식",
      "예술 사조",
-     "style",
+     "스타일",
      "시대"
     ],
     "start": {
@@ -9114,7 +9114,7 @@
     "types": [
      "건축 양식",
      "예술 사조",
-     "style",
+     "스타일",
      "예술 양식"
     ],
     "start": {
@@ -9148,7 +9148,7 @@
     "types": [
      "건축 양식",
      "예술 사조",
-     "style",
+     "스타일",
      "문화 운동"
     ],
     "start": {
@@ -9276,7 +9276,7 @@
     "desc": null,
     "types": [
      "예술 사조",
-     "style",
+     "스타일",
      "예술 양식"
     ],
     "start": {
@@ -9342,7 +9342,7 @@
     "en": "French Realism",
     "desc": null,
     "types": [
-     "style",
+     "스타일",
      "painting movement"
     ],
     "start": {
@@ -9550,7 +9550,7 @@
     "desc": "대상의 구체적인 형상이 아닌 점, 선, 면, 색 같은 순수 조형 요소로 표현한 미술",
     "types": [
      "예술 사조",
-     "style",
+     "스타일",
      "예술 장르",
      "예술 양식"
     ],
@@ -9924,6 +9924,19 @@
    },
    "others": [
     {
+     "qid": "Q12599161",
+     "ko": "분청사기 박지철채모란문 자라병",
+     "en": "Buncheong Porcelain Parkjicheolchae Peony Moon Jararabyeong",
+     "desc": null,
+     "types": [
+      "문화유산",
+      "그릇"
+     ],
+     "start": null,
+     "end": null,
+     "term": "분청사기"
+    },
+    {
      "qid": "Q12599166",
      "ko": "분청사기 음각어문 편병",
      "en": "Buncheong Flat Bottle with Incised Fish Design",
@@ -9932,19 +9945,6 @@
       "병",
       "꽃병",
       "문화유산"
-     ],
-     "start": null,
-     "end": null,
-     "term": "분청사기"
-    },
-    {
-     "qid": "Q12599161",
-     "ko": "분청사기 박지철채모란문 자라병",
-     "en": "Buncheong Porcelain Parkjicheolchae Peony Moon Jararabyeong",
-     "desc": null,
-     "types": [
-      "문화유산",
-      "그릇"
      ],
      "start": null,
      "end": null,
@@ -12373,7 +12373,7 @@
     "end": {
      "prop": "P570",
      "year": 1836,
-     "precision": 9
+     "precision": 11
     },
     "term": "정약용"
    },
@@ -13238,7 +13238,7 @@
      "types": [
       "건축 양식",
       "예술 사조",
-      "style",
+      "스타일",
       "시대"
      ],
      "start": {
@@ -13903,9 +13903,9 @@
      "서적의 개별 복사본"
     ],
     "start": {
-     "prop": "P577",
+     "prop": "P571",
      "year": 1377,
-     "precision": 10
+     "precision": 9
     },
     "end": null,
     "term": "(지정한 번호)"
