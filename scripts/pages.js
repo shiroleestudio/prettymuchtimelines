@@ -254,7 +254,7 @@ ${g.list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)} <sp
   };
 
   write('p/' + e.id + '.html', page({
-    title: `${e.title} (${period(e)}) — ${ds.label.replace(/\s*\(.*?\)/, '')} 연표 · 같은 시기 세계는 | ${BRAND_TITLE}`,
+    title: `${e.title} (${period(e)}) — 같은 시기 세계는 | ${BRAND_TITLE}`,
     ogTitle: `${e.title} (${period(e)})`,
     description, url, ld, body, ads: true, era, entryId: e.id
   }));
@@ -292,11 +292,11 @@ ${(manifest.sources || []).map((s) => `        <li><a href="${esc(s.url)}" rel="
     </section>`;
 
 write('p/index.html', page({
-  title: `한·중·일 역사 연표 항목 목록 | ${BRAND_TITLE}`,
+  title: `항목 목록 — ${BRAND_TITLE}`,
   description: site.description,
   url: BASE + 'p/index.html',
   type: 'website',
-  ld: { '@context': 'https://schema.org', '@type': 'CollectionPage', name: '역사 연표 항목 목록', url: BASE + 'p/index.html', isPartOf: { '@type': 'WebSite', name: site.name, url: BASE } },
+  ld: { '@context': 'https://schema.org', '@type': 'CollectionPage', name: '항목 목록', url: BASE + 'p/index.html', isPartOf: { '@type': 'WebSite', name: site.name, url: BASE } },
   body: listBody
 }));
 
@@ -321,8 +321,8 @@ const indexPath = path.join(ROOT, 'index.html');
 let html = fs.readFileSync(indexPath, 'utf8');
 const seo = `<!-- seo:start — scripts/pages.js 가 site.json 으로 만든다. 직접 고치지 말 것 -->
   ${head({
-    title: `${site.tagline} | ${site.name}`,
-    ogTitle: site.tagline,
+    title: site.tagline,
+    ogTitle: BRAND_TITLE,
     description: site.description,
     url: BASE,
     type: 'website',

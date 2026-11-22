@@ -1,8 +1,8 @@
 {
   "$comment": "사이트 이름·주소 — 이름을 정하거나 도메인을 옮기면 여기만 고치고 npm run build. index.html 의 검색용 머리말, 항목 페이지(p/), sitemap.xml, robots.txt 가 함께 바뀐다. tagline 의 첫 토막은 한글 제목, 나머지는 부제(index.html 의 .brand__sub 와 같게 유지). alternateNames 는 검색엔진용 다른 이름(WebSite 구조화 데이터).",
   "name": "Timeline of Pretty Much Everything",
-  "tagline": "거의 모든 것의 타임라인 · 한·중·일 역사 연표를 한 시간축에 나란히",
-  "alternateNames": ["역사 연표", "한중일 역사 연표", "한국사 세계사 비교 연표"],
+  "tagline": "거의 모든 것의 연표 · 한·중·일 역사를 한 시간축에 나란히",
+  "alternateNames": ["거의 모든 것의 타임라인", "한중일 역사 연표"],
   "description": "한국사·중국사·일본사·세계사를 한 시간축에 나란히 놓고 확대해 보는 역사 연표. 같은 해 다른 나라에서는 무슨 일이 있었을까? 출처를 확인한 항목은 공공 자료 링크를 함께 보여 줍니다.",
   "url": "https://timeline.shiroleestudio.com/",
   "image": "icons/og.jpg",
