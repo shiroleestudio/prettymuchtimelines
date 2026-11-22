@@ -78,6 +78,7 @@ js/quiz.js                  퀴즈(데모) — 연표 끼워 넣기(오늘의 �
 js/tour.js                  처음 온 사람을 위한 사용법 안내(단계 카드·가리키기·다시 보지 않기)
 p/                          검색용 글 페이지(자동 생성 — scripts/pages.js)
 site.json                   사이트 이름·주소·설명(검색 머리말·글 페이지·사이트맵이 여기서 읽음)
+                            tagline 첫 토막 = 한글 제목, 나머지 = 부제(index.html 의 .brand__sub 와 같게). alternateNames = 검색엔진용 다른 이름
 js/zoom.js                  탐험 그림판 — 카메라·입력(끌기·핀치·눕히기)·사건 자리 잡기·비행·열 이름 덮개
 js/plane.js                 그림판 붓 — Three.js(WebGL2) 로 도형·글자를 GPU 에, 안 되면 Canvas 2D
 vendor/three.min.js         Three.js r170 중 쓰는 부분만 묶은 것 (MIT, vendor/three.LICENSE) — 6-4 참고
