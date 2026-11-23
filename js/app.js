@@ -173,7 +173,11 @@
 
   var stageScenes = [];   // 장면 그림 — 연도 구간 { node, a, b, label, o, dy }
 
-  /** 무대에 모든 장면 그림을 한 장씩 깔아 둔다(처음엔 모두 투명). */
+  /**
+   * 무대에 장면마다 빈 칸(div)을 하나씩 둔다. 그림(background-image)은 그 장면이 처음 보일 때 넣는다 —
+   * 처음부터 스무 장을 다 걸어 두면 폰 사파리가 장마다 화면 2.6배짜리 층을 잡아(장당 약 20MB)
+   * 메모리 부족으로 탭을 다시 불러온다(아이폰 13, 2026-11-23). 안 보이는 칸은 display:none(styles.css).
+   */
   function buildStage() {
     el.stage.textContent = '';
     stageScenes = [];
@@ -182,10 +186,9 @@
       scenes.forEach(function (sc, si) {
         var node = document.createElement('div');
         node.className = 'stage__art';
-        node.style.backgroundImage = 'url("' + sc.diorama + '")';
         el.stage.appendChild(node);
         stageScenes.push({
-          node: node, label: sc.label || '',
+          node: node, label: sc.label || '', src: sc.diorama, loaded: false,
           a: sc.start_year,
           b: scenes[si + 1] ? scenes[si + 1].start_year : era.end_year,
           o: -1, dy: NaN
@@ -205,6 +208,7 @@
       if (year >= sc.a && year < sc.b) label = sc.label;
       if (o !== sc.o) {
         sc.o = o;
+        if (o && !sc.loaded) { sc.loaded = true; sc.node.style.backgroundImage = 'url("' + sc.src + '")'; }
         sc.node.style.opacity = o ? String(o) : '';
         sc.node.classList.toggle('is-on', o > 0);
       }
