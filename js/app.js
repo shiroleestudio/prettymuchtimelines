@@ -197,14 +197,25 @@
     });
   }
 
-  /** 초점선의 해가 있는 장면을 보이게 하고, 경계에서는 교차 페이드(화면 px 기준). 장면 이름을 돌려준다 */
+  /**
+   * 초점선의 해가 있는 장면을 보이게 하고, 경계에서는 교차 페이드(화면 px 기준). 장면 이름을 돌려준다.
+   * 동시에 켜지는 장면은 가장 진한 둘까지 — 멀리서 보면 짧은 장면 서너 개가 겹쳐 켜졌는데, 폰에서는 켜진
+   * 장면마다 메모리를 쓰므로(위 buildStage) 셋째부터는 끈다.
+   */
   function updateStage(year, s) {
     var label = '';
     var fade = SCENE_FADE / s;   // 연도 단위
-    stageScenes.forEach(function (sc) {
+    var os = stageScenes.map(function (sc) {
       var f = Math.min(fade, sc.b - sc.a);
       var o = clamp(Math.min((year - (sc.a - f / 2)) / f, ((sc.b + f / 2) - year) / f), 0, 1);
-      o = Math.round(o * 50) / 50;
+      return Math.round(o * 50) / 50;
+    });
+    var top = os.slice().sort(function (a, b) { return b - a; });
+    var cut = top[1] || 0;   // 둘째로 진한 값 — 이보다 옅은 것은 끈다
+    var kept = 0;
+    stageScenes.forEach(function (sc, i) {
+      var o = os[i];
+      if (o < cut || (o === cut && kept >= 2) || !o) o = 0; else kept += 1;
       if (year >= sc.a && year < sc.b) label = sc.label;
       if (o !== sc.o) {
         sc.o = o;
@@ -214,7 +225,8 @@
       }
       if (!o) return;
       var dy = Math.round(-clamp((year - sc.a) / Math.max(1, sc.b - sc.a), 0, 1) * SCENE_DRIFT);
-      if (dy !== sc.dy) { sc.dy = dy; sc.node.style.transform = 'translate3d(0,' + dy + 'px,0)'; }
+      // 2D translate 로 — translate3d 는 폰에서 장마다 층(약 20MB)을 잡게 한다
+      if (dy !== sc.dy) { sc.dy = dy; sc.node.style.transform = 'translate(0,' + dy + 'px)'; }
     });
     return label;
   }

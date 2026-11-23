@@ -593,8 +593,7 @@ body {
     mask-image: none;
   }
   .is-night .stage { opacity: .95; }
-  /* 그림을 화면 폭의 2.6배로 키우고(좌우 무대 하나가 화면을 채움) 왼쪽↔오른쪽을 천천히 오간다.
-     transform 은 app.js 몫이라 translate/scale 로. 위는 하늘 여백이라 조금 끌어올린다 */
+  /* 그림을 화면 폭의 2.6배로 키워 왼쪽 무대 하나가 화면을 채우게 한다. 위는 하늘 여백이라 조금 끌어올린다 */
   .stage__art {
     left: 0;
     right: auto;
@@ -607,12 +606,9 @@ body {
     -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 22%, #000 70%, transparent 92%);
     mask-image: linear-gradient(180deg, transparent 0, #000 22%, #000 70%, transparent 92%);
   }
-  .stage__art.is-on { animation: scene-pan 38s ease-in-out infinite alternate; }
-}
-
-@keyframes scene-pan {
-  0%, 8% { translate: 0 0; scale: 1; }
-  92%, 100% { translate: -160vw 0; scale: 1.04; }
+  /* 폰에서는 움직이지 않는다(교차 페이드만). 애니메이션·will-change 가 있으면 장면마다 화면 2.6배짜리 층(약 20MB)이
+     생겨 아이폰 사파리가 메모리 부족을 냈다. 그림은 왼쪽 무대(0~100vw)를 보여 준다 */
+  .stage__art.is-on { animation: none; will-change: auto; }
 }
 
 /* ------------------------------------- 시간축 카드(갈림길 화면이 쓴다) */
