@@ -109,7 +109,6 @@ body {
 
 .bg-gradient,
 .bg-blob,
-.bg-stars,
 .bg-grain {
   position: absolute;
   inset: 0;
@@ -124,31 +123,6 @@ body {
   opacity: .9;
   transition: opacity .6s linear;
 }
-
-/* 별 — 연표보다 천천히 흐르는 먼 하늘(패럴랙스는 app.js 가 --sy 로) */
-.bg-stars {
-  top: -400px;
-  bottom: -400px;
-  pointer-events: none;
-  opacity: .22;
-  filter: brightness(.3);   /* 라이트에서는 거의 보이지 않게 */
-  background-image:
-    radial-gradient(1.6px 1.6px at 12% 18%, #fff8ef 60%, transparent 100%),
-    radial-gradient(1.2px 1.2px at 48% 6%, #fff8ef 60%, transparent 100%),
-    radial-gradient(2px 2px at 78% 24%, #ffd98a 60%, transparent 100%),
-    radial-gradient(1.2px 1.2px at 90% 60%, #fff8ef 60%, transparent 100%),
-    radial-gradient(1.4px 1.4px at 28% 52%, #fff8ef 60%, transparent 100%),
-    radial-gradient(1.8px 1.8px at 60% 76%, #fff8ef 60%, transparent 100%),
-    radial-gradient(1.2px 1.2px at 8% 88%, #ffd98a 60%, transparent 100%),
-    radial-gradient(1.4px 1.4px at 70% 94%, #fff8ef 60%, transparent 100%),
-    radial-gradient(1px 1px at 36% 34%, #fff8ef 60%, transparent 100%),
-    radial-gradient(1.6px 1.6px at 94% 8%, #fff8ef 60%, transparent 100%);
-  background-size: 520px 520px, 380px 380px, 640px 640px, 460px 460px, 700px 700px, 560px 560px, 420px 420px, 600px 600px, 340px 340px, 480px 480px;
-  transform: translate3d(0, var(--sy, 0px), 0);
-  will-change: transform;
-}
-
-.is-night .bg-stars { opacity: .9; filter: none; }
 
 .bg-grain {
   pointer-events: none;
