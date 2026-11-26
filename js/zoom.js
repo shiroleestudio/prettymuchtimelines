@@ -27,7 +27,10 @@
      · 덮개(#zoom) — 화면에 납작하게 붙은 열 이름. 손가락 입력도 여기서 받아
                      원근을 거꾸로 풀어 판 좌표로 바꾼다. 그래서 눕혀도 손가락 밑의 점이 그대로 따라온다.
 
-   선형 시간이라 선사(3만 년)가 길고 문명사는 아래쪽에 모여 있다 — 그것이 빅 히스토리의 실제 비율.
+   시간축은 '눌러 보기' 축이다 — 사건이 드문 구간(선사·고대 초기)은 1년의 길이를 줄이고, 빽빽한 근현대는
+   그대로 둔다(매니페스트 time_scale). 모든 열이 같은 축을 쓰므로 같은 해는 늘 같은 높이에 있고,
+   연도 눈금은 그 자리의 실제 간격에 맞춰 촘촘해지거나 성글어진다. 카메라(cam.t0·cam.s)는 눌린 축의
+   단위(τ)로 움직이고, 해 ↔ τ 변환은 tauOf()·yearAt() 만 거친다.
    그리기는 <canvas> 하나. 화면이 움직일 때만 다시 그린다.
    ------------------------------------------------------------------ */
 (function (global) {
@@ -49,7 +52,7 @@
   var HEAD_H = 34;           // 위에 붙는 열 이름 줄
   var COL_MAX = 270;         // 열 너비(가장 가까이)
   var COL_MIN = 46;          // 열 너비(가장 멀리)
-  var STEPS = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000];
+  var STEPS = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000];
   var KIND_RANK = { polity: 0, era: 1 };
 
   function clamp(v, a, b) { return v < a ? a : (v > b ? b : v); }
@@ -89,6 +92,67 @@
         var sx = t * S;
         var u = w0 / (rho2 * d1) * (coshr0 * tanh(rho * sx + r0) - sinh(r0));
         return { c: c0 + u * dx, w: w0 * coshr0 / cosh(rho * sx + r0), k: clamp(u, 0, 1) };
+      }
+    };
+  }
+
+  /**
+   * 시간 눌러 보기 — 해(year) ↔ 눌린 축 좌표(τ).
+   * knots: [{ year, scale }] — 그 해 부근에서 1년이 차지하는 길이의 비율(1 = 근현대와 같게).
+   * 매듭 사이는 비율을 로그 직선으로 잇고(갑자기 꺾이지 않게) 적분해 표를 만든다. 매듭이 둘 미만이면 그대로(비율 1).
+   * 표 밖(처음·끝 너머)은 끝 비율로 이어진다. 단조 증가라 같은 해는 늘 같은 τ.
+   */
+  function makeWarp(knots) {
+    var ks = (knots || []).filter(function (k) { return k && isFinite(k.year) && k.scale > 0; })
+      .slice().sort(function (a, b) { return a.year - b.year; });
+    if (ks.length < 2) {
+      return { tau: function (y) { return y; }, year: function (t) { return t; }, slope: function () { return 1; } };
+    }
+    var ys = [ks[0].year];
+    var ts = [0];
+    var ss = [ks[0].scale];
+    for (var i = 1; i < ks.length; i += 1) {
+      var y0 = ks[i - 1].year, y1 = ks[i].year, s0 = ks[i - 1].scale, s1 = ks[i].scale;
+      var len = y1 - y0;
+      if (len <= 0) continue;
+      var k = Math.log(s1 / s0) / len;
+      var n = Math.max(1, Math.min(64, Math.ceil(len / 25)));
+      for (var j = 1; j <= n; j += 1) {
+        var a = y0 + len * (j - 1) / n;
+        var b = y0 + len * j / n;
+        var sa = s0 * Math.exp(k * (a - y0));
+        var sb = s0 * Math.exp(k * (b - y0));
+        var area = Math.abs(k) < 1e-12 ? s0 * (b - a) : (sb - sa) / k;
+        ys.push(b);
+        ts.push(ts[ts.length - 1] + area);
+        ss.push(sb);
+      }
+    }
+    var N = ys.length - 1;
+    function seg(arr, v) {   // v 가 들어가는 조각 번호(0..N-1)
+      var lo = 0, hi = N - 1;
+      while (lo < hi) { var mid = (lo + hi + 1) >> 1; if (arr[mid] <= v) lo = mid; else hi = mid - 1; }
+      return lo;
+    }
+    function rate(i) { return (ts[i + 1] - ts[i]) / (ys[i + 1] - ys[i]); }
+    return {
+      tau: function (y) {
+        if (y <= ys[0]) return ts[0] + (y - ys[0]) * ss[0];
+        if (y >= ys[N]) return ts[N] + (y - ys[N]) * ss[N];
+        var i = seg(ys, y);
+        return ts[i] + (y - ys[i]) * rate(i);
+      },
+      year: function (t) {
+        if (t <= ts[0]) return ys[0] + (t - ts[0]) / ss[0];
+        if (t >= ts[N]) return ys[N] + (t - ts[N]) / ss[N];
+        var i = seg(ts, t);
+        return ys[i] + (t - ts[i]) / rate(i);
+      },
+      /** 그 해 부근에서 τ 1 이 몇 년인지의 역수 — 1년당 τ */
+      slope: function (y) {
+        if (y <= ys[0]) return ss[0];
+        if (y >= ys[N]) return ss[N];
+        return rate(seg(ys, y));
       }
     };
   }
@@ -200,7 +264,7 @@
 
   /**
    * @param canvas  <canvas id="zoom">
-   * @param opts    { eras, present, focusY(): px, onCamera(info), openEntry(entry) }
+   * @param opts    { eras, timeScale, present, focusY(): px, onCamera(info), openEntry(entry) }
    */
   function create(canvas, opts) {
     var plane = opts.plane;                 // 눕는 판
@@ -226,6 +290,14 @@
     var T_MIN = eras[0].start_year;
     var T_MAX = eras[eras.length - 1].end_year;
     var PRESENT = opts.present || T_MAX;
+    var HOME_YEAR = -4200;   // 처음 열 때 위쪽 해(문명사의 시작 언저리)
+    var warp = makeWarp(opts.timeScale);
+    function tauOf(year) { return warp.tau(year); }
+    /** 두 해 사이의 길이(τ) */
+    function tauSpan(a, b) { return Math.max(1e-6, warp.tau(b) - warp.tau(a)); }
+    // 열 너비는 '1년당 px' 에 따라 변하는데, 눌린 축에서는 문명사 전체(HOME_YEAR~지금)의 평균 비율로 셈해
+    // 처음 화면의 열 너비가 누르기 전과 같다
+    var COL_K = tauSpan(HOME_YEAR, T_MAX) / (T_MAX - HOME_YEAR);
 
     var cols = [];   // { ds, events(우선순위 순), blocks(왕조 칸 조각), periods(시대 묶음) }
     // 맨 위의 해, 1년당 px, 화면 왼쪽(여백 다음)에 오는 그림의 가로 위치(px)
@@ -251,12 +323,13 @@
     var MARGIN = 8;
     function axisW() { return narrow() ? 58 : 84; }
     function viewW() { return Math.max(1, W - MARGIN * 2); }
-    function cw() { return colWidth(cam.s); }
+    function cw() { return colWidth(cam.s * COL_K); }
     function focusY() { return unproj(W / 2, opts.focusY ? opts.focusY() : Hv * 0.36).y; }
     /** 화면 y → 판 y (가운데 열 기준). 눕혀져 있으면 둘이 다르므로, 화면 위치로 연도를 셈할 때는 꼭 이걸 거친다 */
     function planeY(screenY) { return unproj(W / 2, screenY).y; }
-    function yOf(year) { return (year - cam.t0) * cam.s; }
-    function yearAt(y) { return cam.t0 + y / cam.s; }
+    function yOf(year) { return (tauOf(year) - cam.t0) * cam.s; }
+    function yearAt(y) { return warp.year(cam.t0 + y / cam.s); }
+    function tauAt(y) { return cam.t0 + y / cam.s; }
 
     // 가로 — 그림(world) px. 열들 사이 axisAt 자리에 연도 축 칸(axisW)이 끼어 있다.
     // 항목을 펼치면 그 열만 잠시 넓어진다(ChronoZoom 처럼 그 왕조가 커지며 이름 아래로 설명이 나올 자리)
@@ -304,7 +377,7 @@
     /** 화면 x 에 u 가 오도록 */
     function pinU(u, x) { cam.x0 = wxOfU(u) - (x - MARGIN); }
     function colU(i) { return i < axisAt ? i : i + 1; }   // 진짜 열 번호 → u
-    function sMin() { return (Hv * 0.92) / (T_MAX - T_MIN); }
+    function sMin() { return (Hv * 0.92) / tauSpan(T_MIN, T_MAX); }
 
     // ----------------------------------------------------------- 원근
 
@@ -336,7 +409,7 @@
       var mid = -(vis - ww) / 2;                           // 그림이 화면보다 좁으면 가운데
       var pad = cw() * 0.25;
       return {
-        tA: T_MIN - fy / cam.s, tB: T_MAX - fy / cam.s,
+        tA: tauOf(T_MIN) - fy / cam.s, tB: tauOf(T_MAX) - fy / cam.s,
         xA: ww <= vis ? mid : -pad, xB: ww <= vis ? mid : ww - vis + pad
       };
     }
@@ -442,7 +515,7 @@
       geo.P = Math.max(Hv * 1.1, 600);
       if (wasOn) setPlane(true);
       else sizePlane(Hv);
-      if (keep != null) cam.t0 = keep - focusY() / cam.s;
+      if (keep != null) cam.t0 = tauOf(keep) - focusY() / cam.s;
       clampCam();
       invalidate();
     }
@@ -489,7 +562,7 @@
       geo.th = tilt.cur;
       geo.c = Math.cos(geo.th);
       geo.s = Math.sin(geo.th);
-      cam.t0 = keep - focusY() / cam.s;
+      cam.t0 = tauOf(keep) - focusY() / cam.s;
       canvas.classList.toggle('is-tilted', geo.th > 0.02);
       if (pp.kind === 'gl') return;   // GL 은 그릴 때 카메라를 기울인다
       st.top = (geo.yP - geo.Dtop) + 'px';
@@ -858,15 +931,36 @@
       // 눈금 칸 바탕(가장자리에 붙어 열 위에 얹혀도 읽히게). 눕히면 비스듬한 띠가 무거워 보여 옅게
       pp.rect(axL, 0, axisW(), H, colors.sky, geo.th > 0.02 ? 0.5 : 0.86);
 
-      var step = STEPS[STEPS.length - 1];
-      for (var k = 0; k < STEPS.length; k += 1) { if (STEPS[k] * cam.s >= 56) { step = STEPS[k]; break; } }
-      var first = Math.ceil(yTop / step) * step;
+      // 눌린 축이라 1년의 길이가 자리마다 다르다 — 눈금 간격은 그 자리의 실제 px 로 고른다(56px 이상).
+      // 큰 간격(1만 년)부터 작은 간격 순으로, 이미 놓인 눈금과 48px 이상 떨어지는 자리에만 놓는다.
+      // 그래서 드문 구간에는 성긴 눈금이, 빽빽한 구간에는 촘촘한 눈금이 한 화면에 나란히 나온다
+      function stepAt(year) {
+        var px = cam.s * warp.slope(year);
+        for (var k = 0; k < STEPS.length; k += 1) { if (STEPS[k] * px >= 56) return STEPS[k]; }
+        return STEPS[STEPS.length - 1];
+      }
       var lastTick = Math.min(yBot, PRESENT);   // 지금 뒤(아직 오지 않은 해)에는 눈금을 긋지 않는다
-      for (var yr = first; yr <= lastTick; yr += step) {
-        var y = yOf(yr);
-        var major = (yr / step) % 5 === 0;
+      var top = Math.max(yTop, T_MIN);          // 역사 시작 앞에는 눈금이 없다
+      var placed = [];                          // [{ y, yr, step }]
+      function free(y) {
+        for (var i = 0; i < placed.length; i += 1) { if (Math.abs(placed[i].y - y) < 48) return false; }
+        return true;
+      }
+      for (var k = STEPS.length - 1; k >= 0; k -= 1) {
+        var step = STEPS[k];
+        if (step * cam.s < 56) break;           // 가장 빽빽한 자리(비율 1)에서도 너무 촘촘한 간격
+        for (var yr = Math.ceil(top / step) * step; yr <= lastTick; yr += step) {
+          if (yr === 0 || step < stepAt(yr)) continue;
+          var y = yOf(yr);
+          if (!free(y)) continue;
+          placed.push({ y: y, yr: yr, step: step });
+        }
+      }
+      placed.forEach(function (tk) {
+        var y = tk.y;
+        var yr = tk.yr;
+        var major = (yr / tk.step) % 5 === 0;
         pp.line(ax - dir * (major ? 10 : 6), y, ax, y, colors.line, major ? 0.9 : 0.45, 1);
-        if (yr === 0) continue;
         var ink = major ? colors.inkBg : colors.inkBg2;
         var fNum = font(12, major ? '700' : '');
         if (yr < 0) {
@@ -875,7 +969,7 @@
         } else {
           pp.text(String(yr), tx, y + 4, fNum, ink, 1, align);
         }
-      }
+      });
       var yNow = Math.min(H, yOf(PRESENT));
       pp.line(ax, Math.max(0, yOf(T_MIN)), ax, yNow, colors.line, 1, 2);
 
@@ -1220,6 +1314,7 @@
         opts.onCamera({
           year: clamp(yearAt(focusY()), T_MIN, T_MAX),   // 고무줄로 넘친 동안에도 역사 밖 해는 안 보이게
           s: cam.s,
+          sYear: cam.s * warp.slope(yearAt(focusY())),   // 초점선 자리에서 실제 1년당 px(눌린 축이라 자리마다 다르다)
           moving: moving,
           dragging: !!(gesture && gesture.active),
           ringX: proj(axisLine(), focusY()).x,
@@ -1295,7 +1390,7 @@
         var nxt = cur + (z.logS - cur) * (1 - Math.exp(-dt * 16));
         if (Math.abs(z.logS - nxt) < 0.002) nxt = z.logS;
         cam.s = clamp(Math.exp(nxt), sMin(), S_MAX);
-        cam.t0 = z.year - z.y / cam.s;
+        cam.t0 = z.t - z.y / cam.s;
         pinU(z.u, z.x);
         if (nxt === z.logS) motion.mode = 'idle';
         return motion.mode !== 'idle';
@@ -1311,20 +1406,21 @@
       o = o || {};
       s = clamp(s || cam.s, sMin(), S_MAX);
       var fy = focusY();
-      var y0 = yearAt(fy);
+      var t0 = tauAt(fy);
       year = clamp(year, T_MIN, T_MAX);
+      var t1 = tauOf(year);
       var u0 = uAtScreen(W / 2);
       var u1 = o.col != null && o.col >= 0 ? colU(o.col) + 0.5 : u0;
       if (reduced || o.instant) {
         cam.s = s;
-        cam.t0 = year - fy / s;
+        cam.t0 = t1 - fy / s;
         pinU(u1, W / 2);
         motion.mode = 'idle';
         invalidate();
         return;
       }
       // 시간 축의 '보이는 구간' 기준으로 줌·이동 경로를 짠다 — 멀리 갈수록 잠깐 물러났다가 다가간다
-      var path = zoomPath(y0, Hv / cam.s, year, Hv / s);
+      var path = zoomPath(t0, Hv / cam.s, t1, Hv / s);
       motion.fly = {
         t0: now(), dur: clamp(path.S * 620, 420, 1900),
         path: path, u0: u0, u1: u1
@@ -1336,9 +1432,9 @@
 
     /** 연도 구간 [a, b] 가 화면에 들어오게 */
     function flyToRange(a, b, o) {
-      var span = Math.max(1, b - a);
+      var span = tauSpan(a, b);
       var s = ((Hv - HEAD_H) * 0.84) / span;
-      flyTo(a + (focusY() - planeY(HEAD_H)) / s - (Hv * 0.05) / s, s, o);
+      flyTo(warp.year(tauOf(a) + (focusY() - planeY(HEAD_H)) / s - (Hv * 0.05) / s), s, o);
     }
 
     function zoomAround(x, y, factor) {
@@ -1347,7 +1443,7 @@
       var same = motion.mode === 'zoom' && Math.abs(motion.zoomTo.y - y) < 2 && Math.abs(motion.zoomTo.x - x) < 2;
       motion.zoomTo = {
         logS: target, x: x, y: y,
-        year: same ? motion.zoomTo.year : yearAt(y),
+        t: same ? motion.zoomTo.t : tauAt(y),
         u: same ? motion.zoomTo.u : uAtScreen(x)
       };
       motion.mode = 'zoom';
@@ -1358,10 +1454,10 @@
     /** 손가락을 그대로 따라가는 줌(트랙패드 핀치) — 부드럽게 늦추지 않고 바로 */
     function zoomNow(x, y, factor) {
       motion.mode = 'idle';
-      var year = yearAt(y);
+      var t = tauAt(y);
       var u = uAtScreen(x);
       cam.s = clamp(cam.s * factor, sMin(), S_MAX);
-      cam.t0 = year - y / cam.s;
+      cam.t0 = t - y / cam.s;
       pinU(u, x);
       invalidate();
     }
@@ -1387,19 +1483,20 @@
       }
       grow.target = col >= 0 ? 1 : 0;
       var o = { col: col };
-      var span = entry.end_year - entry.start_year;
+      var span = entry.end_year > entry.start_year ? tauSpan(entry.start_year, entry.end_year) : 0;
       // 눕힌 채로는 읽기 어렵고, 아래 셈은 납작한 화면 기준이라(눕힌 판 좌표로 셈하면 수천 px 만큼
       // 미래로 튀어 연표 맨 아래로 간다) 펼칠 때는 먼저 납작하게 세운다. 세우는 동안 초점선의 해는 그대로다
       if (tilt.target > 0) setTilt(0);
-      if (span >= 1) {
+      if (span > 0) {
         // 위아래로 숨 쉴 틈을 두고 기간을 화면에 맞춘다(아래쪽 계기판 자리도 남겨 둔다)
         var room = Math.max(120, Hv - HEAD_H - (opts.bottomCover ? opts.bottomCover() : 0));
         var s = clamp((room * 0.62) / span, sMin(), S_MAX);
         var top = HEAD_H + room * 0.12;
         var fyScreen = opts.focusY ? opts.focusY() : Hv * 0.36;   // 납작할 때의 초점선(화면 px)
-        flyTo(entry.start_year + (fyScreen - top) / s, s, o);
+        flyTo(warp.year(tauOf(entry.start_year) + (fyScreen - top) / s), s, o);
       } else {
-        flyTo(entry.start_year, clamp(Math.max(cam.s, Hv / 70), sMin(), S_MAX), o);
+        // 한 해짜리 사건 — 앞뒤로 수십 년(그 자리의 실제 햇수)이 보이게
+        flyTo(entry.start_year, clamp(Math.max(cam.s, Hv / tauSpan(entry.start_year - 35, entry.start_year + 35)), sMin(), S_MAX), o);
       }
       invalidate();
     }
@@ -1490,7 +1587,7 @@
     function startPinch(a, b) {
       var mx = (a.x + b.x) / 2;
       var my = (a.y + b.y) / 2;
-      gesture = { kind: 'pinch', d0: Math.max(20, Math.hypot(a.x - b.x, a.y - b.y)), s0: cam.s, year: yearAt(my), u: uAtScreen(mx), active: true };
+      gesture = { kind: 'pinch', d0: Math.max(20, Math.hypot(a.x - b.x, a.y - b.y)), s0: cam.s, t: tauAt(my), u: uAtScreen(mx), active: true };
     }
 
     canvas.addEventListener('pointermove', function (e) {
@@ -1543,7 +1640,7 @@
         var mx = (a.x + b.x) / 2;
         var my = (a.y + b.y) / 2;
         cam.s = clamp(gesture.s0 * d / gesture.d0, sMin(), S_MAX);
-        cam.t0 = gesture.year - my / cam.s;
+        cam.t0 = gesture.t - my / cam.s;
         pinU(gesture.u, mx);
         invalidate();
       }
@@ -1727,8 +1824,8 @@
       /** 처음 열 때 — 문명사(기원전 4200년~지금)가 화면에 들어오게 */
       home: function () {
         setTilt(0, true);
-        cam.s = clamp(((Hv - HEAD_H) * 0.86) / (T_MAX + 4200), sMin(), S_MAX);
-        cam.t0 = -4200 - (Hv * 0.04 + HEAD_H) / cam.s;
+        cam.s = clamp(((Hv - HEAD_H) * 0.86) / tauSpan(HOME_YEAR, T_MAX), sMin(), S_MAX);
+        cam.t0 = tauOf(HOME_YEAR) - (Hv * 0.04 + HEAD_H) / cam.s;
         // 연도 축이 화면 가운데에(국가사는 왼쪽, 주제사는 오른쪽).
         // 폰처럼 좁은 화면에서는 축을 오른쪽 끝에 붙여 왼쪽의 국가사 열(한·중·일)이 한 화면에 다 들어오게 한다.
         // 열 너비는 그대로라 글자 크기는 변하지 않고, 주제사는 옆으로 밀면 나온다.
