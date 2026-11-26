@@ -1111,6 +1111,14 @@
         y += 18;
         rows.push({ s: '검토 전 초안', y: y, f: fs, c: colors.ink2, a: 0.7 });
       }
+      // 재미로 보는 주제사 — 묶음의 안내(매니페스트 tracks[].note)를 출처 아래에 흐리게
+      if (entry._note) {
+        y += 6;
+        wrap(entry._label + ' · ' + entry._note, w, fs).forEach(function (line) {
+          y += 17;
+          rows.push({ s: line, y: y, f: fs, c: colors.ink2, a: 0.7 });
+        });
+      }
       (links || []).forEach(function (l) {
         y += 10;
         rows.push({ pill: l, y: y, h: 30 });

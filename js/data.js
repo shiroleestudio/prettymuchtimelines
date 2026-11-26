@@ -90,6 +90,9 @@
 
   /** 매니페스트 + 파일 내용을 앱이 쓰기 좋은 형태로 정리한다. */
   function normalize(manifest, fileContents, source, alt) {
+    // 묶음의 신뢰도 안내(tracks[].note) — 재미로 보는 주제사의 항목마다 _note 로 붙여 둔다(그림판 카드가 쓴다)
+    var noteByTrack = {};
+    (manifest.tracks || []).forEach(function (t) { if (t.note) noteByTrack[t.id] = t.note; });
     var datasets = (manifest.datasets || [])
       .slice()
       .sort(function (a, b) {
@@ -104,6 +107,7 @@
           copy._label = ds.label;
           copy._color = ds.color;
           copy._track = ds.track;
+          copy._note = noteByTrack[ds.track] || '';
           copy._file = ds.file;
           copy._summary = oneLineSummary(entry);
           copy._isPoint = entry.start_year === entry.end_year;
