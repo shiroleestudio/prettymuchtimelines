@@ -119,6 +119,12 @@
     return (d < 0 ? -1 : 1) * (a * 0.55 * dim) / (a * 0.55 + dim);
   }
 
+  /** 매니페스트 tracks[].note — 그 묶음을 어떻게 읽어야 하는지(재미로 보는 주제사). 없으면 빈 문자열 */
+  function trackNote(trackId) {
+    var t = (state.data.tracks || []).filter(function (x) { return x.id === trackId; })[0];
+    return (t && t.note) || '';
+  }
+
   function activeColumns() {
     return state.data.datasets.filter(function (ds) { return !state.off[ds.id]; });
   }
@@ -518,6 +524,14 @@
       label.textContent = track.label;
       group.appendChild(label);
 
+      // 묶음의 신뢰도 안내(재미로 보는 주제사) — 매니페스트 tracks[].note 그대로
+      if (track.note) {
+        var note = document.createElement('p');
+        note.className = 'pick-track__note';
+        note.textContent = track.note;
+        group.appendChild(note);
+      }
+
       var grid = document.createElement('div');
       grid.className = 'pick-grid';
 
@@ -730,6 +744,13 @@
         if (glyph) chip.insertAdjacentHTML('beforeend', glyph);
         else chip.appendChild(document.createElement('i'));
         chip.appendChild(document.createTextNode(ds.label));
+        if (trackNote(ds.track)) {   // 재미로 보는 주제사 — 칩에 작은 꼬리표
+          var tag = document.createElement('em');
+          tag.className = 'finder__chip-tag';
+          tag.textContent = '재미';
+          tag.title = trackNote(ds.track);
+          chip.appendChild(tag);
+        }
         chip.addEventListener('click', function () {
           showOnly(ds);
           closeFinder();
@@ -859,6 +880,14 @@
       source.textContent = '출처 · 아직 확인 전(검토 전 초안)';
     }
     body.appendChild(source);
+
+    // 재미로 보는 주제사면 출처 줄 아래에 그 묶음의 안내를 한 줄 — 정식 역사와 구분되게
+    if (entry._note) {
+      var caution = document.createElement('p');
+      caution.className = 'sheet__caution';
+      caution.textContent = entry._label + ' · ' + entry._note;
+      body.appendChild(caution);
+    }
 
     // 이 항목에서 갈라지는 가상 역사(갈림길)가 있으면 바로 들어가는 길
     if (branch) {
@@ -1309,6 +1338,8 @@
 
   function start(data) {
     state.data = data;
+    // 매니페스트에서 처음부터 꺼 두라고 한 카테고리(재미로 보는 주제사 등). 카테고리 탭이나 칩에서 켠다
+    data.datasets.forEach(function (ds) { if (ds.hidden_by_default) state.off[ds.id] = true; });
     applyTheme(loadTheme(), false, true);
     applyDetail(loadDetail(), false);
 

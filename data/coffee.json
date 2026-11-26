@@ -1,0 +1,320 @@
+{
+  "$schema": "../schema/entries.schema.json",
+  "dataset": "coffee",
+  "entries": [
+    {
+      "id": "coffee-yemen",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "예멘에서 커피 재배 시작",
+      "region": "서아시아",
+      "start_year": 1400,
+      "end_year": 1500,
+      "description": "에티오피아가 원산지인 커피가 아라비아로 건너가 15세기 무렵 예멘에서 재배되기 시작했다.",
+      "tags": [
+        "전근대",
+        "재배"
+      ],
+      "sources": [
+        "커피,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0058616"
+      ],
+      "status": "draft",
+      "dating_note": "백과사전은 원산지 에티오피아와 아라비아 전래·독점만 적고 세기는 적지 않는다. \"15세기\"는 2차 자료(브리태니커 요약)의 연대. 흐름이라 1400~1500 으로 둔다.",
+      "era_note": "1400년 ~ 1500년"
+    },
+    {
+      "id": "coffee-istanbul",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "이스탄불의 커피하우스",
+      "region": "서아시아",
+      "start_year": 1554,
+      "end_year": 1554,
+      "description": "메카에 이어 오스만 제국의 수도에 커피하우스가 생겨 커피가 도시 생활의 일부가 됐다.",
+      "tags": [
+        "근세",
+        "커피하우스"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 1554년은 널리 인용되는 연도이고 1475년 설도 있다.",
+      "era_note": "1554년"
+    },
+    {
+      "id": "coffee-europe",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "유럽에 커피 전해짐",
+      "region": "유럽",
+      "start_year": 1651,
+      "end_year": 1651,
+      "description": "17세기 중반 영국 등 유럽 도시에 커피하우스가 생기며 커피가 유럽으로 퍼졌다.",
+      "tags": [
+        "근세",
+        "커피하우스"
+      ],
+      "sources": [
+        "커피,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0058616"
+      ],
+      "status": "draft",
+      "dating_note": "백과사전 「커피」의 \"유럽에 전해진 것은 1651년\". 옥스퍼드 첫 커피하우스 1651년, 런던 1652년 설과 맞물린다.",
+      "era_note": "1651년"
+    },
+    {
+      "id": "coffee-java",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "네덜란드, 자바에 커피 농장",
+      "region": "동남아시아",
+      "start_year": 1696,
+      "end_year": 1696,
+      "description": "네덜란드 상인이 커피 재배를 자바로 옮기면서 아라비아의 독점이 깨지기 시작했다.",
+      "tags": [
+        "근세",
+        "재배"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 17세기 후반이라는 데는 자료가 일치하나 1696년은 2차 자료의 연도.",
+      "era_note": "1696년"
+    },
+    {
+      "id": "coffee-brazil",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "브라질에 커피 들어옴",
+      "region": "아메리카",
+      "start_year": 1727,
+      "end_year": 1727,
+      "description": "브라질에 커피나무가 심겨, 뒤에 세계 최대 커피 생산국이 되는 출발점이 됐다.",
+      "tags": [
+        "근세",
+        "재배"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 1727년(팔레타 설)이 널리 쓰이고, 브리태니커 학생판은 1729년으로 적는다.",
+      "era_note": "1727년"
+    },
+    {
+      "id": "coffee-espresso",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "에스프레소 기계 특허",
+      "region": "유럽",
+      "start_year": 1884,
+      "end_year": 1884,
+      "description": "토리노의 안젤로 모리온도가 증기압으로 커피를 빠르게 내리는 기계를 특허 냈다.",
+      "tags": [
+        "근대",
+        "기계"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 상업화는 1901년 베체라의 특허 이후.",
+      "era_note": "1884년"
+    },
+    {
+      "id": "coffee-gojong",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "고종, 러시아 공사관에서 커피",
+      "region": "동아시아",
+      "start_year": 1896,
+      "end_year": 1896,
+      "description": "아관파천으로 러시아 공사관에 머물던 고종이 커피를 즐기게 됐고, 손탁이 커피를 올려 신임을 얻었다.",
+      "tags": [
+        "근대",
+        "한국"
+      ],
+      "sources": [
+        "커피,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0058616",
+        "손탁호텔,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0030583"
+      ],
+      "status": "draft",
+      "dating_note": "커피가 조선에 들어온 때는 1882년 구미·일본과 수교 이후(백과사전 「커피」). 고종이 즐긴 것은 아관파천(1896년 2월) 때.",
+      "era_note": "1896년"
+    },
+    {
+      "id": "coffee-sontag",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "손탁호텔, 서울 첫 호텔식 다방",
+      "region": "동아시아",
+      "start_year": 1902,
+      "end_year": 1902,
+      "description": "정동에 새로 지은 손탁호텔 아래층에 커피숍이 생겨 서울 최초의 호텔식 다방이 됐다.",
+      "tags": [
+        "근대",
+        "한국",
+        "다방"
+      ],
+      "sources": [
+        "다방,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0013452",
+        "손탁호텔,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0030583"
+      ],
+      "status": "draft",
+      "dating_note": "건물 신축은 1902년 10월(백과사전 「손탁호텔」). 개항 직후 인천의 대불호텔 부속 다방이 더 앞선 선구로 꼽힌다(「다방」).",
+      "era_note": "1902년"
+    },
+    {
+      "id": "coffee-melitta",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "멜리타 벤츠의 종이 필터",
+      "region": "유럽",
+      "start_year": 1908,
+      "end_year": 1908,
+      "description": "독일 드레스덴의 멜리타 벤츠가 종이 필터로 커피를 내리는 방법을 특허 냈다.",
+      "tags": [
+        "근대",
+        "기구"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것.",
+      "era_note": "1908년"
+    },
+    {
+      "id": "coffee-kakadu",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "카카듀, 한국인이 연 첫 다방",
+      "region": "동아시아",
+      "start_year": 1927,
+      "end_year": 1927,
+      "description": "영화감독 이경손이 관훈동에 연 카카듀가 한국인이 경영한 첫 다방으로 꼽힌다.",
+      "tags": [
+        "근대",
+        "한국",
+        "다방"
+      ],
+      "sources": [
+        "다방,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0013452"
+      ],
+      "status": "draft",
+      "dating_note": "1923년 전후 일본인 소유의 후타미·금강산이 근대적 다방의 최초(백과사전 「다방」). 카카듀는 한국인 경영 최초.",
+      "era_note": "1927년"
+    },
+    {
+      "id": "coffee-instant",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "인스턴트 커피, 전쟁으로 대량 생산",
+      "region": "아메리카",
+      "start_year": 1944,
+      "end_year": 1944,
+      "description": "1900년대 초 미국에 나온 인스턴트 커피가 전쟁 중 군인 휴대용으로 생산이 크게 늘어 전후에 일반화됐다.",
+      "tags": [
+        "현대",
+        "인스턴트"
+      ],
+      "sources": [
+        "커피,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0058616"
+      ],
+      "status": "draft",
+      "era_note": "1944년"
+    },
+    {
+      "id": "coffee-usarmy",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "미군 부대를 타고 커피 퍼짐",
+      "region": "동아시아",
+      "start_year": 1945,
+      "end_year": 1945,
+      "description": "해방과 함께 주둔한 미군 부대의 영향으로 커피가 시중에 퍼졌고, 1960년대 말까지 수입 금지라 밀수품이 수요를 채웠다.",
+      "tags": [
+        "현대",
+        "한국"
+      ],
+      "sources": [
+        "동서식품,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0079914"
+      ],
+      "status": "draft",
+      "era_note": "1945년"
+    },
+    {
+      "id": "coffee-dongsuh",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "동서식품, 국산 첫 인스턴트 커피",
+      "region": "동아시아",
+      "start_year": 1970,
+      "end_year": 1970,
+      "description": "제너럴푸즈와 합작한 동서식품이 부평 공장에서 맥스웰하우스 커피를 내며 국산 커피 시대가 열렸다.",
+      "tags": [
+        "현대",
+        "한국",
+        "인스턴트"
+      ],
+      "sources": [
+        "동서식품,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0079914"
+      ],
+      "status": "draft",
+      "dating_note": "회사 설립은 1968년 5월, 합작 계약은 1970년 6월, 다방용 커피 9월·가정용 인스턴트 12월 발매(백과사전 「동서식품」).",
+      "era_note": "1970년"
+    },
+    {
+      "id": "coffee-starbucks",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "스타벅스 시애틀 개점",
+      "region": "아메리카",
+      "start_year": 1971,
+      "end_year": 1971,
+      "description": "시애틀의 원두 가게로 시작한 스타벅스가 1980년대에 에스프레소 바를 열며 카페 체인이 됐다.",
+      "tags": [
+        "현대",
+        "카페"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것.",
+      "era_note": "1971년"
+    },
+    {
+      "id": "coffee-mix",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "동서식품 커피믹스, 세계 최초",
+      "region": "동아시아",
+      "start_year": 1976,
+      "end_year": 1976,
+      "description": "커피·설탕·프림을 한 봉지에 담아 뜨거운 물만 부으면 되는 커피믹스를 동서식품이 처음 만들었다.",
+      "tags": [
+        "현대",
+        "한국",
+        "인스턴트"
+      ],
+      "sources": [
+        "동서식품,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0079914"
+      ],
+      "status": "draft",
+      "dating_note": "1976년 12월 출시. 1974년 자체 개발한 크리머 프리마가 바탕(백과사전 「동서식품」).",
+      "era_note": "1976년"
+    },
+    {
+      "id": "coffee-starbucks-korea",
+      "category": "음식사",
+      "subcategory": "커피",
+      "title": "스타벅스 코리아 1호점(이대)",
+      "region": "동아시아",
+      "start_year": 1999,
+      "end_year": 1999,
+      "description": "이화여대 앞에 스타벅스 국내 1호점이 열리며 커피전문점이 다방을 밀어내는 흐름이 뚜렷해졌다.",
+      "tags": [
+        "현대",
+        "한국",
+        "카페"
+      ],
+      "sources": [
+        "스타벅스 코리아 주요 연혁 https://www.starbucks.co.kr/footer/company/starbucks_history.do",
+        "다방,『한국민족문화대백과사전』 https://encykorea.aks.ac.kr/Article/E0013452"
+      ],
+      "status": "draft",
+      "dating_note": "1호점 1999년(스타벅스 코리아 연혁). 1990년대 커피자판기·커피전문점에 밀려 다방이 자리를 잃었다는 서술은 백과사전 「다방」.",
+      "era_note": "1999년"
+    }
+  ]
+}

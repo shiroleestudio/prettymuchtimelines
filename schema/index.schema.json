@@ -40,7 +40,8 @@
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
           "label": { "type": "string", "minLength": 1 },
-          "order": { "type": "integer" }
+          "order": { "type": "integer" },
+          "note": { "type": "string", "description": "이 묶음을 어떻게 읽어야 하는지 — 카테고리 탭·펼친 칸·글 페이지에 그대로 나온다. 재미로 보는 주제사처럼 신뢰도를 밝혀야 할 때 쓴다" }
         }
       }
     },

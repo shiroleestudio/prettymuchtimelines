@@ -256,6 +256,17 @@ body {
 }
 .finder__chip svg { width: 16px; height: 16px; color: var(--pc, var(--caramel)); flex: 0 0 auto; }
 .finder__chip--all { border-style: dashed; }
+/* 재미로 보는 주제사 칩의 꼬리표 — 정식 역사 칩과 한눈에 갈린다 */
+.finder__chip-tag {
+  font-style: normal;
+  font-size: 10.5px;
+  line-height: 1;
+  padding: 3px 5px;
+  border-radius: 999px;
+  background: var(--pc, var(--caramel));
+  color: #fff;
+  opacity: .85;
+}
 
 .finder__item {
   display: flex;
@@ -1345,6 +1356,14 @@ body {
   color: var(--ink-bg-2);
 }
 
+/* 묶음의 신뢰도 안내(매니페스트 tracks[].note) */
+.pick-track__note {
+  margin: -2px 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-bg-2);
+}
+
 .pick-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -1755,6 +1774,8 @@ body {
 
 .sheet__source a { color: inherit; text-underline-offset: 2px; }
 .sheet__source.is-missing { opacity: .75; }
+/* 재미로 보는 주제사의 안내 줄 — 출처 줄 아래, 흐리게 */
+.sheet__caution { margin: 6px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--ink-bg-2); }
 
 .sheet__desc {
   margin: 0 0 14px;

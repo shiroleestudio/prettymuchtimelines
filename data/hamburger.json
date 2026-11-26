@@ -1,0 +1,290 @@
+{
+  "$schema": "../schema/entries.schema.json",
+  "dataset": "hamburger",
+  "entries": [
+    {
+      "id": "hamburger-origin",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "햄버거 원조 논쟁",
+      "region": "아메리카",
+      "start_year": 1885,
+      "end_year": 1904,
+      "description": "위스콘신·뉴욕·뉴헤이븐·텍사스의 가게들이 저마다 첫 햄버거를 주장하며, 정설은 없다.",
+      "tags": [
+        "근대",
+        "원조"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 주장들: 찰리 내그린(위스콘신 시모어, 1885), 멘치스 형제(뉴욕 햄버그, 1885), 루이스 런치(뉴헤이븐, 1895 또는 1900), 플레처 데이비스(텍사스 애선스, 1880년대 말~1904). 어느 것도 공인된 정설이 아니다.",
+      "era_note": "1885년 ~ 1904년"
+    },
+    {
+      "id": "hamburger-stlouis",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "세인트루이스 만국박람회의 햄버거",
+      "region": "아메리카",
+      "start_year": 1904,
+      "end_year": 1904,
+      "description": "박람회에서 팔린 햄버거 샌드위치가 신문에 실리며 미국 전역에 알려졌다.",
+      "tags": [
+        "근대"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것.",
+      "era_note": "1904년"
+    },
+    {
+      "id": "hamburger-whitecastle",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "화이트캐슬 창업",
+      "region": "아메리카",
+      "start_year": 1921,
+      "end_year": 1921,
+      "description": "빌리 잉그럼이 700달러로 시작한 첫 햄버거 체인으로, 5센트짜리 작은 네모 버거를 봉지째 팔았다.",
+      "tags": [
+        "근대",
+        "체인"
+      ],
+      "sources": [
+        "White Castle — Our History https://www.whitecastle.com/about-us/our-history"
+      ],
+      "status": "draft",
+      "dating_note": "창업지 위치타(캔자스)와 공동 창업자 월터 앤더슨은 2차 자료. 회사 연혁 페이지는 1921년·잉그럼·700달러·5센트만 적는다.",
+      "era_note": "1921년"
+    },
+    {
+      "id": "hamburger-bigboy",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "밥스 빅보이 개점",
+      "region": "아메리카",
+      "start_year": 1936,
+      "end_year": 1936,
+      "description": "밥 위안이 글렌데일에 연 10석짜리 가게에서 패티 두 장을 겹친 더블덱 버거가 나왔다.",
+      "tags": [
+        "현대",
+        "체인"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 빅보이 공식 소개 페이지(검색 요약)가 1936년·10석·300달러를 적는다.",
+      "era_note": "1936년"
+    },
+    {
+      "id": "hamburger-mcdonalds",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "맥도날드 형제, 샌버너디노 개업",
+      "region": "아메리카",
+      "start_year": 1940,
+      "end_year": 1940,
+      "description": "형제가 연 가게가 1948년 메뉴를 줄이고 조립식 주방으로 바꿔 패스트푸드의 틀이 됐다.",
+      "tags": [
+        "현대",
+        "체인"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것.",
+      "era_note": "1940년"
+    },
+    {
+      "id": "hamburger-burgerking",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "버거킹 창업",
+      "region": "아메리카",
+      "start_year": 1954,
+      "end_year": 1954,
+      "description": "마이애미에서 시작한 버거킹이 1957년 와퍼를 내며 맥도날드의 경쟁자가 됐다.",
+      "tags": [
+        "현대",
+        "체인"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것.",
+      "era_note": "1954년"
+    },
+    {
+      "id": "hamburger-kroc",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "레이 크록의 맥도날드 1호 가맹점",
+      "region": "아메리카",
+      "start_year": 1955,
+      "end_year": 1955,
+      "description": "일리노이 디스플레인스에 연 가맹점이 전국 체인 맥도날드의 출발점이 됐다.",
+      "tags": [
+        "현대",
+        "체인"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 한국맥도날드 소개 페이지는 1954년 크록의 방문을 시작으로 적는다.",
+      "era_note": "1955년"
+    },
+    {
+      "id": "hamburger-bigmac",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "빅맥 등장",
+      "region": "아메리카",
+      "start_year": 1967,
+      "end_year": 1967,
+      "description": "피츠버그 지역 가맹점주 짐 델리가티가 만든 빅맥이 이듬해 전국 메뉴가 됐다.",
+      "tags": [
+        "현대",
+        "메뉴"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 첫 판매 지역은 피츠버그 설과 유니언타운 설이 있다.",
+      "era_note": "1967년"
+    },
+    {
+      "id": "hamburger-wendys",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "웬디스 창업",
+      "region": "아메리카",
+      "start_year": 1969,
+      "end_year": 1969,
+      "description": "데이브 토머스가 오하이오 콜럼버스에 연 가게에서 네모난 패티의 웬디스가 시작됐다.",
+      "tags": [
+        "현대",
+        "체인"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것.",
+      "era_note": "1969년"
+    },
+    {
+      "id": "hamburger-lotteria",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "롯데리아 소공점, 한국 첫 햄버거 체인",
+      "region": "동아시아",
+      "start_year": 1979,
+      "end_year": 1979,
+      "description": "10월 서울 소공동에 1호점이 열리며 한국의 패스트푸드 체인이 시작됐다.",
+      "tags": [
+        "현대",
+        "한국",
+        "체인"
+      ],
+      "sources": [
+        "롯데GRS 회사연혁 https://www.lottegrs.com/kor/company/history.jsp"
+      ],
+      "status": "draft",
+      "dating_note": "롯데GRS 회사연혁: 1979년 10월 ㈜롯데리아 출범·1호점(소공점). 가맹 1호점은 1980년 7월.",
+      "era_note": "1979년"
+    },
+    {
+      "id": "hamburger-burgerking-korea",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "버거킹 한국 진출",
+      "region": "동아시아",
+      "start_year": 1984,
+      "end_year": 1984,
+      "description": "롯데리아에 이어 미국 햄버거 체인이 한국에 들어오기 시작했다.",
+      "tags": [
+        "현대",
+        "한국",
+        "체인"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 1984년은 신문 기사의 연도이며 1호점 위치는 확인하지 못했다.",
+      "era_note": "1984년"
+    },
+    {
+      "id": "hamburger-mcdonalds-korea",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "맥도날드 압구정 1호점",
+      "region": "동아시아",
+      "start_year": 1988,
+      "end_year": 1988,
+      "description": "서울올림픽이 열린 해에 압구정동에 한국 맥도날드 1호점이 열렸다.",
+      "tags": [
+        "현대",
+        "한국",
+        "체인"
+      ],
+      "sources": [
+        "한국맥도날드 — 맥도날드 소개(한국 맥도날드가 걸어온 길) https://www.mcdonalds.co.kr/kor/story/brand/intro"
+      ],
+      "status": "draft",
+      "era_note": "1988년"
+    },
+    {
+      "id": "hamburger-bulgogi",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "롯데리아 불고기버거",
+      "region": "동아시아",
+      "start_year": 1992,
+      "end_year": 1992,
+      "description": "불고기 양념 패티를 얹은 불고기버거가 나와 햄버거의 한국화를 열었다.",
+      "tags": [
+        "현대",
+        "한국",
+        "메뉴"
+      ],
+      "sources": [
+        "롯데GRS 회사연혁 https://www.lottegrs.com/kor/company/history.jsp"
+      ],
+      "status": "draft",
+      "dating_note": "1992년 9월 출시(롯데GRS 회사연혁). 한국맥도날드는 1997년에 불고기 버거를 냈다.",
+      "era_note": "1992년"
+    },
+    {
+      "id": "hamburger-drivethru",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "한국에 드라이브스루 등장",
+      "region": "동아시아",
+      "start_year": 1992,
+      "end_year": 1992,
+      "description": "차에 탄 채 주문하는 드라이브스루 매장이 한국 햄버거 체인에 생겼다.",
+      "tags": [
+        "현대",
+        "한국"
+      ],
+      "sources": [
+        "한국맥도날드 — 맥도날드 소개(한국 맥도날드가 걸어온 길) https://www.mcdonalds.co.kr/kor/story/brand/intro",
+        "롯데GRS 회사연혁 https://www.lottegrs.com/kor/company/history.jsp"
+      ],
+      "status": "draft",
+      "dating_note": "한국맥도날드는 1992년 \"업계 최초 드라이브스루 국내 도입\", 롯데GRS 는 1997년 11월 \"업계 최초 드라이브스루점(명일)\". 두 회사가 서로 최초라 하므로 앞선 연도를 쓴다.",
+      "era_note": "1992년"
+    },
+    {
+      "id": "hamburger-shakeshack",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "title": "쉐이크쉑 강남 1호점",
+      "region": "동아시아",
+      "start_year": 2016,
+      "end_year": 2016,
+      "description": "7월 강남대로에 열린 1호점이 긴 줄을 만들며 수제버거 붐을 불렀다.",
+      "tags": [
+        "현대",
+        "한국",
+        "체인"
+      ],
+      "sources": [],
+      "status": "draft",
+      "dating_note": "출처 확인 전: 공신력 있는 자료 원문으로 아직 확인하지 못한 연도다(2차 자료 요약에 기댐). 확인되기 전에는 참고만 할 것. 2016년 7월은 신문 기사의 연도.",
+      "era_note": "2016년"
+    }
+  ]
+}

@@ -47,6 +47,42 @@
       "url": "https://github.com/Seshat-Global-History-Databank/cliopatria",
       "terms": "CC BY 4.0",
       "use": "국가사 항목의 '지도에 그려진 기간' 참고(대조 리포트에만, 데이터에는 넣지 않음)"
+    },
+    {
+      "id": "starbucks-kr",
+      "name": "스타벅스 코리아 주요 연혁",
+      "org": "에스씨케이컴퍼니",
+      "url": "https://www.starbucks.co.kr/footer/company/starbucks_history.do",
+      "match": "www.starbucks.co.kr",
+      "terms": "회사 공식 연혁. 개점 연도(사실)만 확인",
+      "use": "커피의 역사 — 국내 1호점 연도"
+    },
+    {
+      "id": "lottegrs",
+      "name": "롯데GRS 회사연혁",
+      "org": "롯데GRS",
+      "url": "https://www.lottegrs.com/kor/company/history.jsp",
+      "match": "www.lottegrs.com",
+      "terms": "회사 공식 연혁. 개점·출시 연도(사실)만 확인",
+      "use": "햄버거의 역사 — 롯데리아 1호점·불고기버거·드라이브스루 연도"
+    },
+    {
+      "id": "mcdonalds-kr",
+      "name": "한국맥도날드 — 맥도날드 소개",
+      "org": "한국맥도날드",
+      "url": "https://www.mcdonalds.co.kr/kor/story/brand/intro",
+      "match": "www.mcdonalds.co.kr",
+      "terms": "회사 공식 연혁. 개점·도입 연도(사실)만 확인",
+      "use": "햄버거의 역사 — 압구정 1호점·드라이브스루 연도"
+    },
+    {
+      "id": "whitecastle",
+      "name": "White Castle — Our History",
+      "org": "White Castle System, Inc.",
+      "url": "https://www.whitecastle.com/about-us/our-history",
+      "match": "www.whitecastle.com",
+      "terms": "회사 공식 연혁. 창업 연도(사실)만 확인",
+      "use": "햄버거의 역사 — 화이트캐슬 창업 연도"
     }
   ],
   "eras": [
@@ -396,6 +432,12 @@
       "id": "theme",
       "label": "주제사",
       "order": 2
+    },
+    {
+      "id": "fun",
+      "label": "재미로 보는 주제사",
+      "order": 3,
+      "note": "관심사 따라 가볍게 모은 연표입니다. 출처가 붙은 항목만 공인 자료로 확인했고, 나머지는 널리 알려진 이야기를 옮긴 것이라 그대로 믿지 마세요."
     }
   ],
   "datasets": [
@@ -735,6 +777,30 @@
       "label": "건축사",
       "color": "#a89b8c",
       "order": 62
+    },
+    {
+      "id": "coffee",
+      "file": "coffee.json",
+      "track": "fun",
+      "category": "음식사",
+      "subcategory": "커피",
+      "label": "커피의 역사",
+      "color": "#b08968",
+      "region": "세계",
+      "order": 80,
+      "hidden_by_default": true
+    },
+    {
+      "id": "hamburger",
+      "file": "hamburger.json",
+      "track": "fun",
+      "category": "음식사",
+      "subcategory": "햄버거",
+      "label": "햄버거의 역사",
+      "color": "#d9a066",
+      "region": "세계",
+      "order": 81,
+      "hidden_by_default": true
     }
   ]
 }

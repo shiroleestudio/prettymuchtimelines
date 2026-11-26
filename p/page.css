@@ -207,6 +207,7 @@ h3 { font-size: 19px; margin: 16px 0 8px; display: flex; align-items: center; ga
 .detail p { font-size: 16px; line-height: 1.85; margin: 14px 0 0; word-break: keep-all; text-wrap: pretty; }
 .src { font-size: 13px; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: 10px; margin: 0 0 14px; }
 .draft { opacity: .8; }
+.caution { font-size: 13px; line-height: 1.5; color: var(--ink-bg-2); margin: 0 0 14px; }
 
 /* 주 행동 — 연표 화면의 먹색 알약 */
 .cta {

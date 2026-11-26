@@ -183,6 +183,9 @@ ${o.body}
 
 // ------------------------------------------------------------ 항목 페이지
 
+/** 묶음의 신뢰도 안내(매니페스트 tracks[].note) — 재미로 보는 주제사는 글 페이지에도 밝힌다 */
+const trackNote = (ds) => ((manifest.tracks || []).find((t) => t.id === ds.track) || {}).note || '';
+
 const NATION_FIRST = (a, b) => (a.track === 'nation' ? 0 : 1) - (b.track === 'nation' ? 0 : 1) || (a.order || 0) - (b.order || 0);
 
 for (const e of paged) {
@@ -209,7 +212,8 @@ for (const e of paged) {
       <p class="eyebrow">${era ? `<span class="era">${esc(era.label)}</span>` : ''}<span class="dot" style="background:${esc(ds.color)}"></span>${esc(ds.label)} · ${esc(period(e))}</p>
       <h1>${esc(e.title)}</h1>
       <p class="desc">${esc(e.description)}</p>
-${e.detail && e.detail.length ? `      <section class="detail" aria-label="상세 해설">
+${trackNote(ds) ? `      <p class="caution">${esc(ds.label)} · ${esc(trackNote(ds))}</p>
+` : ''}${e.detail && e.detail.length ? `      <section class="detail" aria-label="상세 해설">
 ${e.detail.map((p) => `        <p>${esc(p)}</p>`).join('\n')}
       </section>
 ` : ''}      <p class="src">출처 · ${srcs.map((s) => (s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a>` : esc(s.name))).join(' · ')}${e.status !== 'reviewed' ? ' <span class="draft">(검토 전 초안)</span>' : ''}</p>
@@ -278,7 +282,8 @@ ${datasets.slice().sort(NATION_FIRST).map((d) => {
   if (!list.length) return '';
   return `    <section class="card" id="${esc(d.id)}">
       <h2><span class="dot" style="background:${esc(d.color)}"></span>${esc(d.label)} <span class="count">${list.length}</span></h2>
-      <ul class="list">
+${trackNote(d) ? `      <p class="caution">${esc(trackNote(d))}</p>
+` : ''}      <ul class="list">
 ${list.map((x) => `        <li><a href="${esc(x.id)}.html">${esc(x.title)} <span class="yr">${esc(shortPeriod(x))}</span></a></li>`).join('\n')}
       </ul>
     </section>`;
