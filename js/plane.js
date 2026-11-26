@@ -240,7 +240,7 @@
     renderer.setClearColor(0x000000, 0);
 
     // --- 글자판(문자열 → 텍스처 한 칸). 가득 차면 비우고 다시 쓴다
-    var TS = 2;   // 판 1px 당 글자판 픽셀 — 화면 배율(dpr, 최대 3)에 맞춘다(resize). 납작할 때 1:1 이라 또렷하고 번지지 않는다
+    var TS = 2;   // 판 1px 당 글자판 픽셀 — 화면 배율(dpr, 최대 4)에 맞춘다(resize). 납작할 때 1:1 이라 또렷하고 번지지 않는다
     var PAD = 6;  // 글자 칸 안쪽 여백(글자판 픽셀)
     var GAP = 12; // 칸과 칸 사이 — 멀리서(밉맵) 볼 때 이웃 칸이 섞이지 않을 만큼
     var maxTex = renderer.capabilities.maxTextureSize || 4096;
@@ -474,7 +474,7 @@
       kind: 'gl',
       resize: function (w, h, hv, dpr) {
         W = w; Hv = hv;
-        var ts = Math.min(3, Math.max(1, dpr));   // 폰(dpr 3)에서 2 로 막으면 글자가 1.5배 늘려져 흐리다
+        var ts = Math.min(4, Math.max(1, dpr));   // 화면 배율과 같게(상한 4). 더 낮게 막으면 글자가 늘려져 흐리다
         if (ts !== TS) { TS = ts; resetAtlas(); }
         renderer.setPixelRatio(dpr);
         renderer.setSize(w, hv, false);

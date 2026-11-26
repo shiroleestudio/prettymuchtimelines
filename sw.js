@@ -7,26 +7,26 @@
    왜 캐시 우선이 아닌가: 캐시 우선으로 두면 배포한 새 코드가 반영되지 않고
    예전 화면이 계속 보인다. 오프라인 지원은 예비용 캐시만으로 충분하다. */
 
-const CACHE_VERSION = 'bighistory-80244942';
+const CACHE_VERSION = 'bighistory-8e82f83c';
 const NETWORK_TIMEOUT_MS = 4000;
 
 const PRECACHE = [
   './',
   './index.html',
-  './css/styles.css?v=80244942',
-  './fonts/fonts.css?v=80244942',
+  './css/styles.css?v=8e82f83c',
+  './fonts/fonts.css?v=8e82f83c',
   './fonts/gaegu-latin.woff2',
-  './js/data.js?v=80244942',
-  './js/common.js?v=80244942',
-  './js/icons.js?v=80244942',
-  './js/hud.js?v=80244942',
-  './js/branch.js?v=80244942',
-  './js/quiz.js?v=80244942',
-  './js/tour.js?v=80244942',
-  './vendor/three.min.js?v=80244942',
-  './js/plane.js?v=80244942',
-  './js/zoom.js?v=80244942',
-  './js/app.js?v=80244942',
+  './js/data.js?v=8e82f83c',
+  './js/common.js?v=8e82f83c',
+  './js/icons.js?v=8e82f83c',
+  './js/hud.js?v=8e82f83c',
+  './js/branch.js?v=8e82f83c',
+  './js/quiz.js?v=8e82f83c',
+  './js/tour.js?v=8e82f83c',
+  './vendor/three.min.js?v=8e82f83c',
+  './js/plane.js?v=8e82f83c',
+  './js/zoom.js?v=8e82f83c',
+  './js/app.js?v=8e82f83c',
   './manifest.webmanifest',
   './icons/icon.svg',
   './favicon.ico',

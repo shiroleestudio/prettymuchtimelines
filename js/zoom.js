@@ -505,7 +505,8 @@
       var keep = W ? yearAt(focusY()) : null;
       var wasOn = geo.on;
       if (wasOn) setPlane(false);
-      dpr = Math.min(2.5, global.devicePixelRatio || 1);
+      // 화면 배율 그대로(상한 4). 2.5 로 막았을 때는 dpr 3 폰에서 캔버스가 1.2배 늘려져 글자가 통째로 흐렸다
+      dpr = Math.min(4, global.devicePixelRatio || 1);
       W = r.width;
       Hv = r.height;
       canvas.width = Math.round(W * dpr);
